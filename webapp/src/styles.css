@@ -682,13 +682,41 @@ button.chico { padding: 2px 8px; }
 
 /* ── Historial de partidos jugados ── */
 .ev2-historial { margin-top: 32px; }
+.ev2-hist-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin-bottom: 12px; flex-wrap: wrap;
+}
 .ev2-hist-titulo {
   font-family: var(--font-impact); font-size: 1.1rem; font-weight: 400;
-  color: var(--azul); letter-spacing: .5px; margin: 0 0 14px;
-  padding-bottom: 8px; border-bottom: 3px solid transparent;
-  border-image: var(--wc-tricolor) 1;
+  color: var(--azul); letter-spacing: .5px; margin: 0;
+  padding-bottom: 0;
 }
-.ev2-hist-sub { font-family: var(--font-body); font-size: .72rem; color: var(--gris); font-weight: 400; letter-spacing: 0; }
+.ev2-filtro-select {
+  border: 1px solid var(--borde); border-radius: 8px; padding: 6px 10px;
+  font-size: .82rem; font-family: var(--font-body); color: var(--texto);
+  background: #fff; cursor: pointer; min-width: 190px;
+}
+.ev2-filtro-select:focus { outline: none; border-color: var(--azul); }
+
+/* ── Secciones colapsables ── */
+.ev2-seccion { border: 1px solid var(--borde); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+.ev2-seccion-header {
+  width: 100%; display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px; background: var(--azul-claro); border: none;
+  cursor: pointer; font-family: var(--font-body); text-align: left;
+  transition: background .12s;
+}
+.ev2-seccion-header:hover { background: #d4e2f5; }
+.ev2-chevron { font-size: .85rem; color: var(--azul); width: 14px; flex-shrink: 0; transition: transform .15s; }
+.ev2-seccion-titulo { font-size: .9rem; font-weight: 700; color: var(--azul); flex: 1; }
+.ev2-seccion-count {
+  font-size: .73rem; color: var(--gris);
+  background: #fff; border-radius: 10px; padding: 2px 9px;
+  border: 1px solid var(--borde);
+}
+.ev2-seccion-contenido { padding: 12px; background: #fafbfc; }
+
+/* ── Tarjetas del historial ── */
 .ev2-card-clickable { cursor: pointer; transition: box-shadow .15s, transform .1s; }
 .ev2-card-clickable:hover { box-shadow: 0 4px 18px rgba(13,44,84,.18); transform: translateY(-1px); }
 .ev2-ver-stats { color: var(--azul) !important; font-weight: 600 !important; font-style: normal !important; }

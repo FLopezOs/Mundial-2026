@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Bandera from "./Bandera.jsx";
 
 const ESPN = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world";
@@ -40,11 +40,9 @@ function StatRow({ label, valA, valB }) {
   const tot = a + b || 1;
   const pA  = Math.round(a / tot * 100);
   const pB  = 100 - pA;
-  const dispA = valA ?? "—";
-  const dispB = valB ?? "—";
   return (
     <div className="ev2-stat">
-      <span className="ev2-val home">{dispA}</span>
+      <span className="ev2-val home">{valA ?? "—"}</span>
       <div className="ev2-bar-col">
         <div className="ev2-bar-track">
           <div className="ev2-bar-home" style={{ width: pA + "%" }} />
@@ -52,7 +50,7 @@ function StatRow({ label, valA, valB }) {
         </div>
         <span className="ev2-stat-lbl">{label}</span>
       </div>
-      <span className="ev2-val away">{dispB}</span>
+      <span className="ev2-val away">{valB ?? "—"}</span>
     </div>
   );
 }
@@ -133,7 +131,6 @@ function TarjetaVivo({ ev }) {
       (t.statistics ?? []).forEach(s => { (isA ? statsA : statsB)[s.name] = s.displayValue; });
     });
   }
-  // Adaptar wonCorners → cornerKicks para StatsBlock
   const liveStats = {};
   for (const { key } of STATS_CFG) {
     const espnKey = key === "cornerKicks" ? "wonCorners" : key;
@@ -191,12 +188,12 @@ function TarjetaVivo({ ev }) {
 /* ── Tarjeta de partido ya terminado (historial) ── */
 function TarjetaHistorial({ partido, statsMap }) {
   const [expandido, setExpandido] = useState(false);
-  const { equipoA, equipoB, resultado, fecha, fase } = partido;
-  const key = `${equipoA}|${equipoB}`;
+  const { equipoA, equipoB, resultado, fecha, ciudad } = partido;
+  const key   = `${equipoA}|${equipoB}`;
   const stats = statsMap?.[key];
 
-  const gA = resultado?.golesA ?? "—";
-  const gB = resultado?.golesB ?? "—";
+  const gA  = resultado?.golesA ?? "—";
+  const gB  = resultado?.golesB ?? "—";
   const gAn = Number(gA), gBn = Number(gB);
 
   const defLabel =
@@ -216,7 +213,7 @@ function TarjetaHistorial({ partido, statsMap }) {
     >
       <div className="ev2-header">
         <span className="ev2-estado">{defLabel}</span>
-        <span className="ev2-venue">{fase} · {fechaDisplay}</span>
+        <span className="ev2-venue">{ciudad ? `${ciudad} · ` : ""}{fechaDisplay}</span>
       </div>
       <div className="ev2-score-wrap">
         <div className="ev2-team home">
@@ -249,15 +246,55 @@ function TarjetaHistorial({ partido, statsMap }) {
   );
 }
 
+/* ── Sección colapsable ── */
+const SECCION_ORDER = [
+  "Grupo A","Grupo B","Grupo C","Grupo D","Grupo E","Grupo F",
+  "Grupo G","Grupo H","Grupo I","Grupo J","Grupo K","Grupo L",
+  "R32","Octavos","Cuartos","Semis","3er Puesto","Final",
+];
+const SECCION_LABEL = {
+  "R32":       "Round of 32",
+  "Octavos":   "Octavos de final",
+  "Cuartos":   "Cuartos de final",
+  "Semis":     "Semifinales",
+  "3er Puesto":"Tercer puesto",
+  "Final":     "Final",
+};
+const seccionLabel = id => SECCION_LABEL[id] ?? id;
+
+function Seccion({ id, partidos, statsMap, abierta, onToggle }) {
+  return (
+    <div className="ev2-seccion">
+      <button className="ev2-seccion-header" onClick={onToggle}>
+        <span className="ev2-chevron">{abierta ? "▾" : "▸"}</span>
+        <span className="ev2-seccion-titulo">{seccionLabel(id)}</span>
+        <span className="ev2-seccion-count">
+          {partidos.length} partido{partidos.length !== 1 ? "s" : ""}
+        </span>
+      </button>
+      {abierta && (
+        <div className="ev2-seccion-contenido">
+          <div className="ev2-grid">
+            {partidos.map(p => (
+              <TarjetaHistorial key={p.id} partido={p} statsMap={statsMap} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ── Vista principal ── */
 export default function EnVivo({ data }) {
-  const [eventos,  setEventos]  = useState(null);
-  const [cargando, setCargando] = useState(false);
-  const [error,    setError]    = useState(null);
-  const [ultima,   setUltima]   = useState(null);
-  const [statsMap, setStatsMap] = useState(null);
+  const [eventos,      setEventos]      = useState(null);
+  const [cargando,     setCargando]     = useState(false);
+  const [error,        setError]        = useState(null);
+  const [ultima,       setUltima]       = useState(null);
+  const [statsMap,     setStatsMap]     = useState(null);
+  const [abiertas,     setAbiertas]     = useState(new Set());
+  const [filtroEquipo, setFiltroEquipo] = useState("");
 
-  // Cargar estadisticas.json una sola vez
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "estadisticas.json")
       .then(r => r.ok ? r.json() : null)
@@ -294,8 +331,62 @@ export default function EnVivo({ data }) {
 
   useEffect(() => { cargar(); }, []);
 
+  /* ── Datos derivados ── */
+  const terminados = useMemo(
+    () => (data?.partidos ?? []).filter(p => p.resultado),
+    [data]
+  );
+
+  const secciones = useMemo(() => {
+    const map = {};
+    for (const p of terminados) {
+      const id = p.fase === "Grupos" ? `Grupo ${p.grupo}` : (p.fase ?? "");
+      if (!id) continue;
+      if (!map[id]) map[id] = [];
+      map[id].push(p);
+    }
+    for (const arr of Object.values(map)) {
+      arr.sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)));
+    }
+    return SECCION_ORDER.filter(id => map[id]).map(id => ({ id, partidos: map[id] }));
+  }, [terminados]);
+
+  const equipos = useMemo(() => {
+    const set = new Set();
+    for (const p of terminados) { set.add(p.equipoA); set.add(p.equipoB); }
+    return [...set].sort((a, b) => a.localeCompare(b, "es"));
+  }, [terminados]);
+
+  /* Auto-expandir secciones cuando cambia el filtro */
+  useEffect(() => {
+    if (!filtroEquipo) {
+      setAbiertas(new Set());
+    } else {
+      setAbiertas(new Set(
+        secciones
+          .filter(s => s.partidos.some(p => p.equipoA === filtroEquipo || p.equipoB === filtroEquipo))
+          .map(s => s.id)
+      ));
+    }
+  }, [filtroEquipo, secciones]);
+
+  const toggleSeccion = id => setAbiertas(prev => {
+    const next = new Set(prev);
+    next.has(id) ? next.delete(id) : next.add(id);
+    return next;
+  });
+
+  const seccionesVisibles = useMemo(() => {
+    if (!filtroEquipo) return secciones;
+    return secciones
+      .map(s => ({
+        ...s,
+        partidos: s.partidos.filter(p => p.equipoA === filtroEquipo || p.equipoB === filtroEquipo),
+      }))
+      .filter(s => s.partidos.length > 0);
+  }, [secciones, filtroEquipo]);
+
   const enVivo = eventos?.filter(esEnVivo) ?? [];
-  const terminados = [...(data?.partidos ?? [])].filter(p => p.resultado).reverse();
 
   return (
     <div className="envivo-vista">
@@ -339,18 +430,37 @@ export default function EnVivo({ data }) {
         </div>
       )}
 
-      {/* ── Historial de partidos jugados ── */}
+      {/* ── Historial agrupado ── */}
       {terminados.length > 0 && (
         <div className="ev2-historial">
-          <h3 className="ev2-hist-titulo">
-            Resultados del Mundial
-            <span className="ev2-hist-sub"> · haz clic para ver estadísticas</span>
-          </h3>
-          <div className="ev2-grid">
-            {terminados.map(p => (
-              <TarjetaHistorial key={p.id} partido={p} statsMap={statsMap} />
-            ))}
+          <div className="ev2-hist-topbar">
+            <h3 className="ev2-hist-titulo">Resultados del Mundial</h3>
+            <select
+              className="ev2-filtro-select"
+              value={filtroEquipo}
+              onChange={e => setFiltroEquipo(e.target.value)}
+            >
+              <option value="">Todos los equipos</option>
+              {equipos.map(eq => <option key={eq} value={eq}>{eq}</option>)}
+            </select>
           </div>
+
+          {filtroEquipo && seccionesVisibles.length === 0 && (
+            <p className="ev2-nodata" style={{ padding: "20px 0" }}>
+              Sin partidos jugados para {filtroEquipo}.
+            </p>
+          )}
+
+          {seccionesVisibles.map(({ id, partidos }) => (
+            <Seccion
+              key={id}
+              id={id}
+              partidos={partidos}
+              statsMap={statsMap}
+              abierta={abiertas.has(id)}
+              onToggle={() => toggleSeccion(id)}
+            />
+          ))}
         </div>
       )}
 
