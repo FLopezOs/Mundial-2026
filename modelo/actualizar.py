@@ -14,7 +14,7 @@ Flujo:
 NOTA: ESPN scoreboard a veces no actualiza status.type.completed aunque el partido
 terminó (bug conocido). es_finalizado() usa múltiples señales para detectar FT.
 """
-import json, os, shutil, sys, urllib.request
+import hashlib, json, os, shutil, sys, urllib.request
 from datetime import datetime, timedelta, timezone, date as date_t
 sys.path.insert(0, os.path.dirname(__file__))
 from comun import cargar_fixture, canon, JSON_A_CANON
@@ -196,12 +196,23 @@ def descargar_openfootball():
         return False
 
 # ── backup ───────────────────────────────────────────────────────────────────
+def _md5(path):
+    h = hashlib.md5()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(8192), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
 def backup():
     bdir = os.path.join(BASE, "output", "backups")
     os.makedirs(bdir, exist_ok=True)
+    bks = sorted(f for f in os.listdir(bdir) if f.startswith("Tracker_") and f.endswith(".xlsx"))
+    if bks and _md5(XLSX) == _md5(os.path.join(bdir, bks[-1])):
+        print("[OK] Backup omitido: sin cambios desde el último.")
+        return
     dst = os.path.join(bdir, f"Tracker_{datetime.now():%Y%m%d_%H%M}.xlsx")
     shutil.copy2(XLSX, dst)
-    bks = sorted(os.listdir(bdir))
+    bks = sorted(f for f in os.listdir(bdir) if f.startswith("Tracker_") and f.endswith(".xlsx"))
     for old in bks[:-10]:
         os.remove(os.path.join(bdir, old))
     print(f"[OK] Backup: {os.path.basename(dst)}")
