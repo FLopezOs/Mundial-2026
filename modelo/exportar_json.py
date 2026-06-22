@@ -11,6 +11,10 @@ from datetime import datetime
 sys.path.insert(0, os.path.dirname(__file__))
 from openpyxl import load_workbook
 from comun import JSON_A_CANON
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except AttributeError:
+    pass
 
 BASE          = os.path.join(os.path.dirname(__file__), "..")
 XLSX          = os.path.join(BASE, "output", "Mundial2026_Tracker.xlsx")

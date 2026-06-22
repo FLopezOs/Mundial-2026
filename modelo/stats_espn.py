@@ -10,6 +10,10 @@ import json, os, sys, urllib.request
 from datetime import date as date_t, datetime, timedelta
 sys.path.insert(0, os.path.dirname(__file__))
 from actualizar import TORNEO_INICIO, espn_canon, es_finalizado
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except AttributeError:
+    pass
 
 BASE    = os.path.join(os.path.dirname(__file__), "..")
 DEST    = os.path.join(BASE, "webapp", "public", "estadisticas.json")

@@ -19,6 +19,10 @@ from datetime import datetime, timedelta, timezone, date as date_t
 sys.path.insert(0, os.path.dirname(__file__))
 from comun import cargar_fixture, canon, JSON_A_CANON
 from openpyxl import load_workbook
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except AttributeError:
+    pass
 
 BASE = os.path.join(os.path.dirname(__file__), "..")
 DATA = os.path.join(BASE, "Data")
