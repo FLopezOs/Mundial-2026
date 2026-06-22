@@ -8,8 +8,7 @@ __pycache__/
 *.pyd
 *.egg-info/
 
-# Excel generado y backups (binarios, no diffs útiles)
-output/Mundial2026_Tracker.xlsx
+# Backups del Tracker (binarios generados automáticamente)
 output/backups/
 
 # Build de la webapp
