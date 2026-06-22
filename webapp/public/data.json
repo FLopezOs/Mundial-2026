@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-22 14:41",
+ "generado": "2026-06-22 19:50",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -1379,13 +1379,11 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "13:00",
-   "oddsImplied": {
-    "pGanaA": 0.666,
-    "pEmpate": 0.2138,
-    "pGanaB": 0.1202,
-    "mlA": "-225",
-    "mlX": "350",
-    "mlB": "+700"
+   "resultado": {
+    "golesA": 2,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO",
@@ -1405,12 +1403,12 @@
    "pais": "Estados Unidos",
    "horaChile": "17:00",
    "oddsImplied": {
-    "pGanaA": 0.8754,
-    "pEmpate": 0.0875,
-    "pGanaB": 0.037,
-    "mlA": "-1000",
-    "mlX": "1000",
-    "mlB": "+2500"
+    "pGanaA": 0.8898,
+    "pEmpate": 0.0794,
+    "pGanaB": 0.0308,
+    "mlA": "-1400",
+    "mlX": "1100",
+    "mlB": "+3000"
    },
    "canales": [
     "DGO"
@@ -2089,12 +2087,12 @@
    "pais": "Estados Unidos",
    "horaChile": "22:00",
    "oddsImplied": {
-    "pGanaA": 0.3016,
-    "pEmpate": 0.3272,
-    "pGanaB": 0.3712,
-    "mlA": "+220",
-    "mlX": "195",
-    "mlB": "+160"
+    "pGanaA": 0.2872,
+    "pEmpate": 0.363,
+    "pGanaB": 0.3498,
+    "mlA": "+235",
+    "mlX": "165",
+    "mlB": "+175"
    },
    "canales": [
     "DGO"
@@ -2112,12 +2110,12 @@
    "pais": "Estados Unidos",
    "horaChile": "22:00",
    "oddsImplied": {
-    "pGanaA": 0.0603,
-    "pEmpate": 0.1287,
-    "pGanaB": 0.8109,
-    "mlA": "+1500",
+    "pGanaA": 0.0737,
+    "pEmpate": 0.1278,
+    "pGanaB": 0.7985,
+    "mlA": "+1200",
     "mlX": "650",
-    "mlB": "-525"
+    "mlB": "-500"
    },
    "canales": [
     "DGO",
