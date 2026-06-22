@@ -340,6 +340,10 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
   text-align: center; padding: 4px 0 2px; letter-spacing: .02em;
 }
 .tp-marcador-prob strong { opacity: 1; font-weight: 700; }
+.tp-sin-mercado {
+  font-size: .6rem; color: var(--gris); font-style: italic;
+  text-align: center; margin: 3px 0 0; opacity: .8;
+}
 
 /* ── Botones de acción ── */
 .acciones-inicio { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 12px; }

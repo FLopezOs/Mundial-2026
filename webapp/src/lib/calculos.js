@@ -1,6 +1,10 @@
 // calculos.js — lógica pura del simulador (sin React).
 // Regla dura: el resultado real SIEMPRE prevalece sobre el pick.
 
+// Peso del modelo Elo+Poisson en el pronóstico consolidado (0–1).
+// Con 0.5 = promedio exacto modelo/mercado. Ajustar tras backtest.
+export const PESO_MODELO = 0.5;
+
 export function resultadoPartido(p, picks) {
   if (p.resultado) {
     return { ga: p.resultado.golesA, gb: p.resultado.golesB, real: true,
@@ -234,7 +238,22 @@ export function recalcularProbs(data, picks) {
       const attB = calEq[eb]?.att ?? 1.0, defB = calEq[eb]?.def ?? 1.0;
       const lambdaA = Math.max(0.3, lH * attA * defB);
       const lambdaB = Math.max(0.3, lA * attB * defA);
-      result[p.id] = { ...probsPoisson(lambdaA, lambdaB), ...mejorMarcador(lambdaA, lambdaB), lambdaA, lambdaB };
+      const modelo = probsPoisson(lambdaA, lambdaB);
+      const odds = p.oddsImplied;
+      let pGanaA, pEmpate, pGanaB, sinMercado;
+      if (odds) {
+        const wO = 1 - PESO_MODELO;
+        const rawA = PESO_MODELO * modelo.pGanaA + wO * odds.pGanaA;
+        const rawX = PESO_MODELO * modelo.pEmpate + wO * odds.pEmpate;
+        const rawB = PESO_MODELO * modelo.pGanaB + wO * odds.pGanaB;
+        const s = rawA + rawX + rawB;
+        pGanaA = rawA / s; pEmpate = rawX / s; pGanaB = rawB / s;
+        sinMercado = false;
+      } else {
+        ({ pGanaA, pEmpate, pGanaB } = modelo);
+        sinMercado = true;
+      }
+      result[p.id] = { pGanaA, pEmpate, pGanaB, sinMercado, ...mejorMarcador(lambdaA, lambdaB), lambdaA, lambdaB };
     }
 
     // Actualizar Elo con resultado conocido (real > pick)

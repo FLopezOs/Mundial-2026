@@ -46,7 +46,7 @@ function Partido({ p, picks, setPicks, probsLive }) {
           <span className={"modelo" + (esLive ? " live" : "")}>
             {esLive ? "⚡" : "📊"} {fmtPct(pr.pGanaA ?? pr.pGanaA, 0)}/{fmtPct(pr.pEmpate, 0)}/{fmtPct(pr.pGanaB ?? pr.pGanaB, 0)}
             {pr?.marcadorProbable && !real ? ` · ${pr.marcadorProbable}` : ""}
-            {esLive && <span className="live-tag">Elo live</span>}
+            {esLive && <span className="live-tag">{pr.sinMercado ? "Elo" : "Elo+M"}</span>}
           </span>
         )}
         {real && <span className="modelo">oficial{p.resultado.definidoPor !== "90" ? ` (${p.resultado.definidoPor})` : ""}</span>}

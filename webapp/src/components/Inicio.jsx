@@ -68,12 +68,9 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
       </div>
       {pr && !jugado && (
         <div className="tp-probs">
-          <FilaProb label="ELO" labelClass="modelo" pA={pr.pGanaA} pX={pr.pEmpate} pB={pr.pGanaB} />
-          {p.oddsImplied && (
-            <FilaProb label="CASAS" labelClass="casas"
-              pA={p.oddsImplied.pGanaA} pX={p.oddsImplied.pEmpate} pB={p.oddsImplied.pGanaB}
-              mlA={p.oddsImplied.mlA} mlX={p.oddsImplied.mlX} mlB={p.oddsImplied.mlB} />
-          )}
+          <FilaProb label={pr.sinMercado ? "ELO" : "ELO+M"} labelClass="modelo"
+            pA={pr.pGanaA} pX={pr.pEmpate} pB={pr.pGanaB} />
+          {pr.sinMercado && <p className="tp-sin-mercado">sin cuotas aún</p>}
         </div>
       )}
       {!jugado && pr?.marcadorProbable && (
