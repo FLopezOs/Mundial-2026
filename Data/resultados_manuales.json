@@ -1,0 +1,6 @@
+{
+ "nota": "Resultados que ESPN no capturó automáticamente. Clave = ID de partido (string). Estos valores se aplican solo si el Excel tiene null para ese partido.",
+ "partidos": {
+  "32": {"golesA": 0, "golesB": 1, "definidoPor": "90", "ganadorPenales": null}
+ }
+}

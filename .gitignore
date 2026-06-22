@@ -1,0 +1,32 @@
+# Dependencias Node
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Excel generado y backups (binarios, no diffs útiles)
+output/Mundial2026_Tracker.xlsx
+output/backups/
+
+# Build de la webapp
+webapp/dist/
+
+# Temporales de Office (archivos de bloqueo)
+~$*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Configuración local de Claude Code (permisos personales de máquina)
+.claude/settings.local.json

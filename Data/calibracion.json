@@ -1,0 +1,249 @@
+{
+ "fecha_calculo": "2026-06-12",
+ "ventana": "2018-01-01 a 2026-06-10",
+ "n_partidos": 8108,
+ "mu": 2.7779,
+ "beta": 0.005078,
+ "equipos": {
+  "Algeria": {
+   "att": 1.114,
+   "def": 0.75,
+   "lambda_base": 1.547
+  },
+  "Argentina": {
+   "att": 0.75,
+   "def": 0.75,
+   "lambda_base": 1.042
+  },
+  "Australia": {
+   "att": 0.83,
+   "def": 0.75,
+   "lambda_base": 1.153
+  },
+  "Austria": {
+   "att": 0.99,
+   "def": 0.905,
+   "lambda_base": 1.375
+  },
+  "Belgium": {
+   "att": 1.009,
+   "def": 1.108,
+   "lambda_base": 1.402
+  },
+  "Bosnia and Herzegovina": {
+   "att": 1.054,
+   "def": 0.784,
+   "lambda_base": 1.464
+  },
+  "Brazil": {
+   "att": 0.987,
+   "def": 1.002,
+   "lambda_base": 1.371
+  },
+  "Canada": {
+   "att": 0.92,
+   "def": 0.75,
+   "lambda_base": 1.278
+  },
+  "Cape Verde": {
+   "att": 0.86,
+   "def": 0.861,
+   "lambda_base": 1.195
+  },
+  "Colombia": {
+   "att": 1.023,
+   "def": 0.91,
+   "lambda_base": 1.42
+  },
+  "Croatia": {
+   "att": 0.917,
+   "def": 1.082,
+   "lambda_base": 1.274
+  },
+  "Curaçao": {
+   "att": 1.244,
+   "def": 0.891,
+   "lambda_base": 1.728
+  },
+  "Czech Republic": {
+   "att": 1.033,
+   "def": 1.121,
+   "lambda_base": 1.435
+  },
+  "DR Congo": {
+   "att": 0.797,
+   "def": 0.75,
+   "lambda_base": 1.108
+  },
+  "Ecuador": {
+   "att": 0.75,
+   "def": 0.75,
+   "lambda_base": 1.042
+  },
+  "Egypt": {
+   "att": 0.797,
+   "def": 0.778,
+   "lambda_base": 1.107
+  },
+  "England": {
+   "att": 0.953,
+   "def": 0.815,
+   "lambda_base": 1.324
+  },
+  "France": {
+   "att": 1.022,
+   "def": 1.059,
+   "lambda_base": 1.42
+  },
+  "Germany": {
+   "att": 1.173,
+   "def": 1.177,
+   "lambda_base": 1.63
+  },
+  "Ghana": {
+   "att": 0.974,
+   "def": 0.875,
+   "lambda_base": 1.353
+  },
+  "Haiti": {
+   "att": 1.3,
+   "def": 0.999,
+   "lambda_base": 1.806
+  },
+  "Iran": {
+   "att": 0.919,
+   "def": 0.956,
+   "lambda_base": 1.276
+  },
+  "Iraq": {
+   "att": 0.751,
+   "def": 0.832,
+   "lambda_base": 1.043
+  },
+  "Ivory Coast": {
+   "att": 0.877,
+   "def": 0.75,
+   "lambda_base": 1.218
+  },
+  "Japan": {
+   "att": 1.093,
+   "def": 0.774,
+   "lambda_base": 1.518
+  },
+  "Jordan": {
+   "att": 1.057,
+   "def": 0.967,
+   "lambda_base": 1.469
+  },
+  "Mexico": {
+   "att": 0.861,
+   "def": 0.75,
+   "lambda_base": 1.196
+  },
+  "Morocco": {
+   "att": 0.886,
+   "def": 0.75,
+   "lambda_base": 1.231
+  },
+  "Netherlands": {
+   "att": 0.983,
+   "def": 1.148,
+   "lambda_base": 1.366
+  },
+  "New Zealand": {
+   "att": 1.1,
+   "def": 0.879,
+   "lambda_base": 1.528
+  },
+  "Norway": {
+   "att": 1.3,
+   "def": 0.821,
+   "lambda_base": 1.806
+  },
+  "Panama": {
+   "att": 0.942,
+   "def": 1.112,
+   "lambda_base": 1.309
+  },
+  "Paraguay": {
+   "att": 0.827,
+   "def": 0.75,
+   "lambda_base": 1.149
+  },
+  "Portugal": {
+   "att": 1.007,
+   "def": 1.076,
+   "lambda_base": 1.399
+  },
+  "Qatar": {
+   "att": 0.825,
+   "def": 1.207,
+   "lambda_base": 1.146
+  },
+  "Saudi Arabia": {
+   "att": 0.761,
+   "def": 0.826,
+   "lambda_base": 1.058
+  },
+  "Scotland": {
+   "att": 1.115,
+   "def": 0.983,
+   "lambda_base": 1.548
+  },
+  "Senegal": {
+   "att": 0.75,
+   "def": 0.853,
+   "lambda_base": 1.042
+  },
+  "South Africa": {
+   "att": 0.854,
+   "def": 0.754,
+   "lambda_base": 1.186
+  },
+  "South Korea": {
+   "att": 0.872,
+   "def": 1.013,
+   "lambda_base": 1.211
+  },
+  "Spain": {
+   "att": 1.3,
+   "def": 1.174,
+   "lambda_base": 1.806
+  },
+  "Sweden": {
+   "att": 1.18,
+   "def": 1.191,
+   "lambda_base": 1.639
+  },
+  "Switzerland": {
+   "att": 1.074,
+   "def": 0.954,
+   "lambda_base": 1.492
+  },
+  "Tunisia": {
+   "att": 0.771,
+   "def": 0.792,
+   "lambda_base": 1.071
+  },
+  "Turkey": {
+   "att": 1.254,
+   "def": 1.06,
+   "lambda_base": 1.742
+  },
+  "United States": {
+   "att": 1.007,
+   "def": 1.094,
+   "lambda_base": 1.399
+  },
+  "Uruguay": {
+   "att": 0.75,
+   "def": 0.75,
+   "lambda_base": 1.042
+  },
+  "Uzbekistan": {
+   "att": 0.879,
+   "def": 0.75,
+   "lambda_base": 1.22
+  }
+ }
+}
