@@ -76,10 +76,10 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
           )}
         </div>
       )}
-      {!jugado && p.modelo?.marcadorProbable && (
+      {!jugado && pr?.marcadorProbable && (
         <div className="tp-marcador-prob">
-          Más probable: <strong>{p.modelo.marcadorProbable}</strong>
-          {p.modelo.pMarcador != null && <> · {fmtPct(p.modelo.pMarcador, 0)}</>}
+          Más probable: <strong>{pr.marcadorProbable}</strong>
+          {pr.pMarcador != null && <> · {fmtPct(pr.pMarcador, 0)}</>}
         </div>
       )}
       <CanalesBadges canales={p.canales} />

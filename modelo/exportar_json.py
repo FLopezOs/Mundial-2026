@@ -6,7 +6,7 @@ Lee valores calculados (data_only): el xlsx debe haberse recalculado (Excel o re
 Incluye: horaChile por partido, calibracion (μ, β, Att/Def) para recálculo dinámico.
 Merge con Data/resultados_manuales.json para resultados que ESPN no capturó.
 """
-import json, math, os, re, sys
+import json, os, re, sys
 from datetime import datetime
 sys.path.insert(0, os.path.dirname(__file__))
 from openpyxl import load_workbook
@@ -27,25 +27,6 @@ CANALES_JSON  = os.path.join(BASE, "Data", "canales.json")
 
 def num(v, nd=4):
     return round(float(v), nd) if isinstance(v, (int, float)) else None
-
-def _poisson_pmf(k, lam):
-    return math.exp(-lam) * (lam ** k) / math.factorial(k)
-
-def _mejor_marcador(lA, lB, max_g=7):
-    """Devuelve ((a, b), prob) con el marcador de mayor probabilidad Poisson."""
-    best_p, best_a, best_b = -1.0, 0, 0
-    for a in range(max_g + 1):
-        for b in range(max_g + 1):
-            p = _poisson_pmf(a, lA) * _poisson_pmf(b, lB)
-            if p > best_p:
-                best_p, best_a, best_b = p, a, b
-    return (best_a, best_b), best_p
-
-def _elo_mult(d):
-    if d <= 1: return 1.0
-    if d == 2: return 1.5
-    if d == 3: return 1.75
-    return 1.75 + (d - 3) / 8
 
 def to_chile(hora_local, offset_utc):
     """Convierte hora local (HH:MM) con offset UTC a hora Chile (UTC-3)."""
@@ -149,17 +130,6 @@ def main():
             "eloActual":     num(wsE.cell(r, 4).value, 1),
         })
 
-    # Elo chain para calcular marcadores más probables
-    elo = {}
-    for r in range(2, 50):
-        nombre = wsE.cell(r, 1).value
-        ei = wsE.cell(r, 3).value
-        if nombre and isinstance(ei, (int, float)):
-            elo[nombre] = float(ei)
-    cal_eq   = calibracion.get("equipos", {}) if calibracion else {}
-    mu_val   = calibracion["mu"]   if calibracion else None
-    beta_val = calibracion["beta"] if calibracion else None
-
     partidos = []
     manuales_aplicados = 0
     for r in range(2, 106):
@@ -204,40 +174,16 @@ def main():
             }
             manuales_aplicados += 1
 
-        # Actualizar cadena Elo con este resultado
-        if "resultado" in p and ea in elo and eb in elo:
-            r_obj = p["resultado"]
-            gA, gB = r_obj["golesA"], r_obj["golesB"]
-            d = abs(gA - gB)
-            eA, eB = elo[ea], elo[eb]
-            expA = 1.0 / (1.0 + 10 ** ((eB - eA) / 400))
-            sA   = 1.0 if gA > gB else (0.5 if gA == gB else 0.0)
-            delta = 60 * _elo_mult(d) * (sA - expA)
-            elo[ea] = eA + delta
-            elo[eb] = eB - delta
-
         rp = pid + 2
         pa = wsP.cell(rp, 6).value
         if isinstance(pa, (int, float)):
-            # Valores desde el Excel (nunca ocurre con data_only, pero se mantiene como fallback)
+            # Probabilidades desde el Excel (requiere recalc.py o Excel abierto)
             p["modelo"] = {
-                "pGanaA":          num(pa),
-                "pEmpate":         num(wsP.cell(rp, 7).value),
-                "pGanaB":          num(wsP.cell(rp, 8).value),
-                "marcadorProbable":wsP.cell(rp, 9).value,
-                "pMarcador":       num(wsP.cell(rp, 10).value),
+                "pGanaA": num(pa),
+                "pEmpate": num(wsP.cell(rp, 7).value),
+                "pGanaB":  num(wsP.cell(rp, 8).value),
             }
-        elif ("resultado" not in p and mu_val is not None
-              and ea in elo and eb in elo
-              and ea in cal_eq and eb in cal_eq):
-            dr = elo[ea] - elo[eb]
-            lambdaA = max(0.3, ((mu_val + beta_val * dr) / 2) * cal_eq[ea]["att"] * cal_eq[eb]["def"])
-            lambdaB = max(0.3, ((mu_val - beta_val * dr) / 2) * cal_eq[eb]["att"] * cal_eq[ea]["def"])
-            (ma, mb), pM = _mejor_marcador(lambdaA, lambdaB)
-            p["modelo"] = {
-                "marcadorProbable": f"{ma}-{mb}",
-                "pMarcador":        round(pM, 4),
-            }
+
         # Cuotas de casas de apuesta (solo partidos sin resultado)
         if "resultado" not in p and str(pid) in odds_map:
             p["oddsImplied"] = odds_map[str(pid)]
@@ -259,15 +205,13 @@ def main():
     os.makedirs(os.path.dirname(DEST), exist_ok=True)
     with open(DEST, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
-    jugados    = sum(1 for p in partidos if "resultado" in p)
-    con_hora   = sum(1 for p in partidos if "horaChile" in p)
-    con_odds   = sum(1 for p in partidos if "oddsImplied" in p)
-    con_modelo = sum(1 for p in partidos if "modelo" in p)
+    jugados  = sum(1 for p in partidos if "resultado" in p)
+    con_hora = sum(1 for p in partidos if "horaChile" in p)
+    con_odds = sum(1 for p in partidos if "oddsImplied" in p)
     if manuales_aplicados:
         print(f"[OK] Resultados manuales aplicados: {manuales_aplicados} partido(s).")
     print(f"[OK] {len(partidos)} partidos ({jugados} jugados), {con_hora} con hora Chile, "
-          f"{con_odds} con cuotas, {con_modelo} con marcador probable, "
-          f"calibración={'sí' if calibracion else 'NO'}.")
+          f"{con_odds} con cuotas, calibración={'sí' if calibracion else 'NO'}.")
 
 if __name__ == "__main__":
     main()

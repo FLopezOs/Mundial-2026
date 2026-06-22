@@ -193,6 +193,18 @@ function probsPoisson(lambdaA, lambdaB, maxG = 9) {
   return { pGanaA: pA, pEmpate: pX, pGanaB: pB };
 }
 
+function mejorMarcador(lambdaA, lambdaB, maxG = 7) {
+  let bestP = -1, bestA = 0, bestB = 0;
+  for (let a = 0; a <= maxG; a++) {
+    const pa = poissonPMF(lambdaA, a);
+    for (let b = 0; b <= maxG; b++) {
+      const p = pa * poissonPMF(lambdaB, b);
+      if (p > bestP) { bestP = p; bestA = a; bestB = b; }
+    }
+  }
+  return { marcadorProbable: `${bestA}-${bestB}`, pMarcador: +bestP.toFixed(4) };
+}
+
 /**
  * Recalcula probabilidades de todos los partidos usando Elo en cadena + Poisson.
  * Procesa resultados reales (data.partidos[i].resultado) y picks del usuario en orden numFifa.
@@ -222,7 +234,7 @@ export function recalcularProbs(data, picks) {
       const attB = calEq[eb]?.att ?? 1.0, defB = calEq[eb]?.def ?? 1.0;
       const lambdaA = Math.max(0.3, lH * attA * defB);
       const lambdaB = Math.max(0.3, lA * attB * defA);
-      result[p.id] = { ...probsPoisson(lambdaA, lambdaB), lambdaA, lambdaB };
+      result[p.id] = { ...probsPoisson(lambdaA, lambdaB), ...mejorMarcador(lambdaA, lambdaB), lambdaA, lambdaB };
     }
 
     // Actualizar Elo con resultado conocido (real > pick)

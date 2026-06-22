@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-22 14:30",
+ "generado": "2026-06-22 14:41",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -1379,10 +1379,6 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "13:00",
-   "modelo": {
-    "marcadorProbable": "1-0",
-    "pMarcador": 0.207
-   },
    "oddsImplied": {
     "pGanaA": 0.666,
     "pEmpate": 0.2138,
@@ -1408,10 +1404,6 @@
    "ciudad": "Philadelphia",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "modelo": {
-    "marcadorProbable": "2-0",
-    "pMarcador": 0.2
-   },
    "oddsImplied": {
     "pGanaA": 0.8754,
     "pEmpate": 0.0875,
@@ -1435,10 +1427,6 @@
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "20:00",
-   "modelo": {
-    "marcadorProbable": "1-0",
-    "pMarcador": 0.1459
-   },
    "oddsImplied": {
     "pGanaA": 0.4175,
     "pEmpate": 0.2824,
@@ -1463,10 +1451,6 @@
    "ciudad": "San Francisco Bay Area (Santa Clara)",
    "pais": "Estados Unidos",
    "horaChile": "23:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.1249
-   },
    "oddsImplied": {
     "pGanaA": 0.1477,
     "pEmpate": 0.2233,
@@ -1490,10 +1474,6 @@
    "ciudad": "Houston",
    "pais": "Estados Unidos",
    "horaChile": "13:00",
-   "modelo": {
-    "marcadorProbable": "1-0",
-    "pMarcador": 0.1511
-   },
    "oddsImplied": {
     "pGanaA": 0.8149,
     "pEmpate": 0.1284,
@@ -1518,10 +1498,6 @@
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
-   "modelo": {
-    "marcadorProbable": "2-0",
-    "pMarcador": 0.2
-   },
    "oddsImplied": {
     "pGanaA": 0.7841,
     "pEmpate": 0.1474,
@@ -1546,10 +1522,6 @@
    "ciudad": "Toronto",
    "pais": "Canadá",
    "horaChile": "19:00",
-   "modelo": {
-    "marcadorProbable": "1-1",
-    "pMarcador": 0.111
-   },
    "oddsImplied": {
     "pGanaA": 0.1469,
     "pEmpate": 0.222,
@@ -1574,10 +1546,6 @@
    "ciudad": "Guadalajara (Zapopan)",
    "pais": "México",
    "horaChile": "22:00",
-   "modelo": {
-    "marcadorProbable": "1-0",
-    "pMarcador": 0.2008
-   },
    "oddsImplied": {
     "pGanaA": 0.6178,
     "pEmpate": 0.2344,
@@ -1602,10 +1570,6 @@
    "ciudad": "Vancouver",
    "pais": "Canadá",
    "horaChile": "15:00",
-   "modelo": {
-    "marcadorProbable": "1-1",
-    "pMarcador": 0.1316
-   },
    "oddsImplied": {
     "pGanaA": 0.3908,
     "pEmpate": 0.3191,
@@ -1652,10 +1616,6 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "18:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.1162
-   },
    "oddsImplied": {
     "pGanaA": 0.1279,
     "pEmpate": 0.1828,
@@ -1681,10 +1641,6 @@
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "18:00",
-   "modelo": {
-    "marcadorProbable": "1-0",
-    "pMarcador": 0.163
-   },
    "oddsImplied": {
     "pGanaA": 0.8149,
     "pEmpate": 0.1284,
@@ -1708,10 +1664,6 @@
    "ciudad": "Mexico City",
    "pais": "México",
    "horaChile": "21:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.1542
-   },
    "oddsImplied": {
     "pGanaA": 0.2498,
     "pEmpate": 0.2466,
@@ -1736,10 +1688,6 @@
    "ciudad": "Monterrey (Guadalupe)",
    "pais": "México",
    "horaChile": "21:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.1738
-   },
    "oddsImplied": {
     "pGanaA": 0.1825,
     "pEmpate": 0.2426,
@@ -1763,10 +1711,6 @@
    "ciudad": "Philadelphia",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.1555
-   },
    "oddsImplied": {
     "pGanaA": 0.0534,
     "pEmpate": 0.1131,
@@ -1790,10 +1734,6 @@
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
-   "modelo": {
-    "marcadorProbable": "1-1",
-    "pMarcador": 0.1269
-   },
    "oddsImplied": {
     "pGanaA": 0.2644,
     "pEmpate": 0.2413,
@@ -1819,10 +1759,6 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "19:00",
-   "modelo": {
-    "marcadorProbable": "2-0",
-    "pMarcador": 0.1196
-   },
    "oddsImplied": {
     "pGanaA": 0.4951,
     "pEmpate": 0.2802,
@@ -1846,10 +1782,6 @@
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "19:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.1984
-   },
    "oddsImplied": {
     "pGanaA": 0.0479,
     "pEmpate": 0.1065,
@@ -1897,10 +1829,6 @@
    "ciudad": "San Francisco Bay Area (Santa Clara)",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
-   "modelo": {
-    "marcadorProbable": "0-0",
-    "pMarcador": 0.178
-   },
    "oddsImplied": {
     "pGanaA": 0.3308,
     "pEmpate": 0.4264,
@@ -1925,10 +1853,6 @@
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
-   "modelo": {
-    "marcadorProbable": "1-1",
-    "pMarcador": 0.1169
-   },
    "oddsImplied": {
     "pGanaA": 0.2226,
     "pEmpate": 0.2455,
@@ -1953,10 +1877,6 @@
    "ciudad": "Toronto",
    "pais": "Canadá",
    "horaChile": "15:00",
-   "modelo": {
-    "marcadorProbable": "1-0",
-    "pMarcador": 0.1998
-   },
    "oddsImplied": {
     "pGanaA": 0.7391,
     "pEmpate": 0.1739,
@@ -1980,10 +1900,6 @@
    "ciudad": "Houston",
    "pais": "Estados Unidos",
    "horaChile": "20:00",
-   "modelo": {
-    "marcadorProbable": "0-0",
-    "pMarcador": 0.1501
-   },
    "oddsImplied": {
     "pGanaA": 0.4023,
     "pEmpate": 0.2759,
@@ -2007,16 +1923,12 @@
    "ciudad": "Guadalajara (Zapopan)",
    "pais": "México",
    "horaChile": "20:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.142
-   },
    "oddsImplied": {
-    "pGanaA": 0.1278,
-    "pEmpate": 0.2229,
-    "pGanaB": 0.6493,
+    "pGanaA": 0.1284,
+    "pEmpate": 0.2189,
+    "pGanaB": 0.6526,
     "mlA": "+650",
-    "mlX": "330",
+    "mlX": "340",
     "mlB": "-210"
    },
    "canales": [
@@ -2036,10 +1948,6 @@
    "ciudad": "Seattle",
    "pais": "Estados Unidos",
    "horaChile": "23:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.1359
-   },
    "oddsImplied": {
     "pGanaA": 0.3917,
     "pEmpate": 0.349,
@@ -2063,10 +1971,6 @@
    "ciudad": "Vancouver",
    "pais": "Canadá",
    "horaChile": "23:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.117
-   },
    "oddsImplied": {
     "pGanaA": 0.0687,
     "pEmpate": 0.1373,
@@ -2090,10 +1994,6 @@
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "modelo": {
-    "marcadorProbable": "0-2",
-    "pMarcador": 0.1685
-   },
    "oddsImplied": {
     "pGanaA": 0.091,
     "pEmpate": 0.1274,
@@ -2117,10 +2017,6 @@
    "ciudad": "Philadelphia",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "modelo": {
-    "marcadorProbable": "1-0",
-    "pMarcador": 0.1481
-   },
    "oddsImplied": {
     "pGanaA": 0.5945,
     "pEmpate": 0.2446,
@@ -2144,10 +2040,6 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "19:30",
-   "modelo": {
-    "marcadorProbable": "1-1",
-    "pMarcador": 0.1126
-   },
    "oddsImplied": {
     "pGanaA": 0.2626,
     "pEmpate": 0.27,
@@ -2173,10 +2065,6 @@
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "19:30",
-   "modelo": {
-    "marcadorProbable": "0-0",
-    "pMarcador": 0.1739
-   },
    "oddsImplied": {
     "pGanaA": 0.4557,
     "pEmpate": 0.2586,
@@ -2200,10 +2088,6 @@
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
-   "modelo": {
-    "marcadorProbable": "1-1",
-    "pMarcador": 0.1304
-   },
    "oddsImplied": {
     "pGanaA": 0.3016,
     "pEmpate": 0.3272,
@@ -2227,10 +2111,6 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
-   "modelo": {
-    "marcadorProbable": "0-1",
-    "pMarcador": 0.2152
-   },
    "oddsImplied": {
     "pGanaA": 0.0603,
     "pEmpate": 0.1287,

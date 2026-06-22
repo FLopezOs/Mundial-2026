@@ -45,7 +45,7 @@ function Partido({ p, picks, setPicks, probsLive }) {
         {pr && (
           <span className={"modelo" + (esLive ? " live" : "")}>
             {esLive ? "⚡" : "📊"} {fmtPct(pr.pGanaA ?? pr.pGanaA, 0)}/{fmtPct(pr.pEmpate, 0)}/{fmtPct(pr.pGanaB ?? pr.pGanaB, 0)}
-            {p.modelo?.marcadorProbable && !real ? ` · ${p.modelo.marcadorProbable}` : ""}
+            {pr?.marcadorProbable && !real ? ` · ${pr.marcadorProbable}` : ""}
             {esLive && <span className="live-tag">Elo live</span>}
           </span>
         )}
