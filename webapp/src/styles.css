@@ -720,3 +720,22 @@ button.chico { padding: 2px 8px; }
 .ev2-card-clickable { cursor: pointer; transition: box-shadow .15s, transform .1s; }
 .ev2-card-clickable:hover { box-shadow: 0 4px 18px rgba(13,44,84,.18); transform: translateY(-1px); }
 .ev2-ver-stats { color: var(--azul) !important; font-weight: 600 !important; font-style: normal !important; }
+
+/* ── Por País ── */
+.pp-vista { max-width: 600px; margin: 0 auto; }
+.pp-summary {
+  display: grid; grid-template-columns: repeat(7, 1fr);
+  gap: 4px; padding: 14px 16px; border-bottom: 1px solid var(--borde);
+}
+.pp-summary-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.pp-summary-val {
+  font-family: var(--font-impact); font-size: 1.9rem; font-weight: 400;
+  color: var(--azul); line-height: 1;
+}
+.pp-summary-lbl { font-size: .62rem; color: var(--gris); text-transform: uppercase; letter-spacing: .5px; }
+.pp-pos { color: #16a34a; }
+.pp-neg { color: var(--rojo); }
+@media (max-width: 420px) {
+  .pp-summary { grid-template-columns: repeat(4, 1fr); }
+  .pp-summary-val { font-size: 1.5rem; }
+}

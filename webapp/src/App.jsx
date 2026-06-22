@@ -7,8 +7,9 @@ import Bracket from "./components/Bracket.jsx";
 import Resumen from "./components/Resumen.jsx";
 import Escenarios from "./components/Escenarios.jsx";
 import EnVivo from "./components/EnVivo.jsx";
+import PorPais from "./components/PorPais.jsx";
 
-const VISTAS = ["Inicio", "Grupos", "Bracket", "En Vivo", "Resumen", "Escenarios"];
+const VISTAS = ["Inicio", "Grupos", "Bracket", "En Vivo", "Por País", "Resumen", "Escenarios"];
 
 /* ─── Mapeo ESPN (inglés) → nombre canónico ES ─── */
 const ESPN_CANON = {
@@ -191,7 +192,8 @@ export default function App() {
         {vista === "Inicio"     && <Inicio     data={data} picks={picks} calc={calc} setVista={setVista} probsLive={probsLive} liveTeams={liveTeams} />}
         {vista === "Grupos"     && <Grupos     data={data} picks={picks} setPicks={setPicks} calc={calc} probsLive={probsLive} />}
         {vista === "Bracket"    && <Bracket    picks={picks} setPicks={setPicks} calc={calc} />}
-        {vista === "En Vivo"    && <EnVivo data={data} />}
+        {vista === "En Vivo"    && <EnVivo    data={data} />}
+        {vista === "Por País"   && <PorPais   data={data} />}
         {vista === "Resumen"    && <Resumen    data={data} picks={picks} calc={calc} escenario={estado.activo} />}
         {vista === "Escenarios" && <Escenarios estado={estado} guardar={guardar} reiniciarTodo={reiniciarTodo} />}
       </main>
