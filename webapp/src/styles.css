@@ -335,6 +335,11 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
 .tpl-x { color: var(--gris); text-align: center; flex: 1; }
 .tpl-b { color: var(--wc-azul); text-align: right; }
 .casas-tag { color: #7c3aed; }
+.tp-marcador-prob {
+  font-size: .72rem; color: var(--azul-oscuro); opacity: .72;
+  text-align: center; padding: 4px 0 2px; letter-spacing: .02em;
+}
+.tp-marcador-prob strong { opacity: 1; font-weight: 700; }
 
 /* ── Botones de acción ── */
 .acciones-inicio { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 12px; }
