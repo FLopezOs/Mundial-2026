@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useAlmacen } from "./lib/useLocalStorage.js";
-import { calcularGrupos, calcularTerceros, resolverBracket, calcularAciertos, recalcularProbs } from "./lib/calculos.js";
+import { calcularGrupos, calcularTerceros, resolverBracket, calcularAciertos, calcularPuntaje, recalcularProbs } from "./lib/calculos.js";
 import Inicio from "./components/Inicio.jsx";
 import Grupos from "./components/Grupos.jsx";
 import Bracket from "./components/Bracket.jsx";
@@ -153,7 +153,8 @@ export default function App() {
     const terceros = calcularTerceros(grupos);
     const bracket  = resolverBracket(data, picks, grupos, terceros);
     const aciertos = calcularAciertos(data, picks);
-    return { grupos, terceros, bracket, aciertos };
+    const puntaje  = calcularPuntaje(data, picks);
+    return { grupos, terceros, bracket, aciertos, puntaje };
   }, [data, picks]);
 
   const probsLive = useMemo(() => {
@@ -178,6 +179,7 @@ export default function App() {
         <div className="aciertos" title="Aciertos sobre partidos ya jugados con pick">
           <span>✓ 1X2: <strong>{calc.aciertos.ok1x2}/{calc.aciertos.conPick}</strong></span>
           <span>🎯 Exactos: <strong>{calc.aciertos.exactos}</strong></span>
+          <span className="pts-total">🏅 <strong>{calc.puntaje.total}</strong> pts</span>
         </div>
         <nav className="pestanas">
           {VISTAS.map(v => (

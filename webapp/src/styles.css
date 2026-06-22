@@ -97,6 +97,12 @@ body { margin: 0; font-family: var(--font-body); background: var(--fondo); color
 .badge.mal    { background: #fdecea;        color: var(--rojo);  }
 .badge.pen    { background: var(--ambar-f); color: var(--ambar); }
 .badge.pick   { background: var(--azul-claro); color: var(--azul); }
+.badge.pts-badge { font-variant-numeric: tabular-nums; margin-left: 3px; }
+.badge.pts-8  { background: #d1fae5; color: #065f46; }
+.badge.pts-5  { background: #dbeafe; color: #1e40af; }
+.badge.pts-3  { background: #ede9fe; color: #5b21b6; }
+.badge.pts-0  { background: #f3f4f6; color: #6b7280; }
+.pts-total    { font-size: .8rem; color: var(--azul-oscuro); }
 
 .tabla { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: .85rem; }
 .tabla th, .tabla td { padding: 4px 6px; text-align: center; border-bottom: 1px solid var(--borde); }

@@ -118,6 +118,33 @@ export function resolverBracket(data, picks, grupos, terceros) {
   return { llaves, campeon: final?.ganador ?? null, subcampeon: final?.perdedor ?? null };
 }
 
+// ---------- puntaje de pronósticos (marcador de 90'/ET, ignora penales) ----------
+export function puntajePartido(pick, resultado) {
+  const { ga: pA, gb: pB } = pick;
+  const rA = resultado.golesA, rB = resultado.golesB;
+  if (pA === rA && pB === rB) return { pts: 8, razon: "exacto" };
+  const sP = pA > pB ? "A" : pA < pB ? "B" : "X";
+  const sR = rA > rB ? "A" : rA < rB ? "B" : "X";
+  if (sP === sR) {
+    return (pA - pB) === (rA - rB) ? { pts: 5, razon: "dif" } : { pts: 3, razon: "1x2" };
+  }
+  return { pts: 0, razon: "fallo" };
+}
+
+export function calcularPuntaje(data, picks) {
+  let total = 0;
+  const porPartido = {};
+  for (const p of data.partidos) {
+    if (!p.resultado) continue;
+    const s = picks?.scores?.[p.id];
+    if (!s || !Number.isInteger(s.ga) || !Number.isInteger(s.gb)) continue;
+    const r = puntajePartido(s, p.resultado);
+    porPartido[p.id] = r;
+    total += r.pts;
+  }
+  return { total, porPartido };
+}
+
 // ---------- marcador de aciertos ----------
 export function calcularAciertos(data, picks) {
   let conPick = 0, ok1x2 = 0, exactos = 0;

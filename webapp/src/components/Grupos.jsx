@@ -1,4 +1,4 @@
-import { fmtPct } from "../lib/calculos.js";
+import { fmtPct, puntajePartido } from "../lib/calculos.js";
 import Bandera from "./Bandera.jsx";
 
 function Partido({ p, picks, setPicks, probsLive }) {
@@ -9,13 +9,15 @@ function Partido({ p, picks, setPicks, probsLive }) {
     const scores = { ...picks.scores, [p.id]: { ...s, [campo]: Number.isInteger(n) ? n : null } };
     setPicks({ ...picks, scores });
   };
-  let badge = null;
+  let badge = null, ptsBadge = null;
   if (real && Number.isInteger(s.ga) && Number.isInteger(s.gb)) {
     const ok1x2 = Math.sign(s.ga - s.gb) === Math.sign(p.resultado.golesA - p.resultado.golesB);
     const exacto = s.ga === p.resultado.golesA && s.gb === p.resultado.golesB;
     badge = exacto ? <span className="badge exacto">🎯 exacto</span>
       : ok1x2 ? <span className="badge ok">✓ 1X2</span>
       : <span className="badge mal">✗ fallado</span>;
+    const { pts } = puntajePartido(s, p.resultado);
+    ptsBadge = <span className={`badge pts-badge pts-${pts}`}>+{pts}</span>;
   }
   // Probabilidades: usa Elo en cadena (live) si disponible, si no el modelo estático del Tracker
   const pr = probsLive?.[p.id] ?? p.modelo;
@@ -56,7 +58,7 @@ function Partido({ p, picks, setPicks, probsLive }) {
             <span className="live-tag" style={{background:"#7c3aed"}}>DK</span>
           </span>
         )}
-        {badge}
+        {badge}{ptsBadge}
         {real && Number.isInteger(s.ga) && <span className="mi-pick">mi pick: {s.ga}-{s.gb}</span>}
       </div>
     </div>
