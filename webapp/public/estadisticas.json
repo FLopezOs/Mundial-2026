@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-22 09:47",
+ "generado": "2026-06-22 10:00",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -265,44 +265,6 @@
    "offsides": {
     "A": "3",
     "B": "1"
-   }
-  },
-  "Australia|Türkiye": {
-   "possessionPct": {
-    "A": "28.4",
-    "B": "71.6"
-   },
-   "totalShots": {
-    "A": "9",
-    "B": "30"
-   },
-   "shotsOnTarget": {
-    "A": "4",
-    "B": "8"
-   },
-   "saves": {
-    "A": "8",
-    "B": "2"
-   },
-   "cornerKicks": {
-    "A": "5",
-    "B": "8"
-   },
-   "foulsCommitted": {
-    "A": "12",
-    "B": "4"
-   },
-   "yellowCards": {
-    "A": "0",
-    "B": "1"
-   },
-   "redCards": {
-    "A": "0",
-    "B": "0"
-   },
-   "offsides": {
-    "A": "1",
-    "B": "3"
    }
   },
   "Alemania|Curaçao": {
@@ -761,44 +723,6 @@
     "B": "1"
    }
   },
-  "Portugal|Congo DR": {
-   "possessionPct": {
-    "A": "75.4",
-    "B": "24.6"
-   },
-   "totalShots": {
-    "A": "7",
-    "B": "8"
-   },
-   "shotsOnTarget": {
-    "A": "1",
-    "B": "2"
-   },
-   "saves": {
-    "A": "1",
-    "B": "0"
-   },
-   "cornerKicks": {
-    "A": "5",
-    "B": "4"
-   },
-   "foulsCommitted": {
-    "A": "9",
-    "B": "10"
-   },
-   "yellowCards": {
-    "A": "3",
-    "B": "1"
-   },
-   "redCards": {
-    "A": "0",
-    "B": "0"
-   },
-   "offsides": {
-    "A": "3",
-    "B": "2"
-   }
-  },
   "Inglaterra|Croacia": {
    "possessionPct": {
     "A": "51.7",
@@ -1179,44 +1103,6 @@
     "B": "4"
    }
   },
-  "Türkiye|Paraguay": {
-   "possessionPct": {
-    "A": "78.5",
-    "B": "21.5"
-   },
-   "totalShots": {
-    "A": "32",
-    "B": "7"
-   },
-   "shotsOnTarget": {
-    "A": "5",
-    "B": "2"
-   },
-   "saves": {
-    "A": "1",
-    "B": "5"
-   },
-   "cornerKicks": {
-    "A": "12",
-    "B": "0"
-   },
-   "foulsCommitted": {
-    "A": "14",
-    "B": "15"
-   },
-   "yellowCards": {
-    "A": "1",
-    "B": "1"
-   },
-   "redCards": {
-    "A": "0",
-    "B": "1"
-   },
-   "offsides": {
-    "A": "2",
-    "B": "3"
-   }
-  },
   "Países Bajos|Suecia": {
    "possessionPct": {
     "A": "50.9",
@@ -1519,6 +1405,120 @@
    "offsides": {
     "A": "3",
     "B": "0"
+   }
+  },
+  "Australia|Turquía": {
+   "possessionPct": {
+    "A": "28.4",
+    "B": "71.6"
+   },
+   "totalShots": {
+    "A": "9",
+    "B": "30"
+   },
+   "shotsOnTarget": {
+    "A": "4",
+    "B": "8"
+   },
+   "saves": {
+    "A": "8",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "5",
+    "B": "8"
+   },
+   "foulsCommitted": {
+    "A": "12",
+    "B": "4"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "3"
+   }
+  },
+  "Portugal|RD Congo": {
+   "possessionPct": {
+    "A": "75.4",
+    "B": "24.6"
+   },
+   "totalShots": {
+    "A": "7",
+    "B": "8"
+   },
+   "shotsOnTarget": {
+    "A": "1",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "0"
+   },
+   "cornerKicks": {
+    "A": "5",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "9",
+    "B": "10"
+   },
+   "yellowCards": {
+    "A": "3",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "2"
+   }
+  },
+  "Turquía|Paraguay": {
+   "possessionPct": {
+    "A": "78.5",
+    "B": "21.5"
+   },
+   "totalShots": {
+    "A": "32",
+    "B": "7"
+   },
+   "shotsOnTarget": {
+    "A": "5",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "5"
+   },
+   "cornerKicks": {
+    "A": "12",
+    "B": "0"
+   },
+   "foulsCommitted": {
+    "A": "14",
+    "B": "15"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "3"
    }
   }
  }
