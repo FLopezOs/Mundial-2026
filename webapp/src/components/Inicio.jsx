@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useMemo } from "react";
 import Bandera from "./Bandera.jsx";
 import { fmtPct } from "../lib/calculos.js";
+import CanalesBadges from "./CanalesBadges.jsx";
 
 function fechaChile() {
   // Usar IANA timezone para no depender de la zona horaria del browser
@@ -75,6 +76,7 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
           )}
         </div>
       )}
+      <CanalesBadges canales={p.canales} />
     </div>
   );
 }

@@ -19,6 +19,7 @@ WC_JSON       = os.path.join(BASE, "Data", "worldcup.json")
 CALIB_JSON    = os.path.join(BASE, "Data", "calibracion.json")
 ODDS_JSON     = os.path.join(BASE, "Data", "odds.json")
 MANUALES_JSON = os.path.join(BASE, "Data", "resultados_manuales.json")
+CANALES_JSON  = os.path.join(BASE, "Data", "canales.json")
 
 def num(v, nd=4):
     return round(float(v), nd) if isinstance(v, (int, float)) else None
@@ -54,6 +55,15 @@ def build_odds_map(odds_path):
     """Carga Data/odds.json → dict {str(id): {pGanaA, pEmpate, pGanaB, mlA, mlX, mlB}}."""
     try:
         with open(odds_path, encoding="utf-8") as f:
+            d = json.load(f)
+        return d.get("partidos", {})
+    except Exception:
+        return {}
+
+def build_canales_map(canales_path):
+    """Carga Data/canales.json → dict {str(id): [canal, ...]}."""
+    try:
+        with open(canales_path, encoding="utf-8") as f:
             d = json.load(f)
         return d.get("partidos", {})
     except Exception:
@@ -101,6 +111,7 @@ def main():
     calibracion  = build_calibracion(CALIB_JSON)
     odds_map     = build_odds_map(ODDS_JSON)
     manuales_map = build_manuales_map(MANUALES_JSON)
+    canales_map  = build_canales_map(CANALES_JSON)
 
     if manuales_map:
         print(f"[OK] resultados_manuales.json: {len(manuales_map)} partido(s) cargado(s) → "
@@ -172,6 +183,10 @@ def main():
         # Cuotas de casas de apuesta (solo partidos sin resultado)
         if "resultado" not in p and str(pid) in odds_map:
             p["oddsImplied"] = odds_map[str(pid)]
+
+        # Canales de transmisión en Chile
+        if str(pid) in canales_map:
+            p["canales"] = canales_map[str(pid)]
 
         partidos.append(p)
 

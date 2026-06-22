@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import Bandera from "./Bandera.jsx";
+import CanalesBadges from "./CanalesBadges.jsx";
 
 const ESPN = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world";
 
@@ -109,7 +110,7 @@ function StatsBlock({ nameA, nameB, stats }) {
 }
 
 /* ── Tarjeta de partido en vivo ── */
-function TarjetaVivo({ ev }) {
+function TarjetaVivo({ ev, canales }) {
   const comp   = ev.competitions[0];
   const teams  = comp.competitors;
   const teamA  = teams.find(t => t.homeAway === "home") ?? teams[0];
@@ -155,6 +156,7 @@ function TarjetaVivo({ ev }) {
         <span className="ev2-estado">{status.shortDetail}</span>
         <span className="ev2-venue">{comp.venue?.fullName ?? ""}</span>
       </div>
+      <CanalesBadges canales={canales} />
       <div className="ev2-score-wrap">
         <div className="ev2-team home">
           <Bandera equipo={nameA} ancho={44} />
@@ -188,7 +190,7 @@ function TarjetaVivo({ ev }) {
 /* ── Tarjeta de partido ya terminado (historial) ── */
 function TarjetaHistorial({ partido, statsMap }) {
   const [expandido, setExpandido] = useState(false);
-  const { equipoA, equipoB, resultado, fecha, ciudad } = partido;
+  const { equipoA, equipoB, resultado, fecha, ciudad, canales } = partido;
   const key   = `${equipoA}|${equipoB}`;
   const stats = statsMap?.[key];
 
@@ -215,6 +217,7 @@ function TarjetaHistorial({ partido, statsMap }) {
         <span className="ev2-estado">{defLabel}</span>
         <span className="ev2-venue">{ciudad ? `${ciudad} · ` : ""}{fechaDisplay}</span>
       </div>
+      <CanalesBadges canales={canales} />
       <div className="ev2-score-wrap">
         <div className="ev2-team home">
           <Bandera equipo={equipoA} ancho={44} />
@@ -337,6 +340,17 @@ export default function EnVivo({ data }) {
     [data]
   );
 
+  const canalPorEquipos = useMemo(() => {
+    const m = {};
+    for (const p of data?.partidos ?? []) {
+      if (p.canales) {
+        m[`${p.equipoA}|${p.equipoB}`] = p.canales;
+        m[`${p.equipoB}|${p.equipoA}`] = p.canales;
+      }
+    }
+    return m;
+  }, [data]);
+
   const secciones = useMemo(() => {
     const map = {};
     for (const p of terminados) {
@@ -426,7 +440,16 @@ export default function EnVivo({ data }) {
       )}
       {enVivo.length > 0 && (
         <div className="ev2-grid">
-          {enVivo.map(ev => <TarjetaVivo key={ev.id} ev={ev} />)}
+          {enVivo.map(ev => {
+            const comp  = ev.competitions?.[0];
+            const teams = comp?.competitors ?? [];
+            const tA    = teams.find(t => t.homeAway === "home") ?? teams[0];
+            const tB    = teams.find(t => t.homeAway === "away") ?? teams[1];
+            const nA    = canon(tA?.team?.displayName ?? "");
+            const nB    = canon(tB?.team?.displayName ?? "");
+            const canales = canalPorEquipos[`${nA}|${nB}`] ?? null;
+            return <TarjetaVivo key={ev.id} ev={ev} canales={canales} />;
+          })}
         </div>
       )}
 

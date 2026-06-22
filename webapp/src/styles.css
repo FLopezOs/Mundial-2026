@@ -758,3 +758,14 @@ button.chico { padding: 2px 8px; }
   color: var(--azul); line-height: 1;
 }
 .pp-nota-pj { font-size: .72rem; color: var(--gris); text-align: center; margin: 6px 0 2px; }
+
+/* ── Badges de canales ── */
+.canal-badges { display: flex; gap: 4px; flex-wrap: wrap; padding: 4px 14px 6px; }
+.canal-badge {
+  font-size: .62rem; font-weight: 700; padding: 2px 6px;
+  border-radius: 4px; letter-spacing: .4px; line-height: 1.5; white-space: nowrap;
+}
+.canal-dgo    { background: #003087; color: #fff; }
+.canal-chv    { background: #e05500; color: #fff; }
+.canal-disney { background: #113ccf; color: #fff; }
+.canal-otro   { background: var(--gris); color: #fff; }

@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-22 08:39",
+ "generado": "2026-06-22 13:28",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -507,7 +507,12 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 2,
@@ -525,7 +530,10 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 3,
@@ -543,7 +551,12 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 4,
@@ -561,7 +574,12 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 5,
@@ -579,7 +597,11 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 6,
@@ -597,7 +619,12 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 7,
@@ -615,7 +642,10 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 8,
@@ -633,7 +663,10 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 9,
@@ -651,7 +684,10 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 10,
@@ -669,7 +705,12 @@
     "golesB": 2,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 11,
@@ -687,7 +728,12 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 12,
@@ -705,7 +751,10 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 13,
@@ -723,7 +772,11 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Disney+"
+   ]
   },
   {
    "id": 14,
@@ -741,7 +794,11 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 15,
@@ -759,7 +816,12 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 16,
@@ -777,7 +839,10 @@
     "golesB": 2,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 17,
@@ -795,7 +860,11 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 18,
@@ -813,7 +882,10 @@
     "golesB": 4,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 19,
@@ -831,7 +903,12 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 20,
@@ -849,7 +926,10 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 21,
@@ -867,7 +947,10 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 22,
@@ -885,7 +968,11 @@
     "golesB": 2,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 23,
@@ -903,7 +990,10 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 24,
@@ -921,7 +1011,12 @@
     "golesB": 3,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 25,
@@ -939,7 +1034,10 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 26,
@@ -957,7 +1055,12 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 27,
@@ -975,7 +1078,11 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 28,
@@ -993,7 +1100,11 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Disney+"
+   ]
   },
   {
    "id": 29,
@@ -1011,7 +1122,11 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 30,
@@ -1029,7 +1144,11 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 31,
@@ -1047,7 +1166,10 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 32,
@@ -1065,7 +1187,10 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 33,
@@ -1083,7 +1208,10 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 34,
@@ -1101,7 +1229,12 @@
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 35,
@@ -1119,7 +1252,12 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 36,
@@ -1137,7 +1275,11 @@
     "golesB": 4,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 37,
@@ -1155,7 +1297,12 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 38,
@@ -1173,7 +1320,11 @@
     "golesB": 0,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 39,
@@ -1191,7 +1342,10 @@
     "golesB": 2,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 40,
@@ -1209,7 +1363,10 @@
     "golesB": 3,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 41,
@@ -1223,13 +1380,18 @@
    "pais": "Estados Unidos",
    "horaChile": "13:00",
    "oddsImplied": {
-    "pGanaA": 0.6543,
-    "pEmpate": 0.2179,
-    "pGanaB": 0.1278,
-    "mlA": "-215",
-    "mlX": "340",
-    "mlB": "+650"
-   }
+    "pGanaA": 0.666,
+    "pEmpate": 0.2138,
+    "pGanaB": 0.1202,
+    "mlA": "-225",
+    "mlX": "350",
+    "mlB": "+700"
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 42,
@@ -1243,13 +1405,16 @@
    "pais": "Estados Unidos",
    "horaChile": "17:00",
    "oddsImplied": {
-    "pGanaA": 0.8861,
-    "pEmpate": 0.0806,
-    "pGanaB": 0.0333,
+    "pGanaA": 0.8763,
+    "pEmpate": 0.0869,
+    "pGanaB": 0.0368,
     "mlA": "-1100",
-    "mlX": "1100",
-    "mlB": "+2800"
-   }
+    "mlX": "1000",
+    "mlB": "+2500"
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 43,
@@ -1269,7 +1434,11 @@
     "mlA": "+120",
     "mlX": "245",
     "mlB": "+235"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 44,
@@ -1289,7 +1458,10 @@
     "mlA": "+550",
     "mlX": "330",
     "mlB": "-190"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 45,
@@ -1303,13 +1475,17 @@
    "pais": "Estados Unidos",
    "horaChile": "13:00",
    "oddsImplied": {
-    "pGanaA": 0.8121,
-    "pEmpate": 0.128,
-    "pGanaB": 0.06,
-    "mlA": "-550",
-    "mlX": "650",
+    "pGanaA": 0.8036,
+    "pEmpate": 0.1367,
+    "pGanaB": 0.0598,
+    "mlA": "-525",
+    "mlX": "600",
     "mlB": "+1500"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 46,
@@ -1329,7 +1505,11 @@
     "mlA": "-450",
     "mlX": "550",
     "mlB": "+1300"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 47,
@@ -1349,7 +1529,11 @@
     "mlA": "+550",
     "mlX": "330",
     "mlB": "-195"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 48,
@@ -1361,7 +1545,19 @@
    "equipoB": "RD Congo",
    "ciudad": "Guadalajara (Zapopan)",
    "pais": "México",
-   "horaChile": "22:00"
+   "horaChile": "22:00",
+   "oddsImplied": {
+    "pGanaA": 0.6344,
+    "pEmpate": 0.2285,
+    "pGanaB": 0.1371,
+    "mlA": "-195",
+    "mlX": "320",
+    "mlB": "+600"
+   },
+   "canales": [
+    "DGO",
+    "Disney+"
+   ]
   },
   {
    "id": 49,
@@ -1375,13 +1571,16 @@
    "pais": "Canadá",
    "horaChile": "15:00",
    "oddsImplied": {
-    "pGanaA": 0.3834,
-    "pEmpate": 0.3305,
-    "pGanaB": 0.2861,
-    "mlA": "+150",
-    "mlX": "190",
-    "mlB": "+235"
-   }
+    "pGanaA": 0.3908,
+    "pEmpate": 0.3191,
+    "pGanaB": 0.2901,
+    "mlA": "+145",
+    "mlX": "200",
+    "mlB": "+230"
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 50,
@@ -1401,7 +1600,10 @@
     "mlA": "-230",
     "mlX": "400",
     "mlB": "+600"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 51,
@@ -1421,7 +1623,12 @@
     "mlA": "+650",
     "mlX": "425",
     "mlB": "-255"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 52,
@@ -1441,7 +1648,10 @@
     "mlA": "-550",
     "mlX": "650",
     "mlB": "+1600"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 53,
@@ -1455,13 +1665,17 @@
    "pais": "México",
    "horaChile": "21:00",
    "oddsImplied": {
-    "pGanaA": 0.2568,
-    "pEmpate": 0.2501,
-    "pGanaB": 0.4932,
-    "mlA": "+275",
-    "mlX": "285",
-    "mlB": "-105"
-   }
+    "pGanaA": 0.2498,
+    "pEmpate": 0.2466,
+    "pGanaB": 0.5037,
+    "mlA": "+285",
+    "mlX": "290",
+    "mlB": "-110"
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 54,
@@ -1475,13 +1689,16 @@
    "pais": "México",
    "horaChile": "21:00",
    "oddsImplied": {
-    "pGanaA": 0.1749,
-    "pEmpate": 0.2405,
-    "pGanaB": 0.5847,
-    "mlA": "+450",
-    "mlX": "300",
-    "mlB": "-155"
-   }
+    "pGanaA": 0.1825,
+    "pEmpate": 0.2426,
+    "pGanaB": 0.5749,
+    "mlA": "+425",
+    "mlX": "295",
+    "mlB": "-150"
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 55,
@@ -1501,7 +1718,10 @@
     "mlA": "+1700",
     "mlX": "750",
     "mlB": "-650"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 56,
@@ -1515,13 +1735,18 @@
    "pais": "Estados Unidos",
    "horaChile": "16:00",
    "oddsImplied": {
-    "pGanaA": 0.2655,
-    "pEmpate": 0.245,
-    "pGanaB": 0.4895,
-    "mlA": "+260",
-    "mlX": "290",
+    "pGanaA": 0.2644,
+    "pEmpate": 0.2413,
+    "pGanaB": 0.4943,
+    "mlA": "+265",
+    "mlX": "300",
     "mlB": "-105"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 57,
@@ -1541,7 +1766,10 @@
     "mlA": "-105",
     "mlX": "245",
     "mlB": "+330"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 58,
@@ -1561,7 +1789,11 @@
     "mlA": "+1900",
     "mlX": "800",
     "mlB": "-750"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 59,
@@ -1573,7 +1805,18 @@
    "equipoB": "Estados Unidos",
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
-   "horaChile": "22:00"
+   "horaChile": "22:00",
+   "oddsImplied": {
+    "pGanaA": 0.2698,
+    "pEmpate": 0.2395,
+    "pGanaB": 0.4907,
+    "mlA": "+255",
+    "mlX": "300",
+    "mlB": "-105"
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 60,
@@ -1593,7 +1836,11 @@
     "mlA": "+190",
     "mlX": "125",
     "mlB": "+295"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 61,
@@ -1613,7 +1860,11 @@
     "mlA": "+330",
     "mlX": "290",
     "mlB": "-125"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV"
+   ]
   },
   {
    "id": 62,
@@ -1633,7 +1884,10 @@
     "mlA": "-340",
     "mlX": "450",
     "mlB": "+1000"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 63,
@@ -1653,7 +1907,10 @@
     "mlA": "+140",
     "mlX": "250",
     "mlB": "+200"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 64,
@@ -1673,7 +1930,12 @@
     "mlA": "+650",
     "mlX": "330",
     "mlB": "-210"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 65,
@@ -1687,13 +1949,16 @@
    "pais": "Estados Unidos",
    "horaChile": "23:00",
    "oddsImplied": {
-    "pGanaA": 0.4006,
-    "pEmpate": 0.3496,
-    "pGanaB": 0.2497,
-    "mlA": "+140",
+    "pGanaA": 0.3917,
+    "pEmpate": 0.349,
+    "pGanaB": 0.2594,
+    "mlA": "+145",
     "mlX": "175",
-    "mlB": "+285"
-   }
+    "mlB": "+270"
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 66,
@@ -1713,7 +1978,10 @@
     "mlA": "+1200",
     "mlX": "550",
     "mlB": "-450"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 67,
@@ -1733,7 +2001,10 @@
     "mlA": "+950",
     "mlX": "650",
     "mlB": "-450"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 68,
@@ -1753,7 +2024,10 @@
     "mlA": "-160",
     "mlX": "295",
     "mlB": "+500"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 69,
@@ -1773,7 +2047,12 @@
     "mlA": "+265",
     "mlX": "255",
     "mlB": "+105"
-   }
+   },
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 70,
@@ -1785,7 +2064,18 @@
    "equipoB": "Uzbekistán",
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
-   "horaChile": "19:30"
+   "horaChile": "19:30",
+   "oddsImplied": {
+    "pGanaA": 0.4557,
+    "pEmpate": 0.2586,
+    "pGanaB": 0.2857,
+    "mlA": "+110",
+    "mlX": "270",
+    "mlB": "+235"
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 71,
@@ -1805,7 +2095,10 @@
     "mlA": "+205",
     "mlX": "210",
     "mlB": "+155"
-   }
+   },
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 72,
@@ -1825,7 +2118,11 @@
     "mlA": "+1500",
     "mlX": "600",
     "mlB": "-525"
-   }
+   },
+   "canales": [
+    "DGO",
+    "Disney+"
+   ]
   },
   {
    "id": 73,
@@ -1837,7 +2134,10 @@
    "equipoB": "2B",
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
-   "horaChile": "15:00"
+   "horaChile": "15:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 74,
@@ -1849,7 +2149,10 @@
    "equipoB": "2F",
    "ciudad": "Houston",
    "pais": "Estados Unidos",
-   "horaChile": "13:00"
+   "horaChile": "13:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 75,
@@ -1861,7 +2164,10 @@
    "equipoB": "3A/B/C/D/F",
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
-   "horaChile": "16:30"
+   "horaChile": "16:30",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 76,
@@ -1873,7 +2179,10 @@
    "equipoB": "2C",
    "ciudad": "Monterrey (Guadalupe)",
    "pais": "México",
-   "horaChile": "21:00"
+   "horaChile": "21:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 77,
@@ -1885,7 +2194,10 @@
    "equipoB": "2I",
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
-   "horaChile": "13:00"
+   "horaChile": "13:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 78,
@@ -1897,7 +2209,10 @@
    "equipoB": "3C/D/F/G/H",
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
-   "horaChile": "17:00"
+   "horaChile": "17:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 79,
@@ -1909,7 +2224,10 @@
    "equipoB": "3C/E/F/H/I",
    "ciudad": "Mexico City",
    "pais": "México",
-   "horaChile": "21:00"
+   "horaChile": "21:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 80,
@@ -1921,7 +2239,10 @@
    "equipoB": "3E/H/I/J/K",
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
-   "horaChile": "12:00"
+   "horaChile": "12:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 81,
@@ -1933,7 +2254,10 @@
    "equipoB": "3A/E/H/I/J",
    "ciudad": "Seattle",
    "pais": "Estados Unidos",
-   "horaChile": "16:00"
+   "horaChile": "16:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 82,
@@ -1945,7 +2269,10 @@
    "equipoB": "3B/E/F/I/J",
    "ciudad": "San Francisco Bay Area (Santa Clara)",
    "pais": "Estados Unidos",
-   "horaChile": "20:00"
+   "horaChile": "20:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 83,
@@ -1957,7 +2284,10 @@
    "equipoB": "2J",
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
-   "horaChile": "15:00"
+   "horaChile": "15:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 84,
@@ -1969,7 +2299,10 @@
    "equipoB": "2L",
    "ciudad": "Toronto",
    "pais": "Canadá",
-   "horaChile": "19:00"
+   "horaChile": "19:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 85,
@@ -1981,7 +2314,10 @@
    "equipoB": "3E/F/G/I/J",
    "ciudad": "Vancouver",
    "pais": "Canadá",
-   "horaChile": "23:00"
+   "horaChile": "23:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 86,
@@ -1993,7 +2329,10 @@
    "equipoB": "2G",
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
-   "horaChile": "14:00"
+   "horaChile": "14:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 87,
@@ -2005,7 +2344,10 @@
    "equipoB": "2H",
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
-   "horaChile": "18:00"
+   "horaChile": "18:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 88,
@@ -2017,7 +2359,10 @@
    "equipoB": "3D/E/I/J/L",
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
-   "horaChile": "21:30"
+   "horaChile": "21:30",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 89,
@@ -2029,7 +2374,10 @@
    "equipoB": "W75",
    "ciudad": "Houston",
    "pais": "Estados Unidos",
-   "horaChile": "13:00"
+   "horaChile": "13:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 90,
@@ -2041,7 +2389,10 @@
    "equipoB": "W77",
    "ciudad": "Philadelphia",
    "pais": "Estados Unidos",
-   "horaChile": "17:00"
+   "horaChile": "17:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 91,
@@ -2053,7 +2404,10 @@
    "equipoB": "W78",
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
-   "horaChile": "16:00"
+   "horaChile": "16:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 92,
@@ -2065,7 +2419,10 @@
    "equipoB": "W80",
    "ciudad": "Mexico City",
    "pais": "México",
-   "horaChile": "20:00"
+   "horaChile": "20:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 93,
@@ -2077,7 +2434,10 @@
    "equipoB": "W84",
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
-   "horaChile": "15:00"
+   "horaChile": "15:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 94,
@@ -2089,7 +2449,10 @@
    "equipoB": "W82",
    "ciudad": "Seattle",
    "pais": "Estados Unidos",
-   "horaChile": "20:00"
+   "horaChile": "20:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 95,
@@ -2101,7 +2464,10 @@
    "equipoB": "W88",
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
-   "horaChile": "12:00"
+   "horaChile": "12:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 96,
@@ -2113,7 +2479,10 @@
    "equipoB": "W87",
    "ciudad": "Vancouver",
    "pais": "Canadá",
-   "horaChile": "16:00"
+   "horaChile": "16:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 97,
@@ -2125,7 +2494,10 @@
    "equipoB": "W90",
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
-   "horaChile": "16:00"
+   "horaChile": "16:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 98,
@@ -2137,7 +2509,10 @@
    "equipoB": "W94",
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
-   "horaChile": "15:00"
+   "horaChile": "15:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 99,
@@ -2149,7 +2524,10 @@
    "equipoB": "W92",
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
-   "horaChile": "17:00"
+   "horaChile": "17:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 100,
@@ -2161,7 +2539,10 @@
    "equipoB": "W96",
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
-   "horaChile": "21:00"
+   "horaChile": "21:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 101,
@@ -2173,7 +2554,10 @@
    "equipoB": "W98",
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
-   "horaChile": "15:00"
+   "horaChile": "15:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 102,
@@ -2185,7 +2569,10 @@
    "equipoB": "W100",
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
-   "horaChile": "15:00"
+   "horaChile": "15:00",
+   "canales": [
+    "DGO"
+   ]
   },
   {
    "id": 103,
@@ -2197,7 +2584,12 @@
    "equipoB": "L102",
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
-   "horaChile": "17:00"
+   "horaChile": "17:00",
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   },
   {
    "id": 104,
@@ -2209,7 +2601,12 @@
    "equipoB": "W102",
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
-   "horaChile": "15:00"
+   "horaChile": "15:00",
+   "canales": [
+    "DGO",
+    "CHV",
+    "Disney+"
+   ]
   }
  ]
 }
