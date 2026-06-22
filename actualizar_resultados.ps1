@@ -39,7 +39,7 @@ Write-Host "  Dependencias OK" -ForegroundColor Green
 
 # --- Actualizar resultados ---
 Write-Host ""
-Write-Host "[1/2] Descargando resultados oficiales..." -ForegroundColor Cyan
+Write-Host "[1/3] Descargando resultados oficiales..." -ForegroundColor Cyan
 & $pyExe modelo/actualizar.py
 if ($LASTEXITCODE -ne 0) {
     Write-Host "ERROR en actualizar.py" -ForegroundColor Red
@@ -48,12 +48,19 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host ""
-Write-Host "[2/2] Generando datos para la pagina web..." -ForegroundColor Cyan
+Write-Host "[2/3] Generando datos para la pagina web..." -ForegroundColor Cyan
 & $pyExe modelo/exportar_json.py
 if ($LASTEXITCODE -ne 0) {
     Write-Host "ERROR en exportar_json.py" -ForegroundColor Red
     Read-Host "Presiona Enter para cerrar"
     exit 1
+}
+
+Write-Host ""
+Write-Host "[3/3] Descargando estadisticas de partidos jugados..." -ForegroundColor Cyan
+& $pyExe modelo/stats_espn.py
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "AVISO: stats_espn.py fallo (las estadisticas no se actualizaron)" -ForegroundColor Yellow
 }
 
 Write-Host ""

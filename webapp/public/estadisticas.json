@@ -1,0 +1,1525 @@
+{
+ "generado": "2026-06-22 09:47",
+ "partidos": {
+  "México|Sudáfrica": {
+   "possessionPct": {
+    "A": "60.5",
+    "B": "39.5"
+   },
+   "totalShots": {
+    "A": "16",
+    "B": "3"
+   },
+   "shotsOnTarget": {
+    "A": "4",
+    "B": "2"
+   },
+   "saves": {
+    "A": "2",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "3",
+    "B": "1"
+   },
+   "foulsCommitted": {
+    "A": "12",
+    "B": "11"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "1",
+    "B": "2"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "1"
+   }
+  },
+  "Corea del Sur|Chequia": {
+   "possessionPct": {
+    "A": "61.5",
+    "B": "38.5"
+   },
+   "totalShots": {
+    "A": "15",
+    "B": "7"
+   },
+   "shotsOnTarget": {
+    "A": "6",
+    "B": "4"
+   },
+   "saves": {
+    "A": "3",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "5"
+   },
+   "foulsCommitted": {
+    "A": "9",
+    "B": "16"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "2"
+   }
+  },
+  "Canadá|Bosnia y Herzegovina": {
+   "possessionPct": {
+    "A": "61.1",
+    "B": "38.9"
+   },
+   "totalShots": {
+    "A": "13",
+    "B": "8"
+   },
+   "shotsOnTarget": {
+    "A": "4",
+    "B": "3"
+   },
+   "saves": {
+    "A": "2",
+    "B": "1"
+   },
+   "cornerKicks": {
+    "A": "9",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "10",
+    "B": "20"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "3"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "0"
+   }
+  },
+  "Estados Unidos|Paraguay": {
+   "possessionPct": {
+    "A": "65.3",
+    "B": "34.7"
+   },
+   "totalShots": {
+    "A": "16",
+    "B": "9"
+   },
+   "shotsOnTarget": {
+    "A": "6",
+    "B": "1"
+   },
+   "saves": {
+    "A": "1",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "3",
+    "B": "1"
+   },
+   "foulsCommitted": {
+    "A": "13",
+    "B": "17"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "5"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "1"
+   }
+  },
+  "Qatar|Suiza": {
+   "possessionPct": {
+    "A": "32",
+    "B": "68"
+   },
+   "totalShots": {
+    "A": "6",
+    "B": "26"
+   },
+   "shotsOnTarget": {
+    "A": "3",
+    "B": "7"
+   },
+   "saves": {
+    "A": "5",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "3",
+    "B": "10"
+   },
+   "foulsCommitted": {
+    "A": "12",
+    "B": "11"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "1"
+   }
+  },
+  "Brasil|Marruecos": {
+   "possessionPct": {
+    "A": "51.4",
+    "B": "48.6"
+   },
+   "totalShots": {
+    "A": "12",
+    "B": "14"
+   },
+   "shotsOnTarget": {
+    "A": "5",
+    "B": "3"
+   },
+   "saves": {
+    "A": "2",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "6",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "16",
+    "B": "14"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "1"
+   }
+  },
+  "Haití|Escocia": {
+   "possessionPct": {
+    "A": "53.7",
+    "B": "46.3"
+   },
+   "totalShots": {
+    "A": "15",
+    "B": "9"
+   },
+   "shotsOnTarget": {
+    "A": "2",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "3"
+   },
+   "foulsCommitted": {
+    "A": "23",
+    "B": "21"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "3"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "1"
+   }
+  },
+  "Australia|Türkiye": {
+   "possessionPct": {
+    "A": "28.4",
+    "B": "71.6"
+   },
+   "totalShots": {
+    "A": "9",
+    "B": "30"
+   },
+   "shotsOnTarget": {
+    "A": "4",
+    "B": "8"
+   },
+   "saves": {
+    "A": "8",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "5",
+    "B": "8"
+   },
+   "foulsCommitted": {
+    "A": "12",
+    "B": "4"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "3"
+   }
+  },
+  "Alemania|Curaçao": {
+   "possessionPct": {
+    "A": "64.6",
+    "B": "35.4"
+   },
+   "totalShots": {
+    "A": "26",
+    "B": "8"
+   },
+   "shotsOnTarget": {
+    "A": "12",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "8",
+    "B": "1"
+   },
+   "foulsCommitted": {
+    "A": "18",
+    "B": "11"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "1"
+   }
+  },
+  "Países Bajos|Japón": {
+   "possessionPct": {
+    "A": "59.8",
+    "B": "40.2"
+   },
+   "totalShots": {
+    "A": "10",
+    "B": "10"
+   },
+   "shotsOnTarget": {
+    "A": "6",
+    "B": "3"
+   },
+   "saves": {
+    "A": "1",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "5",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "7",
+    "B": "7"
+   },
+   "yellowCards": {
+    "A": "3",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "0"
+   }
+  },
+  "Costa de Marfil|Ecuador": {
+   "possessionPct": {
+    "A": "48.4",
+    "B": "51.6"
+   },
+   "totalShots": {
+    "A": "15",
+    "B": "12"
+   },
+   "shotsOnTarget": {
+    "A": "4",
+    "B": "1"
+   },
+   "saves": {
+    "A": "1",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "3",
+    "B": "6"
+   },
+   "foulsCommitted": {
+    "A": "10",
+    "B": "13"
+   },
+   "yellowCards": {
+    "A": "3",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "0"
+   }
+  },
+  "Suecia|Túnez": {
+   "possessionPct": {
+    "A": "48.7",
+    "B": "51.3"
+   },
+   "totalShots": {
+    "A": "13",
+    "B": "6"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "1"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "10",
+    "B": "8"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "6"
+   }
+  },
+  "España|Cabo Verde": {
+   "possessionPct": {
+    "A": "74.3",
+    "B": "25.7"
+   },
+   "totalShots": {
+    "A": "27",
+    "B": "6"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "1"
+   },
+   "saves": {
+    "A": "1",
+    "B": "7"
+   },
+   "cornerKicks": {
+    "A": "11",
+    "B": "1"
+   },
+   "foulsCommitted": {
+    "A": "10",
+    "B": "1"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "3"
+   }
+  },
+  "Bélgica|Egipto": {
+   "possessionPct": {
+    "A": "53.6",
+    "B": "46.4"
+   },
+   "totalShots": {
+    "A": "15",
+    "B": "14"
+   },
+   "shotsOnTarget": {
+    "A": "3",
+    "B": "3"
+   },
+   "saves": {
+    "A": "2",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "2",
+    "B": "7"
+   },
+   "foulsCommitted": {
+    "A": "15",
+    "B": "15"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "1"
+   }
+  },
+  "Arabia Saudita|Uruguay": {
+   "possessionPct": {
+    "A": "33.2",
+    "B": "66.8"
+   },
+   "totalShots": {
+    "A": "7",
+    "B": "27"
+   },
+   "shotsOnTarget": {
+    "A": "3",
+    "B": "10"
+   },
+   "saves": {
+    "A": "9",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "14"
+   },
+   "foulsCommitted": {
+    "A": "11",
+    "B": "6"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "6"
+   }
+  },
+  "Irán|Nueva Zelanda": {
+   "possessionPct": {
+    "A": "48.5",
+    "B": "51.5"
+   },
+   "totalShots": {
+    "A": "17",
+    "B": "14"
+   },
+   "shotsOnTarget": {
+    "A": "4",
+    "B": "8"
+   },
+   "saves": {
+    "A": "6",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "1"
+   },
+   "foulsCommitted": {
+    "A": "10",
+    "B": "8"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "0"
+   }
+  },
+  "Francia|Senegal": {
+   "possessionPct": {
+    "A": "53.4",
+    "B": "46.6"
+   },
+   "totalShots": {
+    "A": "11",
+    "B": "6"
+   },
+   "shotsOnTarget": {
+    "A": "8",
+    "B": "2"
+   },
+   "saves": {
+    "A": "2",
+    "B": "5"
+   },
+   "cornerKicks": {
+    "A": "6",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "5",
+    "B": "9"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "3"
+   }
+  },
+  "Irak|Noruega": {
+   "possessionPct": {
+    "A": "38.7",
+    "B": "61.3"
+   },
+   "totalShots": {
+    "A": "11",
+    "B": "12"
+   },
+   "shotsOnTarget": {
+    "A": "1",
+    "B": "5"
+   },
+   "saves": {
+    "A": "2",
+    "B": "0"
+   },
+   "cornerKicks": {
+    "A": "2",
+    "B": "5"
+   },
+   "foulsCommitted": {
+    "A": "12",
+    "B": "13"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "0"
+   }
+  },
+  "Argentina|Argelia": {
+   "possessionPct": {
+    "A": "47.8",
+    "B": "52.2"
+   },
+   "totalShots": {
+    "A": "10",
+    "B": "7"
+   },
+   "shotsOnTarget": {
+    "A": "6",
+    "B": "1"
+   },
+   "saves": {
+    "A": "0",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "2",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "13",
+    "B": "8"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "1"
+   }
+  },
+  "Austria|Jordania": {
+   "possessionPct": {
+    "A": "63.2",
+    "B": "36.8"
+   },
+   "totalShots": {
+    "A": "11",
+    "B": "11"
+   },
+   "shotsOnTarget": {
+    "A": "4",
+    "B": "4"
+   },
+   "saves": {
+    "A": "3",
+    "B": "1"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "3"
+   },
+   "foulsCommitted": {
+    "A": "12",
+    "B": "7"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "1"
+   }
+  },
+  "Portugal|Congo DR": {
+   "possessionPct": {
+    "A": "75.4",
+    "B": "24.6"
+   },
+   "totalShots": {
+    "A": "7",
+    "B": "8"
+   },
+   "shotsOnTarget": {
+    "A": "1",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "0"
+   },
+   "cornerKicks": {
+    "A": "5",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "9",
+    "B": "10"
+   },
+   "yellowCards": {
+    "A": "3",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "2"
+   }
+  },
+  "Inglaterra|Croacia": {
+   "possessionPct": {
+    "A": "51.7",
+    "B": "48.3"
+   },
+   "totalShots": {
+    "A": "22",
+    "B": "10"
+   },
+   "shotsOnTarget": {
+    "A": "11",
+    "B": "5"
+   },
+   "saves": {
+    "A": "3",
+    "B": "7"
+   },
+   "cornerKicks": {
+    "A": "8",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "10",
+    "B": "12"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "1"
+   }
+  },
+  "Ghana|Panamá": {
+   "possessionPct": {
+    "A": "38",
+    "B": "62"
+   },
+   "totalShots": {
+    "A": "7",
+    "B": "11"
+   },
+   "shotsOnTarget": {
+    "A": "2",
+    "B": "4"
+   },
+   "saves": {
+    "A": "4",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "2",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "9",
+    "B": "11"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "4",
+    "B": "1"
+   }
+  },
+  "Uzbekistán|Colombia": {
+   "possessionPct": {
+    "A": "38.6",
+    "B": "61.4"
+   },
+   "totalShots": {
+    "A": "8",
+    "B": "15"
+   },
+   "shotsOnTarget": {
+    "A": "2",
+    "B": "4"
+   },
+   "saves": {
+    "A": "1",
+    "B": "1"
+   },
+   "cornerKicks": {
+    "A": "3",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "14",
+    "B": "11"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "3"
+   }
+  },
+  "Chequia|Sudáfrica": {
+   "possessionPct": {
+    "A": "38.3",
+    "B": "61.7"
+   },
+   "totalShots": {
+    "A": "14",
+    "B": "17"
+   },
+   "shotsOnTarget": {
+    "A": "3",
+    "B": "4"
+   },
+   "saves": {
+    "A": "3",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "5",
+    "B": "5"
+   },
+   "foulsCommitted": {
+    "A": "12",
+    "B": "10"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "3"
+   }
+  },
+  "Suiza|Bosnia y Herzegovina": {
+   "possessionPct": {
+    "A": "62.3",
+    "B": "37.7"
+   },
+   "totalShots": {
+    "A": "13",
+    "B": "5"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "3"
+   },
+   "saves": {
+    "A": "2",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "7",
+    "B": "3"
+   },
+   "foulsCommitted": {
+    "A": "7",
+    "B": "18"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "1"
+   }
+  },
+  "Canadá|Qatar": {
+   "possessionPct": {
+    "A": "79",
+    "B": "21"
+   },
+   "totalShots": {
+    "A": "32",
+    "B": "2"
+   },
+   "shotsOnTarget": {
+    "A": "10",
+    "B": "0"
+   },
+   "saves": {
+    "A": "0",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "19",
+    "B": "1"
+   },
+   "foulsCommitted": {
+    "A": "9",
+    "B": "10"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "2"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "1"
+   }
+  },
+  "México|Corea del Sur": {
+   "possessionPct": {
+    "A": "42.4",
+    "B": "57.6"
+   },
+   "totalShots": {
+    "A": "8",
+    "B": "9"
+   },
+   "shotsOnTarget": {
+    "A": "4",
+    "B": "2"
+   },
+   "saves": {
+    "A": "2",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "1",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "9",
+    "B": "7"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "6"
+   }
+  },
+  "Estados Unidos|Australia": {
+   "possessionPct": {
+    "A": "61.9",
+    "B": "38.1"
+   },
+   "totalShots": {
+    "A": "10",
+    "B": "5"
+   },
+   "shotsOnTarget": {
+    "A": "2",
+    "B": "2"
+   },
+   "saves": {
+    "A": "2",
+    "B": "1"
+   },
+   "cornerKicks": {
+    "A": "7",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "12",
+    "B": "16"
+   },
+   "yellowCards": {
+    "A": "3",
+    "B": "4"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "0"
+   }
+  },
+  "Escocia|Marruecos": {
+   "possessionPct": {
+    "A": "41.1",
+    "B": "58.9"
+   },
+   "totalShots": {
+    "A": "6",
+    "B": "12"
+   },
+   "shotsOnTarget": {
+    "A": "0",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "0"
+   },
+   "cornerKicks": {
+    "A": "2",
+    "B": "5"
+   },
+   "foulsCommitted": {
+    "A": "11",
+    "B": "8"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "0"
+   }
+  },
+  "Brasil|Haití": {
+   "possessionPct": {
+    "A": "56.7",
+    "B": "43.3"
+   },
+   "totalShots": {
+    "A": "8",
+    "B": "7"
+   },
+   "shotsOnTarget": {
+    "A": "5",
+    "B": "3"
+   },
+   "saves": {
+    "A": "3",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "13",
+    "B": "14"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "3"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "8",
+    "B": "4"
+   }
+  },
+  "Türkiye|Paraguay": {
+   "possessionPct": {
+    "A": "78.5",
+    "B": "21.5"
+   },
+   "totalShots": {
+    "A": "32",
+    "B": "7"
+   },
+   "shotsOnTarget": {
+    "A": "5",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "5"
+   },
+   "cornerKicks": {
+    "A": "12",
+    "B": "0"
+   },
+   "foulsCommitted": {
+    "A": "14",
+    "B": "15"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "3"
+   }
+  },
+  "Países Bajos|Suecia": {
+   "possessionPct": {
+    "A": "50.9",
+    "B": "49.1"
+   },
+   "totalShots": {
+    "A": "10",
+    "B": "16"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "8"
+   },
+   "saves": {
+    "A": "7",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "2",
+    "B": "5"
+   },
+   "foulsCommitted": {
+    "A": "9",
+    "B": "12"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "3"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "3"
+   }
+  },
+  "Alemania|Costa de Marfil": {
+   "possessionPct": {
+    "A": "59.5",
+    "B": "40.5"
+   },
+   "totalShots": {
+    "A": "16",
+    "B": "9"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "5"
+   },
+   "cornerKicks": {
+    "A": "8",
+    "B": "3"
+   },
+   "foulsCommitted": {
+    "A": "5",
+    "B": "7"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "1"
+   }
+  },
+  "Ecuador|Curaçao": {
+   "possessionPct": {
+    "A": "74.6",
+    "B": "25.4"
+   },
+   "totalShots": {
+    "A": "27",
+    "B": "10"
+   },
+   "shotsOnTarget": {
+    "A": "15",
+    "B": "3"
+   },
+   "saves": {
+    "A": "3",
+    "B": "15"
+   },
+   "cornerKicks": {
+    "A": "9",
+    "B": "0"
+   },
+   "foulsCommitted": {
+    "A": "7",
+    "B": "10"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "5"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "2"
+   }
+  },
+  "Túnez|Japón": {
+   "possessionPct": {
+    "A": "37.9",
+    "B": "62.1"
+   },
+   "totalShots": {
+    "A": "2",
+    "B": "11"
+   },
+   "shotsOnTarget": {
+    "A": "0",
+    "B": "5"
+   },
+   "saves": {
+    "A": "1",
+    "B": "0"
+   },
+   "cornerKicks": {
+    "A": "3",
+    "B": "5"
+   },
+   "foulsCommitted": {
+    "A": "8",
+    "B": "15"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "1"
+   }
+  },
+  "España|Arabia Saudita": {
+   "possessionPct": {
+    "A": "67.1",
+    "B": "32.9"
+   },
+   "totalShots": {
+    "A": "22",
+    "B": "3"
+   },
+   "shotsOnTarget": {
+    "A": "8",
+    "B": "1"
+   },
+   "saves": {
+    "A": "1",
+    "B": "5"
+   },
+   "cornerKicks": {
+    "A": "6",
+    "B": "1"
+   },
+   "foulsCommitted": {
+    "A": "10",
+    "B": "2"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "3"
+   }
+  },
+  "Bélgica|Irán": {
+   "possessionPct": {
+    "A": "70.1",
+    "B": "29.9"
+   },
+   "totalShots": {
+    "A": "23",
+    "B": "7"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "3"
+   },
+   "saves": {
+    "A": "3",
+    "B": "7"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "7",
+    "B": "9"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "1",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "4"
+   }
+  },
+  "Uruguay|Cabo Verde": {
+   "possessionPct": {
+    "A": "65.2",
+    "B": "34.8"
+   },
+   "totalShots": {
+    "A": "17",
+    "B": "12"
+   },
+   "shotsOnTarget": {
+    "A": "2",
+    "B": "4"
+   },
+   "saves": {
+    "A": "2",
+    "B": "0"
+   },
+   "cornerKicks": {
+    "A": "11",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "11",
+    "B": "4"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "0"
+   }
+  },
+  "Nueva Zelanda|Egipto": {
+   "possessionPct": {
+    "A": "44.4",
+    "B": "55.6"
+   },
+   "totalShots": {
+    "A": "11",
+    "B": "19"
+   },
+   "shotsOnTarget": {
+    "A": "5",
+    "B": "7"
+   },
+   "saves": {
+    "A": "4",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "14",
+    "B": "8"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "0"
+   }
+  }
+ }
+}

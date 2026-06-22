@@ -79,17 +79,38 @@ function OddsBar({ nameA, nameB, pA, pX, pB }) {
 }
 
 const STATS_CFG = [
-  { key: "possessionPct",  label: "Posesión"       },
-  { key: "totalShots",     label: "Tiros"           },
-  { key: "shotsOnTarget",  label: "Al arco"         },
-  { key: "saves",          label: "Atajadas"        },
-  { key: "cornerKicks",    label: "Córners"         },
-  { key: "foulsCommitted", label: "Faltas"          },
-  { key: "yellowCards",    label: "Amarillas"       },
-  { key: "redCards",       label: "Rojas"           },
-  { key: "offsides",       label: "Offside"         },
+  { key: "possessionPct",  label: "Posesión"  },
+  { key: "totalShots",     label: "Tiros"     },
+  { key: "shotsOnTarget",  label: "Al arco"   },
+  { key: "saves",          label: "Atajadas"  },
+  { key: "cornerKicks",    label: "Córners"   },
+  { key: "foulsCommitted", label: "Faltas"    },
+  { key: "yellowCards",    label: "Amarillas" },
+  { key: "redCards",       label: "Rojas"     },
+  { key: "offsides",       label: "Offside"   },
 ];
 
+/* ── Bloque de estadísticas reutilizable ── */
+function StatsBlock({ nameA, nameB, stats }) {
+  const rows = STATS_CFG.filter(s => stats[s.key]);
+  if (!rows.length) return null;
+  return (
+    <div className="ev2-stats-wrap">
+      <div className="ev2-stats-header">
+        <span className="ev2-stats-team home">{nameA}</span>
+        <span className="ev2-stats-mid">ESTADÍSTICAS</span>
+        <span className="ev2-stats-team away">{nameB}</span>
+      </div>
+      <div className="ev2-stats">
+        {rows.map(({ key, label }) => (
+          <StatRow key={key} label={label} valA={stats[key]?.A} valB={stats[key]?.B} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ── Tarjeta de partido en vivo ── */
 function TarjetaVivo({ ev }) {
   const comp   = ev.competitions[0];
   const teams  = comp.competitors;
@@ -105,7 +126,6 @@ function TarjetaVivo({ ev }) {
   const numA   = parseInt(scA) || 0;
   const numB   = parseInt(scB) || 0;
 
-  /* Estadísticas */
   const statsA = {}, statsB = {};
   if (ev.summary?.boxscore?.teams) {
     ev.summary.boxscore.teams.forEach(t => {
@@ -113,9 +133,14 @@ function TarjetaVivo({ ev }) {
       (t.statistics ?? []).forEach(s => { (isA ? statsA : statsB)[s.name] = s.displayValue; });
     });
   }
-  const statRows = STATS_CFG.filter(s => statsA[s.key] !== undefined || statsB[s.key] !== undefined);
+  // Adaptar wonCorners → cornerKicks para StatsBlock
+  const liveStats = {};
+  for (const { key } of STATS_CFG) {
+    const espnKey = key === "cornerKicks" ? "wonCorners" : key;
+    if (statsA[espnKey] !== undefined || statsB[espnKey] !== undefined)
+      liveStats[key] = { A: statsA[espnKey] ?? "0", B: statsB[espnKey] ?? "0" };
+  }
 
-  /* Cuotas en vivo */
   let odds = null;
   const oddsList = comp.odds ?? [];
   const dk = oddsList.find(o => o.provider?.name?.toLowerCase().includes("draftkings")) ?? oddsList[0];
@@ -128,68 +153,117 @@ function TarjetaVivo({ ev }) {
 
   return (
     <div className={"ev2-card" + (live ? " live" : final ? " ended" : "")}>
-
-      {/* ── Cabecera oscura con estado y sede ── */}
       <div className="ev2-header">
         {live && <span className="ev2-pulse" />}
         <span className="ev2-estado">{status.shortDetail}</span>
         <span className="ev2-venue">{comp.venue?.fullName ?? ""}</span>
       </div>
-
-      {/* ── Marcador principal ── */}
       <div className="ev2-score-wrap">
         <div className="ev2-team home">
           <Bandera equipo={nameA} ancho={44} />
           <span className="ev2-team-name">{nameA}</span>
         </div>
-
         <div className="ev2-score-center">
           <span className={"ev2-gol" + (numA > numB ? " winner" : "")}>{scA}</span>
           <span className="ev2-dash">–</span>
           <span className={"ev2-gol" + (numB > numA ? " winner" : "")}>{scB}</span>
         </div>
-
         <div className="ev2-team away">
           <Bandera equipo={nameB} ancho={44} />
           <span className="ev2-team-name">{nameB}</span>
         </div>
       </div>
-
-      {/* ── Cuotas ── */}
       {odds && (
         <div className="ev2-odds-wrap">
           <span className="ev2-odds-title">Cuotas en vivo</span>
           <OddsBar nameA={nameA} nameB={nameB} pA={odds.pA} pX={odds.pX} pB={odds.pB} />
         </div>
       )}
-
-      {/* ── Estadísticas ── */}
-      {statRows.length > 0 ? (
-        <div className="ev2-stats-wrap">
-          <div className="ev2-stats-header">
-            <span className="ev2-stats-team home">{nameA}</span>
-            <span className="ev2-stats-mid">ESTADÍSTICAS</span>
-            <span className="ev2-stats-team away">{nameB}</span>
-          </div>
-          <div className="ev2-stats">
-            {statRows.map(({ key, label }) => (
-              <StatRow key={key} label={label} valA={statsA[key]} valB={statsB[key]} />
-            ))}
-          </div>
-        </div>
+      {Object.keys(liveStats).length > 0 ? (
+        <StatsBlock nameA={nameA} nameB={nameB} stats={liveStats} />
       ) : live ? (
         <p className="ev2-nodata">Estadísticas llegando…</p>
       ) : null}
-
     </div>
   );
 }
 
-export default function EnVivo() {
+/* ── Tarjeta de partido ya terminado (historial) ── */
+function TarjetaHistorial({ partido, statsMap }) {
+  const [expandido, setExpandido] = useState(false);
+  const { equipoA, equipoB, resultado, fecha, fase } = partido;
+  const key = `${equipoA}|${equipoB}`;
+  const stats = statsMap?.[key];
+
+  const gA = resultado?.golesA ?? "—";
+  const gB = resultado?.golesB ?? "—";
+  const gAn = Number(gA), gBn = Number(gB);
+
+  const defLabel =
+    resultado?.definidoPor === "PEN" ? "FT (Penales)" :
+    resultado?.definidoPor === "ET"  ? "FT (Prórroga)" : "FT";
+
+  let fechaDisplay = "";
+  try {
+    const d = new Date(String(fecha) + "T12:00:00");
+    fechaDisplay = d.toLocaleDateString("es-CL", { day: "numeric", month: "short" });
+  } catch { fechaDisplay = String(fecha); }
+
+  return (
+    <div
+      className={"ev2-card ended" + (stats ? " ev2-card-clickable" : "")}
+      onClick={() => stats && setExpandido(e => !e)}
+    >
+      <div className="ev2-header">
+        <span className="ev2-estado">{defLabel}</span>
+        <span className="ev2-venue">{fase} · {fechaDisplay}</span>
+      </div>
+      <div className="ev2-score-wrap">
+        <div className="ev2-team home">
+          <Bandera equipo={equipoA} ancho={44} />
+          <span className="ev2-team-name">{equipoA}</span>
+        </div>
+        <div className="ev2-score-center">
+          <span className={"ev2-gol" + (gAn > gBn ? " winner" : "")}>{gA}</span>
+          <span className="ev2-dash">–</span>
+          <span className={"ev2-gol" + (gBn > gAn ? " winner" : "")}>{gB}</span>
+        </div>
+        <div className="ev2-team away">
+          <Bandera equipo={equipoB} ancho={44} />
+          <span className="ev2-team-name">{equipoB}</span>
+        </div>
+      </div>
+      {stats && !expandido && (
+        <p className="ev2-nodata ev2-ver-stats">📊 Ver estadísticas del partido</p>
+      )}
+      {stats && expandido && (
+        <>
+          <StatsBlock nameA={equipoA} nameB={equipoB} stats={stats} />
+          <p className="ev2-nodata ev2-ver-stats">▲ Cerrar estadísticas</p>
+        </>
+      )}
+      {!stats && (
+        <p className="ev2-nodata">Sin estadísticas disponibles</p>
+      )}
+    </div>
+  );
+}
+
+/* ── Vista principal ── */
+export default function EnVivo({ data }) {
   const [eventos,  setEventos]  = useState(null);
   const [cargando, setCargando] = useState(false);
   const [error,    setError]    = useState(null);
   const [ultima,   setUltima]   = useState(null);
+  const [statsMap, setStatsMap] = useState(null);
+
+  // Cargar estadisticas.json una sola vez
+  useEffect(() => {
+    fetch(import.meta.env.BASE_URL + "estadisticas.json")
+      .then(r => r.ok ? r.json() : null)
+      .then(d => d && setStatsMap(d.partidos))
+      .catch(() => {});
+  }, []);
 
   async function cargar() {
     setCargando(true); setError(null);
@@ -221,6 +295,7 @@ export default function EnVivo() {
   useEffect(() => { cargar(); }, []);
 
   const enVivo = eventos?.filter(esEnVivo) ?? [];
+  const terminados = [...(data?.partidos ?? [])].filter(p => p.resultado).reverse();
 
   return (
     <div className="envivo-vista">
@@ -250,6 +325,7 @@ export default function EnVivo() {
         </div>
       )}
 
+      {/* ── Partidos en vivo ── */}
       {!cargando && eventos && enVivo.length === 0 && (
         <div className="ev2-empty">
           <div className="ev2-empty-icon">⏸</div>
@@ -257,12 +333,27 @@ export default function EnVivo() {
           <p className="ev2-empty-sub">Actualiza cuando comience el próximo partido</p>
         </div>
       )}
-
       {enVivo.length > 0 && (
         <div className="ev2-grid">
           {enVivo.map(ev => <TarjetaVivo key={ev.id} ev={ev} />)}
         </div>
       )}
+
+      {/* ── Historial de partidos jugados ── */}
+      {terminados.length > 0 && (
+        <div className="ev2-historial">
+          <h3 className="ev2-hist-titulo">
+            Resultados del Mundial
+            <span className="ev2-hist-sub"> · haz clic para ver estadísticas</span>
+          </h3>
+          <div className="ev2-grid">
+            {terminados.map(p => (
+              <TarjetaHistorial key={p.id} partido={p} statsMap={statsMap} />
+            ))}
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }

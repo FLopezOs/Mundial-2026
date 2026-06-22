@@ -679,3 +679,16 @@ button.chico { padding: 2px 8px; }
   0%   { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+
+/* ── Historial de partidos jugados ── */
+.ev2-historial { margin-top: 32px; }
+.ev2-hist-titulo {
+  font-family: var(--font-impact); font-size: 1.1rem; font-weight: 400;
+  color: var(--azul); letter-spacing: .5px; margin: 0 0 14px;
+  padding-bottom: 8px; border-bottom: 3px solid transparent;
+  border-image: var(--wc-tricolor) 1;
+}
+.ev2-hist-sub { font-family: var(--font-body); font-size: .72rem; color: var(--gris); font-weight: 400; letter-spacing: 0; }
+.ev2-card-clickable { cursor: pointer; transition: box-shadow .15s, transform .1s; }
+.ev2-card-clickable:hover { box-shadow: 0 4px 18px rgba(13,44,84,.18); transform: translateY(-1px); }
+.ev2-ver-stats { color: var(--azul) !important; font-weight: 600 !important; font-style: normal !important; }

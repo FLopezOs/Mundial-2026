@@ -191,7 +191,7 @@ export default function App() {
         {vista === "Inicio"     && <Inicio     data={data} picks={picks} calc={calc} setVista={setVista} probsLive={probsLive} liveTeams={liveTeams} />}
         {vista === "Grupos"     && <Grupos     data={data} picks={picks} setPicks={setPicks} calc={calc} probsLive={probsLive} />}
         {vista === "Bracket"    && <Bracket    picks={picks} setPicks={setPicks} calc={calc} />}
-        {vista === "En Vivo"    && <EnVivo />}
+        {vista === "En Vivo"    && <EnVivo data={data} />}
         {vista === "Resumen"    && <Resumen    data={data} picks={picks} calc={calc} escenario={estado.activo} />}
         {vista === "Escenarios" && <Escenarios estado={estado} guardar={guardar} reiniciarTodo={reiniciarTodo} />}
       </main>
