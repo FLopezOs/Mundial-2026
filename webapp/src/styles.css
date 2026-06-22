@@ -739,3 +739,22 @@ button.chico { padding: 2px 8px; }
   .pp-summary { grid-template-columns: repeat(4, 1fr); }
   .pp-summary-val { font-size: 1.5rem; }
 }
+.pp-topbar { margin-bottom: 12px; }
+.pp-topbar .ev2-hist-titulo { margin: 0 0 10px; }
+.pp-selects { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.pp-selects .ev2-filtro-select { flex: 1; min-width: 140px; }
+.pp-vs-label { font-size: .8rem; font-weight: 700; color: var(--gris); flex-shrink: 0; }
+.pp-vs-row { display: flex; align-items: flex-start; gap: 10px; margin-top: 12px; }
+.pp-vs-row .pp-mini-card { flex: 1; min-width: 0; }
+.pp-vs-sep { font-family: var(--font-impact); font-size: 1.6rem; color: var(--gris); align-self: center; flex-shrink: 0; }
+.pp-mini-card .ev2-header { padding: 10px 12px 6px; }
+.pp-mini-titulo { font-size: .85rem !important; font-weight: 700 !important; }
+.pp-summary-sm {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 3px; padding: 8px 10px 10px; border-bottom: 1px solid var(--borde);
+}
+.pp-summary-val-sm {
+  font-family: var(--font-impact); font-size: 1.3rem; font-weight: 400;
+  color: var(--azul); line-height: 1;
+}
+.pp-nota-pj { font-size: .72rem; color: var(--gris); text-align: center; margin: 6px 0 2px; }
