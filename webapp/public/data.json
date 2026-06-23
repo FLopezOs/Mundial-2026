@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-23 17:14",
+ "generado": "2026-06-23 19:57",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -1466,13 +1466,11 @@
    "ciudad": "Houston",
    "pais": "Estados Unidos",
    "horaChile": "13:00",
-   "oddsImplied": {
-    "pGanaA": 0.8392,
-    "pEmpate": 0.1128,
-    "pGanaB": 0.048,
-    "mlA": "-700",
-    "mlX": "750",
-    "mlB": "+1900"
+   "resultado": {
+    "golesA": 5,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO",
@@ -1491,11 +1489,11 @@
    "pais": "Estados Unidos",
    "horaChile": "16:00",
    "oddsImplied": {
-    "pGanaA": 0.8036,
-    "pEmpate": 0.1367,
-    "pGanaB": 0.0598,
-    "mlA": "-525",
-    "mlX": "600",
+    "pGanaA": 0.8121,
+    "pEmpate": 0.128,
+    "pGanaB": 0.06,
+    "mlA": "-550",
+    "mlX": "650",
     "mlB": "+1500"
    },
    "canales": [
@@ -1515,12 +1513,12 @@
    "pais": "Canadá",
    "horaChile": "19:00",
    "oddsImplied": {
-    "pGanaA": 0.1371,
-    "pEmpate": 0.2181,
-    "pGanaB": 0.6449,
-    "mlA": "+600",
-    "mlX": "340",
-    "mlB": "-205"
+    "pGanaA": 0.1278,
+    "pEmpate": 0.2084,
+    "pGanaB": 0.6637,
+    "mlA": "+650",
+    "mlX": "360",
+    "mlB": "-225"
    },
    "canales": [
     "DGO",
@@ -1539,10 +1537,10 @@
    "pais": "México",
    "horaChile": "22:00",
    "oddsImplied": {
-    "pGanaA": 0.6251,
-    "pEmpate": 0.2385,
-    "pGanaB": 0.1363,
-    "mlA": "-190",
+    "pGanaA": 0.6207,
+    "pEmpate": 0.2414,
+    "pGanaB": 0.1379,
+    "mlA": "-180",
     "mlX": "300",
     "mlB": "+600"
    },
@@ -1846,10 +1844,10 @@
    "pais": "Estados Unidos",
    "horaChile": "15:00",
    "oddsImplied": {
-    "pGanaA": 0.1909,
-    "pEmpate": 0.2219,
-    "pGanaB": 0.5872,
-    "mlA": "+400",
+    "pGanaA": 0.1834,
+    "pEmpate": 0.224,
+    "pGanaB": 0.5926,
+    "mlA": "+425",
     "mlX": "330",
     "mlB": "-160"
    },
@@ -1870,11 +1868,11 @@
    "pais": "Canadá",
    "horaChile": "15:00",
    "oddsImplied": {
-    "pGanaA": 0.7734,
-    "pEmpate": 0.147,
-    "pGanaB": 0.0796,
-    "mlA": "-425",
-    "mlX": "550",
+    "pGanaA": 0.7834,
+    "pEmpate": 0.1368,
+    "pGanaB": 0.0798,
+    "mlA": "-450",
+    "mlX": "600",
     "mlB": "+1100"
    },
    "canales": [
@@ -1964,12 +1962,12 @@
    "pais": "Canadá",
    "horaChile": "23:00",
    "oddsImplied": {
-    "pGanaA": 0.0682,
-    "pEmpate": 0.1364,
-    "pGanaB": 0.7955,
-    "mlA": "+1300",
-    "mlX": "600",
-    "mlB": "-500"
+    "pGanaA": 0.0641,
+    "pEmpate": 0.1282,
+    "pGanaB": 0.8077,
+    "mlA": "+1400",
+    "mlX": "650",
+    "mlB": "-525"
    },
    "canales": [
     "DGO"
@@ -2010,11 +2008,11 @@
    "pais": "Estados Unidos",
    "horaChile": "17:00",
    "oddsImplied": {
-    "pGanaA": 0.5766,
-    "pEmpate": 0.2563,
-    "pGanaB": 0.1671,
-    "mlA": "-150",
-    "mlX": "275",
+    "pGanaA": 0.5672,
+    "pEmpate": 0.2662,
+    "pGanaB": 0.1667,
+    "mlA": "-145",
+    "mlX": "260",
     "mlB": "+475"
    },
    "canales": [
@@ -2033,12 +2031,12 @@
    "pais": "Estados Unidos",
    "horaChile": "19:30",
    "oddsImplied": {
-    "pGanaA": 0.2626,
-    "pEmpate": 0.27,
-    "pGanaB": 0.4675,
-    "mlA": "+265",
-    "mlX": "255",
-    "mlB": "+105"
+    "pGanaA": 0.2501,
+    "pEmpate": 0.2568,
+    "pGanaB": 0.4932,
+    "mlA": "+285",
+    "mlX": "275",
+    "mlB": "-105"
    },
    "canales": [
     "DGO",
@@ -2058,12 +2056,12 @@
    "pais": "Estados Unidos",
    "horaChile": "19:30",
    "oddsImplied": {
-    "pGanaA": 0.4702,
-    "pEmpate": 0.2504,
-    "pGanaB": 0.2794,
-    "mlA": "+105",
-    "mlX": "285",
-    "mlB": "+245"
+    "pGanaA": 0.5019,
+    "pEmpate": 0.2426,
+    "pGanaB": 0.2555,
+    "mlA": "-110",
+    "mlX": "295",
+    "mlB": "+275"
    },
    "canales": [
     "DGO"
@@ -2081,12 +2079,12 @@
    "pais": "Estados Unidos",
    "horaChile": "22:00",
    "oddsImplied": {
-    "pGanaA": 0.2557,
-    "pEmpate": 0.408,
-    "pGanaB": 0.3364,
-    "mlA": "+275",
-    "mlX": "135",
-    "mlB": "+185"
+    "pGanaA": 0.2524,
+    "pEmpate": 0.417,
+    "pGanaB": 0.3307,
+    "mlA": "+280",
+    "mlX": "130",
+    "mlB": "+190"
    },
    "canales": [
     "DGO"
