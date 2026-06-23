@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-22 22:44",
+ "generado": "2026-06-23 02:51",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -1557,6 +1557,82 @@
    "offsides": {
     "A": "2",
     "B": "0"
+   }
+  },
+  "Francia|Irak": {
+   "possessionPct": {
+    "A": "55.5",
+    "B": "44.5"
+   },
+   "totalShots": {
+    "A": "19",
+    "B": "4"
+   },
+   "shotsOnTarget": {
+    "A": "5",
+    "B": "0"
+   },
+   "saves": {
+    "A": "0",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "8",
+    "B": "4"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "0"
+   }
+  },
+  "Noruega|Senegal": {
+   "possessionPct": {
+    "A": "41.7",
+    "B": "58.3"
+   },
+   "totalShots": {
+    "A": "13",
+    "B": "16"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "4"
+   },
+   "saves": {
+    "A": "2",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "5",
+    "B": "4"
+   },
+   "foulsCommitted": {
+    "A": "13",
+    "B": "5"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "4"
    }
   }
  }
