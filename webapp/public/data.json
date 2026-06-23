@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-23 19:57",
+ "generado": "2026-06-23 22:10",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -1488,13 +1488,11 @@
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
-   "oddsImplied": {
-    "pGanaA": 0.8121,
-    "pEmpate": 0.128,
-    "pGanaB": 0.06,
-    "mlA": "-550",
-    "mlX": "650",
-    "mlB": "+1500"
+   "resultado": {
+    "golesA": 0,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO",
@@ -1561,11 +1559,11 @@
    "pais": "Canadá",
    "horaChile": "15:00",
    "oddsImplied": {
-    "pGanaA": 0.4062,
-    "pEmpate": 0.313,
-    "pGanaB": 0.2808,
+    "pGanaA": 0.4083,
+    "pEmpate": 0.3095,
+    "pGanaB": 0.2822,
     "mlA": "+135",
-    "mlX": "205",
+    "mlX": "210",
     "mlB": "+240"
    },
    "canales": [
@@ -1632,10 +1630,10 @@
    "pais": "Estados Unidos",
    "horaChile": "18:00",
    "oddsImplied": {
-    "pGanaA": 0.8159,
-    "pEmpate": 0.1277,
-    "pGanaB": 0.0563,
-    "mlA": "-575",
+    "pGanaA": 0.8149,
+    "pEmpate": 0.1284,
+    "pGanaB": 0.0567,
+    "mlA": "-550",
     "mlX": "650",
     "mlB": "+1600"
    },
@@ -1820,12 +1818,12 @@
    "pais": "Estados Unidos",
    "horaChile": "22:00",
    "oddsImplied": {
-    "pGanaA": 0.3239,
-    "pEmpate": 0.4343,
-    "pGanaB": 0.2419,
-    "mlA": "+195",
-    "mlX": "120",
-    "mlB": "+295"
+    "pGanaA": 0.3198,
+    "pEmpate": 0.4462,
+    "pGanaB": 0.234,
+    "mlA": "+200",
+    "mlX": "115",
+    "mlB": "+310"
    },
    "canales": [
     "DGO",
@@ -2008,12 +2006,12 @@
    "pais": "Estados Unidos",
    "horaChile": "17:00",
    "oddsImplied": {
-    "pGanaA": 0.5672,
-    "pEmpate": 0.2662,
-    "pGanaB": 0.1667,
-    "mlA": "-145",
-    "mlX": "260",
-    "mlB": "+475"
+    "pGanaA": 0.561,
+    "pEmpate": 0.2787,
+    "pGanaB": 0.1603,
+    "mlA": "-140",
+    "mlX": "245",
+    "mlB": "+500"
    },
    "canales": [
     "DGO"
@@ -2056,12 +2054,12 @@
    "pais": "Estados Unidos",
    "horaChile": "19:30",
    "oddsImplied": {
-    "pGanaA": 0.5019,
-    "pEmpate": 0.2426,
-    "pGanaB": 0.2555,
-    "mlA": "-110",
-    "mlX": "295",
-    "mlB": "+275"
+    "pGanaA": 0.5121,
+    "pEmpate": 0.2455,
+    "pGanaB": 0.2424,
+    "mlA": "-115",
+    "mlX": "290",
+    "mlB": "+295"
    },
    "canales": [
     "DGO"
@@ -2079,11 +2077,11 @@
    "pais": "Estados Unidos",
    "horaChile": "22:00",
    "oddsImplied": {
-    "pGanaA": 0.2524,
-    "pEmpate": 0.417,
-    "pGanaB": 0.3307,
-    "mlA": "+280",
-    "mlX": "130",
+    "pGanaA": 0.2382,
+    "pEmpate": 0.4332,
+    "pGanaB": 0.3286,
+    "mlA": "+300",
+    "mlX": "120",
     "mlB": "+190"
    },
    "canales": [
