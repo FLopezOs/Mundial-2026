@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-24 22:14",
+ "generado": "2026-06-25 02:52",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -1596,13 +1596,11 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "18:00",
-   "oddsImplied": {
-    "pGanaA": 0.0961,
-    "pEmpate": 0.1831,
-    "pGanaB": 0.7208,
-    "mlA": "+900",
-    "mlX": "425",
-    "mlB": "-300"
+   "resultado": {
+    "golesA": 0,
+    "golesB": 3,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO",
@@ -1621,13 +1619,11 @@
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "18:00",
-   "oddsImplied": {
-    "pGanaA": 0.737,
-    "pEmpate": 0.167,
-    "pGanaB": 0.096,
-    "mlA": "-330",
-    "mlX": "475",
-    "mlB": "+900"
+   "resultado": {
+    "golesA": 4,
+    "golesB": 2,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO"
@@ -1644,14 +1640,6 @@
    "ciudad": "Mexico City",
    "pais": "México",
    "horaChile": "21:00",
-   "oddsImplied": {
-    "pGanaA": 0.2509,
-    "pEmpate": 0.2542,
-    "pGanaB": 0.4948,
-    "mlA": "+285",
-    "mlX": "280",
-    "mlB": "-105"
-   },
    "canales": [
     "DGO",
     "CHV"
@@ -1668,14 +1656,6 @@
    "ciudad": "Monterrey (Guadalupe)",
    "pais": "México",
    "horaChile": "21:00",
-   "oddsImplied": {
-    "pGanaA": 0.1599,
-    "pEmpate": 0.2429,
-    "pGanaB": 0.5973,
-    "mlA": "+500",
-    "mlX": "295",
-    "mlB": "-165"
-   },
    "canales": [
     "DGO"
    ]
@@ -1715,12 +1695,12 @@
    "pais": "Estados Unidos",
    "horaChile": "16:00",
    "oddsImplied": {
-    "pGanaA": 0.2442,
-    "pEmpate": 0.2297,
-    "pGanaB": 0.5261,
-    "mlA": "+295",
-    "mlX": "320",
-    "mlB": "-120"
+    "pGanaA": 0.2144,
+    "pEmpate": 0.2144,
+    "pGanaB": 0.5711,
+    "mlA": "+350",
+    "mlX": "350",
+    "mlB": "-145"
    },
    "canales": [
     "DGO",
@@ -1763,11 +1743,11 @@
    "pais": "Estados Unidos",
    "horaChile": "19:00",
    "oddsImplied": {
-    "pGanaA": 0.0453,
-    "pEmpate": 0.0905,
-    "pGanaB": 0.8642,
-    "mlA": "+2000",
-    "mlX": "950",
+    "pGanaA": 0.0417,
+    "pEmpate": 0.0871,
+    "pGanaB": 0.8712,
+    "mlA": "+2200",
+    "mlX": "1000",
     "mlB": "-1000"
    },
    "canales": [
@@ -1810,12 +1790,12 @@
    "pais": "Estados Unidos",
    "horaChile": "22:00",
    "oddsImplied": {
-    "pGanaA": 0.3357,
-    "pEmpate": 0.4252,
-    "pGanaB": 0.2392,
-    "mlA": "+185",
+    "pGanaA": 0.3416,
+    "pEmpate": 0.4251,
+    "pGanaB": 0.2333,
+    "mlA": "+180",
     "mlX": "125",
-    "mlB": "+300"
+    "mlB": "+310"
    },
    "canales": [
     "DGO",
@@ -1952,12 +1932,12 @@
    "pais": "Canadá",
    "horaChile": "23:00",
    "oddsImplied": {
-    "pGanaA": 0.056,
-    "pEmpate": 0.119,
-    "pGanaB": 0.825,
+    "pGanaA": 0.0565,
+    "pEmpate": 0.1201,
+    "pGanaB": 0.8234,
     "mlA": "+1600",
     "mlX": "700",
-    "mlB": "-650"
+    "mlB": "-600"
    },
    "canales": [
     "DGO"
@@ -2046,11 +2026,11 @@
    "pais": "Estados Unidos",
    "horaChile": "19:30",
    "oddsImplied": {
-    "pGanaA": 0.5426,
-    "pEmpate": 0.2341,
-    "pGanaB": 0.2233,
-    "mlA": "-130",
-    "mlX": "310",
+    "pGanaA": 0.5497,
+    "pEmpate": 0.2278,
+    "pGanaB": 0.2225,
+    "mlA": "-135",
+    "mlX": "320",
     "mlB": "+330"
    },
    "canales": [
