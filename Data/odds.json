@@ -1,62 +1,62 @@
 {
- "generado": "2026-06-25 02:52",
+ "generado": "2026-06-25 06:45",
  "fuente": "DraftKings vía ESPN unofficial API",
  "partidos": {
   "55": {
-   "pGanaA": 0.0534,
-   "pEmpate": 0.1131,
-   "pGanaB": 0.8334,
+   "pGanaA": 0.0531,
+   "pEmpate": 0.1194,
+   "pGanaB": 0.8276,
    "mlA": "+1700",
-   "mlX": "750",
+   "mlX": "700",
    "mlB": "-650"
   },
   "56": {
-   "pGanaA": 0.2144,
-   "pEmpate": 0.2144,
-   "pGanaB": 0.5711,
-   "mlA": "+350",
-   "mlX": "350",
-   "mlB": "-145"
+   "pGanaA": 0.1746,
+   "pEmpate": 0.196,
+   "pGanaB": 0.6293,
+   "mlA": "+450",
+   "mlX": "390",
+   "mlB": "-190"
   },
   "57": {
-   "pGanaA": 0.5124,
-   "pEmpate": 0.2699,
-   "pGanaB": 0.2177,
+   "pGanaA": 0.5143,
+   "pEmpate": 0.2671,
+   "pGanaB": 0.2185,
    "mlA": "-115",
-   "mlX": "255",
+   "mlX": "260",
    "mlB": "+340"
   },
   "58": {
-   "pGanaA": 0.0417,
-   "pEmpate": 0.0871,
-   "pGanaB": 0.8712,
-   "mlA": "+2200",
+   "pGanaA": 0.037,
+   "pEmpate": 0.0875,
+   "pGanaB": 0.8754,
+   "mlA": "+2500",
    "mlX": "1000",
    "mlB": "-1000"
   },
   "60": {
-   "pGanaA": 0.3416,
-   "pEmpate": 0.4251,
-   "pGanaB": 0.2333,
-   "mlA": "+180",
+   "pGanaA": 0.3357,
+   "pEmpate": 0.4252,
+   "pGanaB": 0.2392,
+   "mlA": "+185",
    "mlX": "125",
-   "mlB": "+310"
+   "mlB": "+300"
   },
   "59": {
-   "pGanaA": 0.2698,
-   "pEmpate": 0.2395,
-   "pGanaB": 0.4907,
-   "mlA": "+255",
-   "mlX": "300",
-   "mlB": "-105"
+   "pGanaA": 0.2428,
+   "pEmpate": 0.234,
+   "pGanaB": 0.5232,
+   "mlA": "+295",
+   "mlX": "310",
+   "mlB": "-120"
   },
   "61": {
-   "pGanaA": 0.2035,
-   "pEmpate": 0.2225,
-   "pGanaB": 0.574,
-   "mlA": "+370",
-   "mlX": "330",
-   "mlB": "-150"
+   "pGanaA": 0.1918,
+   "pEmpate": 0.218,
+   "pGanaB": 0.5902,
+   "mlA": "+400",
+   "mlX": "340",
+   "mlB": "-160"
   },
   "62": {
    "pGanaA": 0.7834,
@@ -115,12 +115,12 @@
    "mlB": "-575"
   },
   "69": {
-   "pGanaA": 0.229,
-   "pEmpate": 0.2565,
-   "pGanaB": 0.5145,
+   "pGanaA": 0.2275,
+   "pEmpate": 0.2514,
+   "pGanaB": 0.5211,
    "mlA": "+320",
-   "mlX": "275",
-   "mlB": "-115"
+   "mlX": "280",
+   "mlB": "-120"
   },
   "70": {
    "pGanaA": 0.5497,
@@ -139,12 +139,12 @@
    "mlB": "+190"
   },
   "72": {
-   "pGanaA": 0.0687,
-   "pEmpate": 0.1373,
-   "pGanaB": 0.794,
+   "pGanaA": 0.0688,
+   "pEmpate": 0.1284,
+   "pGanaB": 0.8028,
    "mlA": "+1300",
-   "mlX": "600",
-   "mlB": "-475"
+   "mlX": "650",
+   "mlB": "-500"
   }
  }
 }
