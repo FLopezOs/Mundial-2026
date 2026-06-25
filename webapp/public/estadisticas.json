@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-25 19:54",
+ "generado": "2026-06-25 22:19",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -2050,6 +2050,82 @@
    },
    "offsides": {
     "A": "3",
+    "B": "0"
+   }
+  },
+  "Curaçao|Costa de Marfil": {
+   "possessionPct": {
+    "A": "36.6",
+    "B": "63.4"
+   },
+   "totalShots": {
+    "A": "11",
+    "B": "7"
+   },
+   "shotsOnTarget": {
+    "A": "2",
+    "B": "3"
+   },
+   "saves": {
+    "A": "1",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "6"
+   },
+   "foulsCommitted": {
+    "A": "11",
+    "B": "6"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "1"
+   }
+  },
+  "Ecuador|Alemania": {
+   "possessionPct": {
+    "A": "38.9",
+    "B": "61.1"
+   },
+   "totalShots": {
+    "A": "7",
+    "B": "11"
+   },
+   "shotsOnTarget": {
+    "A": "3",
+    "B": "3"
+   },
+   "saves": {
+    "A": "2",
+    "B": "1"
+   },
+   "cornerKicks": {
+    "A": "3",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "15",
+    "B": "10"
+   },
+   "yellowCards": {
+    "A": "3",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
     "B": "0"
    }
   }
