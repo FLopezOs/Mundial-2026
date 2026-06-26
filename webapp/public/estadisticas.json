@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-25 22:19",
+ "generado": "2026-06-26 02:57",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -2127,6 +2127,82 @@
    "offsides": {
     "A": "1",
     "B": "0"
+   }
+  },
+  "Japón|Suecia": {
+   "possessionPct": {
+    "A": "52.3",
+    "B": "47.7"
+   },
+   "totalShots": {
+    "A": "8",
+    "B": "11"
+   },
+   "shotsOnTarget": {
+    "A": "3",
+    "B": "5"
+   },
+   "saves": {
+    "A": "4",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "2",
+    "B": "8"
+   },
+   "foulsCommitted": {
+    "A": "20",
+    "B": "11"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "2"
+   }
+  },
+  "Túnez|Países Bajos": {
+   "possessionPct": {
+    "A": "28.4",
+    "B": "71.6"
+   },
+   "totalShots": {
+    "A": "10",
+    "B": "20"
+   },
+   "shotsOnTarget": {
+    "A": "4",
+    "B": "7"
+   },
+   "saves": {
+    "A": "4",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "6"
+   },
+   "foulsCommitted": {
+    "A": "11",
+    "B": "10"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "1"
    }
   }
  }
