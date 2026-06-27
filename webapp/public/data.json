@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-27 16:02",
+ "generado": "2026-06-27 19:15",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -1943,12 +1943,12 @@
    "pais": "Estados Unidos",
    "horaChile": "17:00",
    "oddsImplied": {
-    "pGanaA": 0.0597,
-    "pEmpate": 0.1124,
-    "pGanaB": 0.8279,
-    "mlA": "+1500",
-    "mlX": "750",
-    "mlB": "-650"
+    "pGanaA": 0.0533,
+    "pEmpate": 0.1067,
+    "pGanaB": 0.84,
+    "mlA": "+1700",
+    "mlX": "800",
+    "mlB": "-700"
    },
    "canales": [
     "DGO"
@@ -1966,12 +1966,12 @@
    "pais": "Estados Unidos",
    "horaChile": "17:00",
    "oddsImplied": {
-    "pGanaA": 0.5052,
-    "pEmpate": 0.3111,
-    "pGanaB": 0.1837,
-    "mlA": "-110",
-    "mlX": "210",
-    "mlB": "+425"
+    "pGanaA": 0.5316,
+    "pEmpate": 0.2944,
+    "pGanaB": 0.174,
+    "mlA": "-125",
+    "mlX": "225",
+    "mlB": "+450"
    },
    "canales": [
     "DGO"
@@ -1989,12 +1989,12 @@
    "pais": "Estados Unidos",
    "horaChile": "19:30",
    "oddsImplied": {
-    "pGanaA": 0.2619,
-    "pEmpate": 0.2483,
-    "pGanaB": 0.4897,
-    "mlA": "+265",
-    "mlX": "285",
-    "mlB": "-105"
+    "pGanaA": 0.2785,
+    "pEmpate": 0.2528,
+    "pGanaB": 0.4687,
+    "mlA": "+245",
+    "mlX": "280",
+    "mlB": "+105"
    },
    "canales": [
     "DGO",
@@ -2014,11 +2014,11 @@
    "pais": "Estados Unidos",
    "horaChile": "19:30",
    "oddsImplied": {
-    "pGanaA": 0.5646,
-    "pEmpate": 0.2446,
-    "pGanaB": 0.1908,
-    "mlA": "-145",
-    "mlX": "290",
+    "pGanaA": 0.5574,
+    "pEmpate": 0.2515,
+    "pGanaB": 0.1911,
+    "mlA": "-140",
+    "mlX": "280",
     "mlB": "+400"
    },
    "canales": [
@@ -2037,12 +2037,12 @@
    "pais": "Estados Unidos",
    "horaChile": "22:00",
    "oddsImplied": {
-    "pGanaA": 0.2435,
-    "pEmpate": 0.4693,
-    "pGanaB": 0.2872,
-    "mlA": "+295",
-    "mlX": "105",
-    "mlB": "+235"
+    "pGanaA": 0.2633,
+    "pEmpate": 0.4805,
+    "pGanaB": 0.2563,
+    "mlA": "+265",
+    "mlX": "100",
+    "mlB": "+275"
    },
    "canales": [
     "DGO"
