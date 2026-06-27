@@ -1,38 +1,38 @@
 {
- "generado": "2026-06-27 02:47",
+ "generado": "2026-06-27 06:27",
  "fuente": "DraftKings vía ESPN unofficial API",
  "partidos": {
   "68": {
-   "pGanaA": 0.5246,
-   "pEmpate": 0.3005,
-   "pGanaB": 0.1749,
-   "mlA": "-120",
+   "pGanaA": 0.5107,
+   "pEmpate": 0.2984,
+   "pGanaB": 0.191,
+   "mlA": "-115",
    "mlX": "220",
-   "mlB": "+450"
+   "mlB": "+400"
   },
   "67": {
-   "pGanaA": 0.0637,
-   "pEmpate": 0.1275,
-   "pGanaB": 0.8088,
+   "pGanaA": 0.0639,
+   "pEmpate": 0.1198,
+   "pGanaB": 0.8163,
    "mlA": "+1400",
-   "mlX": "650",
-   "mlB": "-550"
+   "mlX": "700",
+   "mlB": "-575"
   },
   "69": {
-   "pGanaA": 0.2401,
-   "pEmpate": 0.2462,
-   "pGanaB": 0.5137,
-   "mlA": "+300",
-   "mlX": "290",
-   "mlB": "-115"
+   "pGanaA": 0.2785,
+   "pEmpate": 0.2528,
+   "pGanaB": 0.4687,
+   "mlA": "+245",
+   "mlX": "280",
+   "mlB": "+105"
   },
   "70": {
-   "pGanaA": 0.5584,
-   "pEmpate": 0.2335,
-   "pGanaB": 0.2081,
-   "mlA": "-140",
+   "pGanaA": 0.5832,
+   "pEmpate": 0.234,
+   "pGanaB": 0.1828,
+   "mlA": "-155",
    "mlX": "310",
-   "mlB": "+360"
+   "mlB": "+425"
   },
   "71": {
    "pGanaA": 0.2351,
@@ -43,12 +43,12 @@
    "mlB": "+195"
   },
   "72": {
-   "pGanaA": 0.0637,
-   "pEmpate": 0.1275,
-   "pGanaB": 0.8088,
-   "mlA": "+1400",
-   "mlX": "650",
-   "mlB": "-550"
+   "pGanaA": 0.0565,
+   "pEmpate": 0.1201,
+   "pGanaB": 0.8234,
+   "mlA": "+1600",
+   "mlX": "700",
+   "mlB": "-600"
   }
  }
 }
