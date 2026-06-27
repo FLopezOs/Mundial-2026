@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-27 13:24",
+ "generado": "2026-06-27 16:02",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -1966,12 +1966,12 @@
    "pais": "Estados Unidos",
    "horaChile": "17:00",
    "oddsImplied": {
-    "pGanaA": 0.5083,
-    "pEmpate": 0.3017,
-    "pGanaB": 0.1901,
-    "mlA": "-115",
-    "mlX": "215",
-    "mlB": "+400"
+    "pGanaA": 0.5052,
+    "pEmpate": 0.3111,
+    "pGanaB": 0.1837,
+    "mlA": "-110",
+    "mlX": "210",
+    "mlB": "+425"
    },
    "canales": [
     "DGO"
@@ -2014,12 +2014,12 @@
    "pais": "Estados Unidos",
    "horaChile": "19:30",
    "oddsImplied": {
-    "pGanaA": 0.5749,
-    "pEmpate": 0.2426,
-    "pGanaB": 0.1825,
-    "mlA": "-150",
-    "mlX": "295",
-    "mlB": "+425"
+    "pGanaA": 0.5646,
+    "pEmpate": 0.2446,
+    "pGanaB": 0.1908,
+    "mlA": "-145",
+    "mlX": "290",
+    "mlB": "+400"
    },
    "canales": [
     "DGO"
@@ -2037,12 +2037,12 @@
    "pais": "Estados Unidos",
    "horaChile": "22:00",
    "oddsImplied": {
-    "pGanaA": 0.2414,
-    "pEmpate": 0.4652,
-    "pGanaB": 0.2934,
+    "pGanaA": 0.2435,
+    "pEmpate": 0.4693,
+    "pGanaB": 0.2872,
     "mlA": "+295",
     "mlX": "105",
-    "mlB": "+225"
+    "mlB": "+235"
    },
    "canales": [
     "DGO"
