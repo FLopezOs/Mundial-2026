@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-27 22:00",
+ "generado": "2026-06-28 03:27",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -1942,13 +1942,11 @@
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "oddsImplied": {
-    "pGanaA": 0.0597,
-    "pEmpate": 0.1124,
-    "pGanaB": 0.8279,
-    "mlA": "+1500",
-    "mlX": "750",
-    "mlB": "-650"
+   "resultado": {
+    "golesA": 0,
+    "golesB": 2,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO"
@@ -1965,13 +1963,11 @@
    "ciudad": "Philadelphia",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "oddsImplied": {
-    "pGanaA": 0.534,
-    "pEmpate": 0.2913,
-    "pGanaB": 0.1748,
-    "mlA": "-125",
-    "mlX": "230",
-    "mlB": "+450"
+   "resultado": {
+    "golesA": 2,
+    "golesB": 1,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO"
@@ -1988,13 +1984,11 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "19:30",
-   "oddsImplied": {
-    "pGanaA": 0.2696,
-    "pEmpate": 0.2519,
-    "pGanaB": 0.4785,
-    "mlA": "+255",
-    "mlX": "280",
-    "mlB": "+100"
+   "resultado": {
+    "golesA": 0,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO",
@@ -2013,13 +2007,11 @@
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "19:30",
-   "oddsImplied": {
-    "pGanaA": 0.5661,
-    "pEmpate": 0.2517,
-    "pGanaB": 0.1822,
-    "mlA": "-145",
-    "mlX": "280",
-    "mlB": "+425"
+   "resultado": {
+    "golesA": 3,
+    "golesB": 1,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO"
@@ -2036,14 +2028,6 @@
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
-   "oddsImplied": {
-    "pGanaA": 0.2633,
-    "pEmpate": 0.4805,
-    "pGanaB": 0.2563,
-    "mlA": "+265",
-    "mlX": "100",
-    "mlB": "+275"
-   },
    "canales": [
     "DGO"
    ]
@@ -2059,14 +2043,6 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
-   "oddsImplied": {
-    "pGanaA": 0.0507,
-    "pEmpate": 0.107,
-    "pGanaB": 0.8424,
-    "mlA": "+1800",
-    "mlX": "800",
-    "mlB": "-700"
-   },
    "canales": [
     "DGO",
     "Disney+"
