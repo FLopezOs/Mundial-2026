@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-28 03:27",
+ "generado": "2026-06-28 08:47",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -2659,6 +2659,82 @@
    "offsides": {
     "A": "3",
     "B": "1"
+   }
+  },
+  "Argelia|Austria": {
+   "possessionPct": {
+    "A": "65",
+    "B": "35"
+   },
+   "totalShots": {
+    "A": "12",
+    "B": "10"
+   },
+   "shotsOnTarget": {
+    "A": "5",
+    "B": "3"
+   },
+   "saves": {
+    "A": "1",
+    "B": "2"
+   },
+   "cornerKicks": {
+    "A": "0",
+    "B": "3"
+   },
+   "foulsCommitted": {
+    "A": "3",
+    "B": "7"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "3"
+   }
+  },
+  "Jordania|Argentina": {
+   "possessionPct": {
+    "A": "26.7",
+    "B": "73.3"
+   },
+   "totalShots": {
+    "A": "5",
+    "B": "12"
+   },
+   "shotsOnTarget": {
+    "A": "1",
+    "B": "4"
+   },
+   "saves": {
+    "A": "1",
+    "B": "0"
+   },
+   "cornerKicks": {
+    "A": "2",
+    "B": "6"
+   },
+   "foulsCommitted": {
+    "A": "13",
+    "B": "7"
+   },
+   "yellowCards": {
+    "A": "3",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "3"
    }
   }
  }

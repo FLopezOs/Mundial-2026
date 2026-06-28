@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-28 03:27",
+ "generado": "2026-06-28 08:47",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2028,6 +2028,12 @@
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
+   "resultado": {
+    "golesA": 3,
+    "golesB": 3,
+    "definidoPor": "90",
+    "ganadorPenales": null
+   },
    "canales": [
     "DGO"
    ]
@@ -2043,6 +2049,12 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
+   "resultado": {
+    "golesA": 1,
+    "golesB": 3,
+    "definidoPor": "90",
+    "ganadorPenales": null
+   },
    "canales": [
     "DGO",
     "Disney+"
