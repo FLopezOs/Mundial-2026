@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-29 14:25",
+ "generado": "2026-06-29 15:40",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2008,24 +2008,16 @@
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "oddsImplied": {
-    "pGanaA": 0.0597,
-    "pEmpate": 0.1124,
-    "pGanaB": 0.8279,
-    "mlA": "+1500",
-    "mlX": "750",
-    "mlB": "-650"
-   },
-   "canales": [
-    "DGO",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 0,
     "golesB": 2,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Paramount+"
+   ]
   },
   {
    "id": 68,
@@ -2038,24 +2030,16 @@
    "ciudad": "Philadelphia",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "oddsImplied": {
-    "pGanaA": 0.534,
-    "pEmpate": 0.2913,
-    "pGanaB": 0.1748,
-    "mlA": "-125",
-    "mlX": "230",
-    "mlB": "+450"
-   },
-   "canales": [
-    "DGO",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 2,
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Paramount+"
+   ]
   },
   {
    "id": 69,
@@ -2068,26 +2052,18 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "19:30",
-   "oddsImplied": {
-    "pGanaA": 0.2696,
-    "pEmpate": 0.2519,
-    "pGanaB": 0.4785,
-    "mlA": "+255",
-    "mlX": "280",
-    "mlB": "+100"
+   "resultado": {
+    "golesA": 0,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO",
     "CHV",
     "Disney+",
     "Paramount+"
-   ],
-   "resultado": {
-    "golesA": 0,
-    "golesB": 0,
-    "definidoPor": "90",
-    "ganadorPenales": null
-   }
+   ]
   },
   {
    "id": 70,
@@ -2100,24 +2076,16 @@
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "19:30",
-   "oddsImplied": {
-    "pGanaA": 0.5661,
-    "pEmpate": 0.2517,
-    "pGanaB": 0.1822,
-    "mlA": "-145",
-    "mlX": "280",
-    "mlB": "+425"
-   },
-   "canales": [
-    "DGO",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 3,
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Paramount+"
+   ]
   },
   {
    "id": 71,
@@ -2130,24 +2098,16 @@
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
-   "oddsImplied": {
-    "pGanaA": 0.2633,
-    "pEmpate": 0.4805,
-    "pGanaB": 0.2563,
-    "mlA": "+265",
-    "mlX": "100",
-    "mlB": "+275"
-   },
-   "canales": [
-    "DGO",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 3,
     "golesB": 3,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Paramount+"
+   ]
   },
   {
    "id": 72,
@@ -2160,25 +2120,17 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
-   "oddsImplied": {
-    "pGanaA": 0.0507,
-    "pEmpate": 0.107,
-    "pGanaB": 0.8424,
-    "mlA": "+1800",
-    "mlX": "800",
-    "mlB": "-700"
-   },
-   "canales": [
-    "DGO",
-    "Disney+",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 1,
     "golesB": 3,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Disney+",
+    "Paramount+"
+   ]
   },
   {
    "id": 73,
@@ -2186,8 +2138,8 @@
    "fecha": "2026-06-28",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Sudáfrica",
-   "equipoB": "Canadá",
+   "equipoA": "2A",
+   "equipoB": "2B",
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
@@ -2195,13 +2147,7 @@
     "DGO",
     "CHV",
     "Paramount+"
-   ],
-   "resultado": {
-    "golesA": 0,
-    "golesB": 1,
-    "definidoPor": "90",
-    "ganadorPenales": null
-   }
+   ]
   },
   {
    "id": 74,
@@ -2209,8 +2155,8 @@
    "fecha": "2026-06-29",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Brasil",
-   "equipoB": "Japón",
+   "equipoA": "1C",
+   "equipoB": "2F",
    "ciudad": "Houston",
    "pais": "Estados Unidos",
    "horaChile": "13:00",
@@ -2227,8 +2173,8 @@
    "fecha": "2026-06-29",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Alemania",
-   "equipoB": "Paraguay",
+   "equipoA": "1E",
+   "equipoB": "3A/B/C/D/F",
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
    "horaChile": "16:30",
@@ -2244,8 +2190,8 @@
    "fecha": "2026-06-29",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Países Bajos",
-   "equipoB": "Marruecos",
+   "equipoA": "1F",
+   "equipoB": "2C",
    "ciudad": "Monterrey (Guadalupe)",
    "pais": "México",
    "horaChile": "21:00",
@@ -2260,8 +2206,8 @@
    "fecha": "2026-06-30",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Costa de Marfil",
-   "equipoB": "Noruega",
+   "equipoA": "2E",
+   "equipoB": "2I",
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "13:00",
@@ -2276,8 +2222,8 @@
    "fecha": "2026-06-30",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Francia",
-   "equipoB": "Suecia",
+   "equipoA": "1I",
+   "equipoB": "3C/D/F/G/H",
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
@@ -2293,8 +2239,8 @@
    "fecha": "2026-06-30",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "México",
-   "equipoB": "Ecuador",
+   "equipoA": "1A",
+   "equipoB": "3C/E/F/H/I",
    "ciudad": "Mexico City",
    "pais": "México",
    "horaChile": "21:00",
@@ -2310,8 +2256,8 @@
    "fecha": "2026-07-01",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Inglaterra",
-   "equipoB": "RD Congo",
+   "equipoA": "1L",
+   "equipoB": "3E/H/I/J/K",
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "12:00",
@@ -2326,8 +2272,8 @@
    "fecha": "2026-07-01",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Bélgica",
-   "equipoB": "Senegal",
+   "equipoA": "1G",
+   "equipoB": "3A/E/H/I/J",
    "ciudad": "Seattle",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
@@ -2343,8 +2289,8 @@
    "fecha": "2026-07-01",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Estados Unidos",
-   "equipoB": "Bosnia y Herzegovina",
+   "equipoA": "1D",
+   "equipoB": "3B/E/F/I/J",
    "ciudad": "San Francisco Bay Area (Santa Clara)",
    "pais": "Estados Unidos",
    "horaChile": "20:00",
@@ -2359,8 +2305,8 @@
    "fecha": "2026-07-02",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "España",
-   "equipoB": "Austria",
+   "equipoA": "1H",
+   "equipoB": "2J",
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
@@ -2376,8 +2322,8 @@
    "fecha": "2026-07-02",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Portugal",
-   "equipoB": "Croacia",
+   "equipoA": "2K",
+   "equipoB": "2L",
    "ciudad": "Toronto",
    "pais": "Canadá",
    "horaChile": "19:00",
@@ -2393,8 +2339,8 @@
    "fecha": "2026-07-02",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Suiza",
-   "equipoB": "Argelia",
+   "equipoA": "1B",
+   "equipoB": "3E/F/G/I/J",
    "ciudad": "Vancouver",
    "pais": "Canadá",
    "horaChile": "23:00",
@@ -2409,8 +2355,8 @@
    "fecha": "2026-07-03",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Australia",
-   "equipoB": "Egipto",
+   "equipoA": "2D",
+   "equipoB": "2G",
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "14:00",
@@ -2425,8 +2371,8 @@
    "fecha": "2026-07-03",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Argentina",
-   "equipoB": "Cabo Verde",
+   "equipoA": "1J",
+   "equipoB": "2H",
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "18:00",
@@ -2443,8 +2389,8 @@
    "fecha": "2026-07-03",
    "fase": "R32",
    "grupo": null,
-   "equipoA": "Colombia",
-   "equipoB": "Ghana",
+   "equipoA": "1K",
+   "equipoB": "3D/E/I/J/L",
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "21:30",
