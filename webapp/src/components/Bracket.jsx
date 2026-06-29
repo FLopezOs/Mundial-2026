@@ -33,10 +33,12 @@ function Llave({ ll, picks, setPicks, compact, pMap }) {
     if (!elegible) return;
     const actual = picks.ko?.[ll.numFifa];
     const ko = { ...picks.ko };
-    if (actual?.ganador === equipo) {
-      ko[ll.numFifa] = { ...actual, pen: !actual.pen };
+    if (actual?.ganador === equipo && actual?.pen) {
+      delete ko[ll.numFifa];          // penales → deseleccionar
+    } else if (actual?.ganador === equipo) {
+      ko[ll.numFifa] = { ...actual, pen: true };  // pick → penales
     } else {
-      ko[ll.numFifa] = { ganador: equipo, pen: false };
+      ko[ll.numFifa] = { ganador: equipo, pen: false };  // nuevo pick
     }
     setPicks({ ...picks, ko });
   };
@@ -138,7 +140,7 @@ export default function Bracket({ picks, setPicks, calc, data }) {
   return (
     <div className="bracket-wrap">
       <p className="ayuda bracket-ayuda">
-        Un clic elige ganador · segundo clic alterna <em>penales</em> · partidos oficiales bloqueados.
+        Un clic elige ganador · segundo clic marca <em>penales</em> · tercero desmarca · partidos oficiales bloqueados.
         {sinResolver && " 🏆 = posible ganador según equipos clasificados."}
       </p>
       {campeon && (
