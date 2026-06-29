@@ -1,39 +1,22 @@
-/* Logos de canal como badges de marca */
+const BASE = import.meta.env.BASE_URL;
+
 const CANALES = {
   "DGO": {
     label: "DGO",
-    logo: (
-      <svg viewBox="0 0 28 14" xmlns="http://www.w3.org/2000/svg" style={{height:"14px",width:"auto",display:"block"}}>
-        <rect width="28" height="14" rx="3" fill="#e60000"/>
-        <text x="14" y="10.5" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900"
-          fontSize="8" fill="#fff" textAnchor="middle" letterSpacing="0.5">DGO</text>
-      </svg>
-    ),
+    img: BASE + "logo-dgo.png",
   },
   "CHV": {
-    label: "CHV",
-    logo: (
-      <svg viewBox="0 0 32 14" xmlns="http://www.w3.org/2000/svg" style={{height:"14px",width:"auto",display:"block"}}>
-        <rect width="32" height="14" rx="3" fill="#003082"/>
-        <text x="16" y="10.5" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900"
-          fontSize="7.5" fill="#fff" textAnchor="middle" letterSpacing="0.3">CHV</text>
-      </svg>
-    ),
+    label: "Chilevision",
+    img: BASE + "logo-chv.jpg",
   },
   "Disney+": {
     label: "Disney+",
-    logo: (
-      <svg viewBox="0 0 38 14" xmlns="http://www.w3.org/2000/svg" style={{height:"14px",width:"auto",display:"block"}}>
-        <rect width="38" height="14" rx="3" fill="#0d2c7b"/>
-        <text x="19" y="10.5" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900"
-          fontSize="7" fill="#fff" textAnchor="middle" letterSpacing="0.2">Disney+</text>
-      </svg>
-    ),
+    img: BASE + "logo-disney.png",
   },
   "Paramount+": {
-    label: "P+",
+    label: "Paramount+",
     logo: (
-      <svg viewBox="0 0 22 14" xmlns="http://www.w3.org/2000/svg" style={{height:"14px",width:"auto",display:"block"}}>
+      <svg viewBox="0 0 22 14" xmlns="http://www.w3.org/2000/svg" style={{height:"18px",width:"auto",display:"block"}}>
         <rect width="22" height="14" rx="3" fill="#0064ff"/>
         <text x="11" y="10.5" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900"
           fontSize="8" fill="#fff" textAnchor="middle" letterSpacing="0.3">P+</text>
@@ -50,8 +33,11 @@ export default function CanalesBadges({ canales }) {
         const cfg = CANALES[c];
         if (!cfg) return null;
         return (
-          <span key={c} className="canal-badge" title={cfg.label === "P+" ? "Paramount+" : cfg.label}>
-            {cfg.logo}
+          <span key={c} className="canal-badge" title={cfg.label}>
+            {cfg.img
+              ? <img src={cfg.img} alt={cfg.label} style={{height:"18px", width:"auto", display:"block"}} />
+              : cfg.logo
+            }
           </span>
         );
       })}
