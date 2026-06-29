@@ -1,7 +1,7 @@
 {
- "generado": "2026-06-29 14:25",
+ "generado": "2026-06-29 18:15",
  "torneo": "Mundial 2026",
- "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
+ "nota": "Generado por recuperación + bracket_manuales.json",
  "calibracion": {
   "mu": 2.7779,
   "beta": 0.005078,
@@ -2008,24 +2008,16 @@
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "oddsImplied": {
-    "pGanaA": 0.0597,
-    "pEmpate": 0.1124,
-    "pGanaB": 0.8279,
-    "mlA": "+1500",
-    "mlX": "750",
-    "mlB": "-650"
-   },
-   "canales": [
-    "DGO",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 0,
     "golesB": 2,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Paramount+"
+   ]
   },
   {
    "id": 68,
@@ -2038,24 +2030,16 @@
    "ciudad": "Philadelphia",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "oddsImplied": {
-    "pGanaA": 0.534,
-    "pEmpate": 0.2913,
-    "pGanaB": 0.1748,
-    "mlA": "-125",
-    "mlX": "230",
-    "mlB": "+450"
-   },
-   "canales": [
-    "DGO",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 2,
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Paramount+"
+   ]
   },
   {
    "id": 69,
@@ -2068,26 +2052,18 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "19:30",
-   "oddsImplied": {
-    "pGanaA": 0.2696,
-    "pEmpate": 0.2519,
-    "pGanaB": 0.4785,
-    "mlA": "+255",
-    "mlX": "280",
-    "mlB": "+100"
+   "resultado": {
+    "golesA": 0,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null
    },
    "canales": [
     "DGO",
     "CHV",
     "Disney+",
     "Paramount+"
-   ],
-   "resultado": {
-    "golesA": 0,
-    "golesB": 0,
-    "definidoPor": "90",
-    "ganadorPenales": null
-   }
+   ]
   },
   {
    "id": 70,
@@ -2100,24 +2076,16 @@
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "19:30",
-   "oddsImplied": {
-    "pGanaA": 0.5661,
-    "pEmpate": 0.2517,
-    "pGanaB": 0.1822,
-    "mlA": "-145",
-    "mlX": "280",
-    "mlB": "+425"
-   },
-   "canales": [
-    "DGO",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 3,
     "golesB": 1,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Paramount+"
+   ]
   },
   {
    "id": 71,
@@ -2130,24 +2098,16 @@
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
-   "oddsImplied": {
-    "pGanaA": 0.2633,
-    "pEmpate": 0.4805,
-    "pGanaB": 0.2563,
-    "mlA": "+265",
-    "mlX": "100",
-    "mlB": "+275"
-   },
-   "canales": [
-    "DGO",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 3,
     "golesB": 3,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Paramount+"
+   ]
   },
   {
    "id": 72,
@@ -2160,25 +2120,17 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "22:00",
-   "oddsImplied": {
-    "pGanaA": 0.0507,
-    "pEmpate": 0.107,
-    "pGanaB": 0.8424,
-    "mlA": "+1800",
-    "mlX": "800",
-    "mlB": "-700"
-   },
-   "canales": [
-    "DGO",
-    "Disney+",
-    "Paramount+"
-   ],
    "resultado": {
     "golesA": 1,
     "golesB": 3,
     "definidoPor": "90",
     "ganadorPenales": null
-   }
+   },
+   "canales": [
+    "DGO",
+    "Disney+",
+    "Paramount+"
+   ]
   },
   {
    "id": 73,
@@ -2195,13 +2147,7 @@
     "DGO",
     "CHV",
     "Paramount+"
-   ],
-   "resultado": {
-    "golesA": 0,
-    "golesB": 1,
-    "definidoPor": "90",
-    "ganadorPenales": null
-   }
+   ]
   },
   {
    "id": 74,
@@ -2639,7 +2585,7 @@
    "equipoA": "W95",
    "equipoB": "W96",
    "ciudad": "Kansas City",
-   "pais": "Estados Unidos",
+   "pais": "USA",
    "horaChile": "21:00",
    "canales": [
     "DGO",
@@ -2650,12 +2596,12 @@
    "id": 101,
    "numFifa": 101,
    "fecha": "2026-07-14",
-   "fase": "Semis",
+   "fase": "Semifinal",
    "grupo": null,
    "equipoA": "W97",
    "equipoB": "W98",
    "ciudad": "Dallas (Arlington)",
-   "pais": "Estados Unidos",
+   "pais": "USA",
    "horaChile": "15:00",
    "canales": [
     "DGO",
@@ -2667,12 +2613,12 @@
    "id": 102,
    "numFifa": 102,
    "fecha": "2026-07-15",
-   "fase": "Semis",
+   "fase": "Semifinal",
    "grupo": null,
    "equipoA": "W99",
    "equipoB": "W100",
    "ciudad": "Atlanta",
-   "pais": "Estados Unidos",
+   "pais": "USA",
    "horaChile": "15:00",
    "canales": [
     "DGO",
@@ -2684,12 +2630,12 @@
    "id": 103,
    "numFifa": 103,
    "fecha": "2026-07-18",
-   "fase": "3er Puesto",
+   "fase": "Tercer Lugar",
    "grupo": null,
    "equipoA": "L101",
    "equipoB": "L102",
    "ciudad": "Miami (Miami Gardens)",
-   "pais": "Estados Unidos",
+   "pais": "USA",
    "horaChile": "17:00",
    "canales": [
     "DGO",
@@ -2706,8 +2652,8 @@
    "grupo": null,
    "equipoA": "W101",
    "equipoB": "W102",
-   "ciudad": "New York/New Jersey (East Rutherford)",
-   "pais": "Estados Unidos",
+   "ciudad": "Nueva York/NJ (East Rutherford)",
+   "pais": "USA",
    "horaChile": "15:00",
    "canales": [
     "DGO",
