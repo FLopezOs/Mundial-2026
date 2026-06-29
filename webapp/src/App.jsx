@@ -5,11 +5,11 @@ import Inicio from "./components/Inicio.jsx";
 import Grupos from "./components/Grupos.jsx";
 import Bracket from "./components/Bracket.jsx";
 import Resumen from "./components/Resumen.jsx";
-import Escenarios from "./components/Escenarios.jsx";
 import EnVivo from "./components/EnVivo.jsx";
+import Historial from "./components/Historial.jsx";
 import PorPais from "./components/PorPais.jsx";
 
-const VISTAS = ["Inicio", "Grupos", "Bracket", "En Vivo", "Por País", "Resumen", "Escenarios"];
+const VISTAS = ["Inicio", "Grupos", "Bracket", "En Vivo", "Resultados", "Por País", "Resumen"];
 
 /* ─── Mapeo ESPN (inglés) → nombre canónico ES ─── */
 const ESPN_CANON = {
@@ -193,11 +193,11 @@ export default function App() {
       <main>
         {vista === "Inicio"     && <Inicio     data={data} picks={picks} calc={calc} setVista={setVista} probsLive={probsLive} liveTeams={liveTeams} />}
         {vista === "Grupos"     && <Grupos     data={data} picks={picks} setPicks={setPicks} calc={calc} probsLive={probsLive} />}
-        {vista === "Bracket"    && <Bracket    picks={picks} setPicks={setPicks} calc={calc} />}
-        {vista === "En Vivo"    && <EnVivo    data={data} />}
-        {vista === "Por País"   && <PorPais   data={data} />}
-        {vista === "Resumen"    && <Resumen    data={data} picks={picks} calc={calc} escenario={estado.activo} />}
-        {vista === "Escenarios" && <Escenarios estado={estado} guardar={guardar} reiniciarTodo={reiniciarTodo} />}
+        {vista === "Bracket"     && <Bracket    picks={picks} setPicks={setPicks} calc={calc} data={data} />}
+        {vista === "En Vivo"     && <EnVivo     data={data} />}
+        {vista === "Resultados"  && <Historial  data={data} />}
+        {vista === "Por País"    && <PorPais    data={data} />}
+        {vista === "Resumen"     && <Resumen    data={data} picks={picks} calc={calc} escenario={estado.activo} />}
       </main>
       <footer className="pie">Modelo Elo+Poisson del Tracker — referencia estadística sin incorporar lesiones ni alineaciones.</footer>
     </div>

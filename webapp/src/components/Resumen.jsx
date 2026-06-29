@@ -1,10 +1,9 @@
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
-import { comparativoModelo, fmtPct, ORDEN_FASES } from "../lib/calculos.js";
+import { comparativoModelo, fmtPct } from "../lib/calculos.js";
 import { generarHtml } from "../lib/exportHtml.js";
 import Bandera from "./Bandera.jsx";
 
-const TITULOS = { R32: "Dieciseisavos", Octavos: "Octavos", Cuartos: "Cuartos", Semis: "Semifinales", "3er Puesto": "3er Puesto", Final: "Final" };
 
 function unoEntre(p) {
   if (!p || p <= 0) return "—";
@@ -33,7 +32,7 @@ export default function Resumen({ data, picks, calc, escenario }) {
     URL.revokeObjectURL(a.href);
   };
 
-  const { llaves, campeon, subcampeon } = calc.bracket;
+  const { campeon, subcampeon } = calc.bracket;
   return (
     <div>
       <div className="acciones no-imprimir">
@@ -71,24 +70,7 @@ export default function Resumen({ data, picks, calc, escenario }) {
           ))}
         </div>
 
-        <h3>Bracket</h3>
-        <div className="bracket bracket-impresion">
-          {ORDEN_FASES.map(f => (
-            <div key={f} className="ronda">
-              <h4>{TITULOS[f]}</h4>
-              {llaves.filter(l => l.fase === f).map(l => (
-                <div key={l.numFifa} className="llave-mini">
-                  <span className={l.ganador === l.a ? "gana" : ""}>{l.a ? <><Bandera equipo={l.a} ancho={13} /> {l.a}</> : "—"}</span>
-                  <span className="vs">v</span>
-                  <span className={l.ganador === l.b ? "gana" : ""}>{l.b ? <><Bandera equipo={l.b} ancho={13} /> {l.b}</> : "—"}</span>
-                  {l.pen && <span className="badge pen">pen</span>}
-                  {l.definicion === "real" && <span className="badge ok">of.</span>}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-        <p className="nota">Generado por Polla Mundial 2026 (datos del Tracker, {data.generado}). Modelo Elo+Poisson solo como referencia.</p>
+        <p className="nota">Generado por Polla Mundial 2026 (datos del Tracker, {data.generado}). El bracket completo está en la pestaña <strong>Bracket</strong>. Modelo Elo+Poisson solo como referencia.</p>
       </div>
     </div>
   );

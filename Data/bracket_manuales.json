@@ -1,0 +1,21 @@
+{
+ "nota": "Equipos reales para la fase eliminatoria R32. Se aplican cuando el Excel tiene códigos de seeding (ej: 2A, 1C, 3A/B/C/D/F). Clave = ID de partido (string).",
+ "partidos": {
+  "73": {"equipoA": "Sudáfrica",          "equipoB": "Canadá"},
+  "74": {"equipoA": "Brasil",             "equipoB": "Japón"},
+  "75": {"equipoA": "Alemania",           "equipoB": "Paraguay"},
+  "76": {"equipoA": "Países Bajos",       "equipoB": "Marruecos"},
+  "77": {"equipoA": "Costa de Marfil",    "equipoB": "Noruega"},
+  "78": {"equipoA": "Francia",            "equipoB": "Suecia"},
+  "79": {"equipoA": "México",             "equipoB": "Ecuador"},
+  "80": {"equipoA": "Inglaterra",         "equipoB": "RD Congo"},
+  "81": {"equipoA": "Bélgica",            "equipoB": "Senegal"},
+  "82": {"equipoA": "Estados Unidos",     "equipoB": "Bosnia y Herzegovina"},
+  "83": {"equipoA": "España",             "equipoB": "Austria"},
+  "84": {"equipoA": "Portugal",           "equipoB": "Croacia"},
+  "85": {"equipoA": "Suiza",              "equipoB": "Argelia"},
+  "86": {"equipoA": "Australia",          "equipoB": "Egipto"},
+  "87": {"equipoA": "Argentina",          "equipoB": "Cabo Verde"},
+  "88": {"equipoA": "Colombia",           "equipoB": "Ghana"}
+ }
+}

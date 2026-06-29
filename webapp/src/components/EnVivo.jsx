@@ -15,6 +15,9 @@ const ESPN_ES = {
   "Spain":"España","England":"Inglaterra","Portugal":"Portugal",
   "Argentina":"Argentina","Netherlands":"Países Bajos",
   "Mexico":"México","Japan":"Japón","Senegal":"Senegal",
+  "South Africa":"Sudáfrica","Algeria":"Argelia",
+  "Norway":"Noruega","Sweden":"Suecia","Austria":"Austria",
+  "Croatia":"Croacia","Paraguay":"Paraguay","Cape Verde":"Cabo Verde",
 };
 const canon = n => ESPN_ES[n] ?? n;
 
@@ -34,7 +37,18 @@ function mlToProb(ml) {
   return v > 0 ? 100 / (v + 100) : (-v) / (-v + 100);
 }
 
-/* ── Fila de estadística con barras horizontales ── */
+const STATS_CFG = [
+  { key: "possessionPct",  label: "Posesión"  },
+  { key: "totalShots",     label: "Tiros"     },
+  { key: "shotsOnTarget",  label: "Al arco"   },
+  { key: "saves",          label: "Atajadas"  },
+  { key: "cornerKicks",    label: "Córners"   },
+  { key: "foulsCommitted", label: "Faltas"    },
+  { key: "yellowCards",    label: "Amarillas" },
+  { key: "redCards",       label: "Rojas"     },
+  { key: "offsides",       label: "Offside"   },
+];
+
 function StatRow({ label, valA, valB }) {
   const parse = s => parseFloat(String(s ?? "0").replace("%","")) || 0;
   const a = parse(valA), b = parse(valB);
@@ -56,7 +70,6 @@ function StatRow({ label, valA, valB }) {
   );
 }
 
-/* ── Barra de probabilidades de cuotas ── */
 function OddsBar({ nameA, nameB, pA, pX, pB }) {
   const tot = pA + pX + pB;
   const nA = pA/tot, nX = pX/tot, nB = pB/tot;
@@ -77,19 +90,6 @@ function OddsBar({ nameA, nameB, pA, pX, pB }) {
   );
 }
 
-const STATS_CFG = [
-  { key: "possessionPct",  label: "Posesión"  },
-  { key: "totalShots",     label: "Tiros"     },
-  { key: "shotsOnTarget",  label: "Al arco"   },
-  { key: "saves",          label: "Atajadas"  },
-  { key: "cornerKicks",    label: "Córners"   },
-  { key: "foulsCommitted", label: "Faltas"    },
-  { key: "yellowCards",    label: "Amarillas" },
-  { key: "redCards",       label: "Rojas"     },
-  { key: "offsides",       label: "Offside"   },
-];
-
-/* ── Bloque de estadísticas reutilizable ── */
 function StatsBlock({ nameA, nameB, stats }) {
   const rows = STATS_CFG.filter(s => stats[s.key]);
   if (!rows.length) return null;
@@ -109,7 +109,6 @@ function StatsBlock({ nameA, nameB, stats }) {
   );
 }
 
-/* ── Tarjeta de partido en vivo ── */
 function TarjetaVivo({ ev, canales }) {
   const comp   = ev.competitions[0];
   const teams  = comp.competitors;
@@ -187,123 +186,11 @@ function TarjetaVivo({ ev, canales }) {
   );
 }
 
-/* ── Tarjeta de partido ya terminado (historial) ── */
-function TarjetaHistorial({ partido, statsMap }) {
-  const [expandido, setExpandido] = useState(false);
-  const { equipoA, equipoB, resultado, fecha, ciudad, canales } = partido;
-  const key   = `${equipoA}|${equipoB}`;
-  const stats = statsMap?.[key];
-
-  const gA  = resultado?.golesA ?? "—";
-  const gB  = resultado?.golesB ?? "—";
-  const gAn = Number(gA), gBn = Number(gB);
-
-  const defLabel =
-    resultado?.definidoPor === "PEN" ? "FT (Penales)" :
-    resultado?.definidoPor === "ET"  ? "FT (Prórroga)" : "FT";
-
-  let fechaDisplay = "";
-  try {
-    const d = new Date(String(fecha) + "T12:00:00");
-    fechaDisplay = d.toLocaleDateString("es-CL", { day: "numeric", month: "short" });
-  } catch { fechaDisplay = String(fecha); }
-
-  return (
-    <div
-      className={"ev2-card ended" + (stats ? " ev2-card-clickable" : "")}
-      onClick={() => stats && setExpandido(e => !e)}
-    >
-      <div className="ev2-header">
-        <span className="ev2-estado">{defLabel}</span>
-        <span className="ev2-venue">{ciudad ? `${ciudad} · ` : ""}{fechaDisplay}</span>
-      </div>
-      <CanalesBadges canales={canales} />
-      <div className="ev2-score-wrap">
-        <div className="ev2-team home">
-          <Bandera equipo={equipoA} ancho={44} />
-          <span className="ev2-team-name">{equipoA}</span>
-        </div>
-        <div className="ev2-score-center">
-          <span className={"ev2-gol" + (gAn > gBn ? " winner" : "")}>{gA}</span>
-          <span className="ev2-dash">–</span>
-          <span className={"ev2-gol" + (gBn > gAn ? " winner" : "")}>{gB}</span>
-        </div>
-        <div className="ev2-team away">
-          <Bandera equipo={equipoB} ancho={44} />
-          <span className="ev2-team-name">{equipoB}</span>
-        </div>
-      </div>
-      {stats && !expandido && (
-        <p className="ev2-nodata ev2-ver-stats">📊 Ver estadísticas del partido</p>
-      )}
-      {stats && expandido && (
-        <>
-          <StatsBlock nameA={equipoA} nameB={equipoB} stats={stats} />
-          <p className="ev2-nodata ev2-ver-stats">▲ Cerrar estadísticas</p>
-        </>
-      )}
-      {!stats && (
-        <p className="ev2-nodata">Sin estadísticas disponibles</p>
-      )}
-    </div>
-  );
-}
-
-/* ── Sección colapsable ── */
-const SECCION_ORDER = [
-  "Grupo A","Grupo B","Grupo C","Grupo D","Grupo E","Grupo F",
-  "Grupo G","Grupo H","Grupo I","Grupo J","Grupo K","Grupo L",
-  "R32","Octavos","Cuartos","Semis","3er Puesto","Final",
-];
-const SECCION_LABEL = {
-  "R32":       "Round of 32",
-  "Octavos":   "Octavos de final",
-  "Cuartos":   "Cuartos de final",
-  "Semis":     "Semifinales",
-  "3er Puesto":"Tercer puesto",
-  "Final":     "Final",
-};
-const seccionLabel = id => SECCION_LABEL[id] ?? id;
-
-function Seccion({ id, partidos, statsMap, abierta, onToggle }) {
-  return (
-    <div className="ev2-seccion">
-      <button className="ev2-seccion-header" onClick={onToggle}>
-        <span className="ev2-chevron">{abierta ? "▾" : "▸"}</span>
-        <span className="ev2-seccion-titulo">{seccionLabel(id)}</span>
-        <span className="ev2-seccion-count">
-          {partidos.length} partido{partidos.length !== 1 ? "s" : ""}
-        </span>
-      </button>
-      {abierta && (
-        <div className="ev2-seccion-contenido">
-          <div className="ev2-grid">
-            {partidos.map(p => (
-              <TarjetaHistorial key={p.id} partido={p} statsMap={statsMap} />
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-/* ── Vista principal ── */
 export default function EnVivo({ data }) {
-  const [eventos,      setEventos]      = useState(null);
-  const [cargando,     setCargando]     = useState(false);
-  const [error,        setError]        = useState(null);
-  const [ultima,       setUltima]       = useState(null);
-  const [statsMap,     setStatsMap]     = useState(null);
-  const [abiertas,     setAbiertas]     = useState(new Set());
-  const [filtroEquipo, setFiltroEquipo] = useState("");
-
-  useEffect(() => {
-    fetch(import.meta.env.BASE_URL + "estadisticas.json")
-      .then(r => r.ok ? r.json() : null)
-      .then(d => d && setStatsMap(d.partidos))
-      .catch(() => {});
-  }, []);
+  const [eventos,  setEventos]  = useState(null);
+  const [cargando, setCargando] = useState(false);
+  const [error,    setError]    = useState(null);
+  const [ultima,   setUltima]   = useState(null);
 
   async function cargar() {
     setCargando(true); setError(null);
@@ -334,12 +221,6 @@ export default function EnVivo({ data }) {
 
   useEffect(() => { cargar(); }, []);
 
-  /* ── Datos derivados ── */
-  const terminados = useMemo(
-    () => (data?.partidos ?? []).filter(p => p.resultado),
-    [data]
-  );
-
   const canalPorEquipos = useMemo(() => {
     const m = {};
     for (const p of data?.partidos ?? []) {
@@ -351,61 +232,10 @@ export default function EnVivo({ data }) {
     return m;
   }, [data]);
 
-  const secciones = useMemo(() => {
-    const map = {};
-    for (const p of terminados) {
-      const id = p.fase === "Grupos" ? `Grupo ${p.grupo}` : (p.fase ?? "");
-      if (!id) continue;
-      if (!map[id]) map[id] = [];
-      map[id].push(p);
-    }
-    for (const arr of Object.values(map)) {
-      arr.sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)));
-    }
-    return SECCION_ORDER.filter(id => map[id]).map(id => ({ id, partidos: map[id] }));
-  }, [terminados]);
-
-  const equipos = useMemo(() => {
-    const set = new Set();
-    for (const p of terminados) { set.add(p.equipoA); set.add(p.equipoB); }
-    return [...set].sort((a, b) => a.localeCompare(b, "es"));
-  }, [terminados]);
-
-  /* Auto-expandir secciones cuando cambia el filtro */
-  useEffect(() => {
-    if (!filtroEquipo) {
-      setAbiertas(new Set());
-    } else {
-      setAbiertas(new Set(
-        secciones
-          .filter(s => s.partidos.some(p => p.equipoA === filtroEquipo || p.equipoB === filtroEquipo))
-          .map(s => s.id)
-      ));
-    }
-  }, [filtroEquipo, secciones]);
-
-  const toggleSeccion = id => setAbiertas(prev => {
-    const next = new Set(prev);
-    next.has(id) ? next.delete(id) : next.add(id);
-    return next;
-  });
-
-  const seccionesVisibles = useMemo(() => {
-    if (!filtroEquipo) return secciones;
-    return secciones
-      .map(s => ({
-        ...s,
-        partidos: s.partidos.filter(p => p.equipoA === filtroEquipo || p.equipoB === filtroEquipo),
-      }))
-      .filter(s => s.partidos.length > 0);
-  }, [secciones, filtroEquipo]);
-
   const enVivo = eventos?.filter(esEnVivo) ?? [];
 
   return (
     <div className="envivo-vista">
-
-      {/* ── Barra superior ── */}
       <div className="ev2-topbar">
         <div className="ev2-topbar-left">
           <span className="ev2-topbar-title">
@@ -430,14 +260,14 @@ export default function EnVivo({ data }) {
         </div>
       )}
 
-      {/* ── Partidos en vivo ── */}
       {!cargando && eventos && enVivo.length === 0 && (
         <div className="ev2-empty">
           <div className="ev2-empty-icon">⏸</div>
           <p className="ev2-empty-msg">Sin partidos en vivo ahora mismo</p>
-          <p className="ev2-empty-sub">Actualiza cuando comience el próximo partido</p>
+          <p className="ev2-empty-sub">Los resultados completos están en la pestaña <strong>Resultados</strong></p>
         </div>
       )}
+
       {enVivo.length > 0 && (
         <div className="ev2-grid">
           {enVivo.map(ev => {
@@ -452,41 +282,6 @@ export default function EnVivo({ data }) {
           })}
         </div>
       )}
-
-      {/* ── Historial agrupado ── */}
-      {terminados.length > 0 && (
-        <div className="ev2-historial">
-          <div className="ev2-hist-topbar">
-            <h3 className="ev2-hist-titulo">Resultados del Mundial</h3>
-            <select
-              className="ev2-filtro-select"
-              value={filtroEquipo}
-              onChange={e => setFiltroEquipo(e.target.value)}
-            >
-              <option value="">Todos los equipos</option>
-              {equipos.map(eq => <option key={eq} value={eq}>{eq}</option>)}
-            </select>
-          </div>
-
-          {filtroEquipo && seccionesVisibles.length === 0 && (
-            <p className="ev2-nodata" style={{ padding: "20px 0" }}>
-              Sin partidos jugados para {filtroEquipo}.
-            </p>
-          )}
-
-          {seccionesVisibles.map(({ id, partidos }) => (
-            <Seccion
-              key={id}
-              id={id}
-              partidos={partidos}
-              statsMap={statsMap}
-              abierta={abiertas.has(id)}
-              onToggle={() => toggleSeccion(id)}
-            />
-          ))}
-        </div>
-      )}
-
     </div>
   );
 }
