@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import Bandera from "./Bandera.jsx";
 
 const IZQ = {
@@ -125,6 +126,15 @@ export default function Bracket({ picks, setPicks, calc, data }) {
     if (p.numFifa) pMap[p.numFifa] = p;
   }
 
+  /* Auto-scroll al centro del bracket al montar */
+  const scrollRef = useRef(null);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (el) {
+      el.scrollLeft = (el.scrollWidth - el.clientWidth) / 2;
+    }
+  }, []);
+
   return (
     <div className="bracket-wrap">
       <p className="ayuda bracket-ayuda">
@@ -135,7 +145,7 @@ export default function Bracket({ picks, setPicks, calc, data }) {
         <div className="campeon">🏆 Tu campeón: <strong><Bandera equipo={campeon} /> {campeon}</strong></div>
       )}
 
-      <div className="bracket-doble-scroll">
+      <div className="bracket-doble-scroll" ref={scrollRef}>
         <div className="bracket-doble">
 
           {/* ── ZONA IZQUIERDA ── */}

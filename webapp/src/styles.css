@@ -30,8 +30,8 @@
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; font-family: var(--font-body); background: var(--fondo); color: var(--texto); line-height: 1.45; }
-.app { max-width: 1200px; margin: 0 auto; padding: 0 14px 48px; overflow-x: hidden; }
+body { margin: 0; font-family: var(--font-body); background: var(--fondo); color: var(--texto); line-height: 1.45; overflow-x: clip; }
+.app { max-width: 1200px; margin: 0 auto; padding: 0 14px 48px; }
 .cargando { padding: 48px; text-align: center; color: var(--gris); }
 
 /* ── Header ── */
@@ -277,7 +277,7 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
 .slot-nombre { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 88px; display: inline-block; vertical-align: middle; }
 
 /* ===== DASHBOARD INICIO ===== */
-.inicio { max-width: 900px; }
+.inicio { }
 
 .stats-bar {
   display: flex; flex-wrap: wrap; gap: 10px;
