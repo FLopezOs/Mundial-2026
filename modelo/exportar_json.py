@@ -148,6 +148,7 @@ def main():
         fecha = wsF.cell(r, 2).value
         ea    = wsF.cell(r, 5).value or ""
         eb    = wsF.cell(r, 6).value or ""
+        ea_orig, eb_orig = ea, eb
         if str(pid) in bracket_map:
             ea = bracket_map[str(pid)].get("equipoA", ea)
             eb = bracket_map[str(pid)].get("equipoB", eb)
@@ -162,8 +163,10 @@ def main():
             "ciudad":  wsF.cell(r, 8).value,
             "pais":    wsF.cell(r, 9).value,
         }
-        # Hora Chile
+        # Hora Chile — intenta primero con nombres reales, luego con códigos originales del Excel
         key = (str(fecha), frozenset([ea.lower(), eb.lower()]))
+        if key not in hora_map:
+            key = (str(fecha), frozenset([ea_orig.lower(), eb_orig.lower()]))
         if key in hora_map:
             p["horaChile"] = hora_map[key]
 

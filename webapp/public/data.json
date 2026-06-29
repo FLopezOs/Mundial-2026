@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-29 14:52",
+ "generado": "2026-06-29 15:31",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2142,6 +2142,7 @@
    "equipoB": "Canadá",
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
+   "horaChile": "15:00",
    "resultado": {
     "golesA": 0,
     "golesB": 1,
@@ -2164,6 +2165,13 @@
    "equipoB": "Japón",
    "ciudad": "Houston",
    "pais": "Estados Unidos",
+   "horaChile": "13:00",
+   "resultado": {
+    "golesA": 2,
+    "golesB": 1,
+    "definidoPor": "90",
+    "ganadorPenales": null
+   },
    "canales": [
     "DGO",
     "CHV",
@@ -2181,6 +2189,7 @@
    "equipoB": "Paraguay",
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
+   "horaChile": "16:30",
    "canales": [
     "DGO",
     "CHV",
@@ -2197,6 +2206,7 @@
    "equipoB": "Marruecos",
    "ciudad": "Monterrey (Guadalupe)",
    "pais": "México",
+   "horaChile": "21:00",
    "canales": [
     "DGO",
     "Paramount+"
@@ -2212,6 +2222,7 @@
    "equipoB": "Noruega",
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
+   "horaChile": "13:00",
    "canales": [
     "DGO",
     "Paramount+"
@@ -2227,6 +2238,7 @@
    "equipoB": "Suecia",
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
+   "horaChile": "17:00",
    "canales": [
     "DGO",
     "CHV",
@@ -2243,6 +2255,7 @@
    "equipoB": "Ecuador",
    "ciudad": "Mexico City",
    "pais": "México",
+   "horaChile": "21:00",
    "canales": [
     "DGO",
     "CHV",
@@ -2259,6 +2272,7 @@
    "equipoB": "RD Congo",
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
+   "horaChile": "12:00",
    "canales": [
     "DGO",
     "Paramount+"
@@ -2274,6 +2288,7 @@
    "equipoB": "Senegal",
    "ciudad": "Seattle",
    "pais": "Estados Unidos",
+   "horaChile": "16:00",
    "canales": [
     "DGO",
     "CHV",
@@ -2290,6 +2305,7 @@
    "equipoB": "Bosnia y Herzegovina",
    "ciudad": "San Francisco Bay Area (Santa Clara)",
    "pais": "Estados Unidos",
+   "horaChile": "20:00",
    "canales": [
     "DGO",
     "Paramount+"
@@ -2305,6 +2321,7 @@
    "equipoB": "Austria",
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
+   "horaChile": "15:00",
    "canales": [
     "DGO",
     "CHV",
@@ -2321,6 +2338,7 @@
    "equipoB": "Croacia",
    "ciudad": "Toronto",
    "pais": "Canadá",
+   "horaChile": "19:00",
    "canales": [
     "DGO",
     "CHV",
@@ -2337,6 +2355,7 @@
    "equipoB": "Argelia",
    "ciudad": "Vancouver",
    "pais": "Canadá",
+   "horaChile": "23:00",
    "canales": [
     "DGO",
     "Paramount+"
@@ -2352,6 +2371,7 @@
    "equipoB": "Egipto",
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
+   "horaChile": "14:00",
    "canales": [
     "DGO",
     "Paramount+"
@@ -2367,6 +2387,7 @@
    "equipoB": "Cabo Verde",
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
+   "horaChile": "18:00",
    "canales": [
     "DGO",
     "CHV",
@@ -2384,6 +2405,7 @@
    "equipoB": "Ghana",
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
+   "horaChile": "21:30",
    "canales": [
     "DGO",
     "CHV",

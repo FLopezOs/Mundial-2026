@@ -13,16 +13,6 @@ const CANALES = {
     label: "Disney+",
     img: BASE + "logo-disney.png",
   },
-  "Paramount+": {
-    label: "Paramount+",
-    logo: (
-      <svg viewBox="0 0 22 14" xmlns="http://www.w3.org/2000/svg" style={{height:"18px",width:"auto",display:"block"}}>
-        <rect width="22" height="14" rx="3" fill="#0064ff"/>
-        <text x="11" y="10.5" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900"
-          fontSize="8" fill="#fff" textAnchor="middle" letterSpacing="0.3">P+</text>
-      </svg>
-    ),
-  },
 };
 
 export default function CanalesBadges({ canales }) {
