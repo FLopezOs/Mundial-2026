@@ -24,6 +24,7 @@ CALIB_JSON    = os.path.join(BASE, "Data", "calibracion.json")
 ODDS_JSON     = os.path.join(BASE, "Data", "odds.json")
 MANUALES_JSON = os.path.join(BASE, "Data", "resultados_manuales.json")
 CANALES_JSON  = os.path.join(BASE, "Data", "canales.json")
+BRACKET_JSON  = os.path.join(BASE, "Data", "bracket_manuales.json")
 
 def num(v, nd=4):
     return round(float(v), nd) if isinstance(v, (int, float)) else None
@@ -73,6 +74,15 @@ def build_canales_map(canales_path):
     except Exception:
         return {}
 
+def build_bracket_map(bracket_path):
+    """Carga Data/bracket_manuales.json → dict {str(id): {equipoA, equipoB}}."""
+    try:
+        with open(bracket_path, encoding="utf-8") as f:
+            d = json.load(f)
+        return d.get("partidos", {})
+    except Exception:
+        return {}
+
 def build_manuales_map(manuales_path):
     """
     Carga Data/resultados_manuales.json → dict {str(id): {golesA, golesB, ...}}.
@@ -116,6 +126,7 @@ def main():
     odds_map     = build_odds_map(ODDS_JSON)
     manuales_map = build_manuales_map(MANUALES_JSON)
     canales_map  = build_canales_map(CANALES_JSON)
+    bracket_map  = build_bracket_map(BRACKET_JSON)
 
     if manuales_map:
         print(f"[OK] resultados_manuales.json: {len(manuales_map)} partido(s) cargado(s) → "
@@ -137,6 +148,9 @@ def main():
         fecha = wsF.cell(r, 2).value
         ea    = wsF.cell(r, 5).value or ""
         eb    = wsF.cell(r, 6).value or ""
+        if str(pid) in bracket_map:
+            ea = bracket_map[str(pid)].get("equipoA", ea)
+            eb = bracket_map[str(pid)].get("equipoB", eb)
         p = {
             "id":      pid,
             "numFifa": wsF.cell(r, 12).value,
