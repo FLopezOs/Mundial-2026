@@ -145,6 +145,13 @@ export default function Inicio({ data, picks, calc, setVista, probsLive: probs, 
         )}
       </div>
 
+      <div className="acciones-inicio">
+        <button className="btn-accion btn-principal" onClick={() => setVista("Grupos")}>✏️ Ingresar / ver resultados</button>
+        <button className="btn-accion" onClick={() => setVista("Bracket")}>🏆 Ver bracket</button>
+        <button className="btn-accion" onClick={() => setVista("En Vivo")}>⚡ Ver en vivo</button>
+        <button className="btn-accion" onClick={() => setVista("Resumen")}>📊 Mi resumen</button>
+      </div>
+
       {/* Selector de fechas */}
       <div className="fecha-strip" ref={stripRef}>
         {fechas.map(f => {
@@ -180,12 +187,6 @@ export default function Inicio({ data, picks, calc, setVista, probsLive: probs, 
         : <div className="seccion-dia vacia"><p className="ayuda">No hay partidos el {diaSemana(diaSeleccionado)}.</p></div>
       }
 
-      <div className="acciones-inicio">
-        <button className="btn-accion btn-principal" onClick={() => setVista("Grupos")}>✏️ Ingresar / ver resultados</button>
-        <button className="btn-accion" onClick={() => setVista("Bracket")}>🏆 Ver bracket</button>
-        <button className="btn-accion" onClick={() => setVista("En Vivo")}>⚡ Ver en vivo</button>
-        <button className="btn-accion" onClick={() => setVista("Resumen")}>📊 Mi resumen</button>
-      </div>
       <p className="nota inicio-nota">Probabilidades con Elo en cadena + Poisson. Actualiza con <kbd>actualizar_resultados.bat</kbd>.</p>
     </div>
   );
