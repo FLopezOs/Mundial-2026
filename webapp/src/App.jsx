@@ -145,6 +145,12 @@ export default function App() {
       .catch(e => setError(String(e)));
   }, []);
 
+  /* ── Refresco automático cada hora ── */
+  useEffect(() => {
+    const iv = setInterval(() => window.location.reload(), 60 * 60 * 1000);
+    return () => clearInterval(iv);
+  }, []);
+
   const setPicks = np => guardar({ ...estado, escenarios: { ...estado.escenarios, [estado.activo]: np } });
 
   const calc = useMemo(() => {
