@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-29 15:40",
+ "generado": "2026-06-29 19:51",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -2765,6 +2765,44 @@
    "yellowCards": {
     "A": "0",
     "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "0"
+   }
+  },
+  "Brasil|Japón": {
+   "possessionPct": {
+    "A": "68.6",
+    "B": "31.4"
+   },
+   "totalShots": {
+    "A": "19",
+    "B": "5"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "6",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "4",
+    "B": "13"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "3"
    },
    "redCards": {
     "A": "0",
