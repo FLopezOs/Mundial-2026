@@ -2,6 +2,8 @@ import { useState, useRef, useEffect, useMemo } from "react";
 import Bandera from "./Bandera.jsx";
 import { fmtPct } from "../lib/calculos.js";
 import CanalesBadges from "./CanalesBadges.jsx";
+import Countdown from "./Countdown.jsx";
+import Trivia from "./Trivia.jsx";
 
 function fechaChile() {
   // Usar IANA timezone para no depender de la zona horaria del browser
@@ -141,6 +143,7 @@ export default function Inicio({ data, picks, calc, setVista, probsLive: probs, 
 
   return (
     <div className="inicio">
+      <Countdown />
       <div className="stats-bar">
         <div className="stat-item"><span className="stat-val">{jugados.length}</span><span className="stat-lbl">jugados</span></div>
         <div className="stat-item"><span className="stat-val">{pendientes.length}</span><span className="stat-lbl">por jugar</span></div>
@@ -196,6 +199,7 @@ export default function Inicio({ data, picks, calc, setVista, probsLive: probs, 
         : <div className="seccion-dia vacia"><p className="ayuda">No hay partidos el {diaSemana(diaSeleccionado)}.</p></div>
       }
 
+      <Trivia />
       <p className="nota inicio-nota">Probabilidades con Elo en cadena + Poisson. Actualiza con <kbd>actualizar_resultados.bat</kbd>.</p>
     </div>
   );

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { fmtPct, puntajePartido } from "../lib/calculos.js";
 import Bandera from "./Bandera.jsx";
 
@@ -19,7 +20,6 @@ function Partido({ p, picks, setPicks, probsLive }) {
     const { pts } = puntajePartido(s, p.resultado);
     ptsBadge = <span className={`badge pts-badge pts-${pts}`}>+{pts}</span>;
   }
-  // Probabilidades: usa Elo en cadena (live) si disponible, si no el modelo estático del Tracker
   const pr = probsLive?.[p.id] ?? p.modelo;
   const esLive = !!probsLive?.[p.id];
 
@@ -87,26 +87,51 @@ function TablaGrupo({ g }) {
 
 export default function Grupos({ data, picks, setPicks, calc, probsLive }) {
   const letras = Object.keys(calc.grupos).sort();
+  const [letraActiva, setLetraActiva] = useState(letras[0] ?? "A");
+  const grupo = calc.grupos[letraActiva];
   const pendientes = data.partidos.filter(
     p => p.grupo && !p.resultado && !Number.isInteger(picks.scores?.[p.id]?.ga)
   ).length;
+
   return (
     <div>
       <p className="ayuda">
         Ingresa tu marcador ({pendientes} sin pick). ⚡ = probabilidad con Elo actualizado a resultados reales.
         Verde = clasifica directo · Amarillo = tercero (pasan 8 mejores).
       </p>
-      <div className="grilla-grupos">
-        {letras.map(l => (
-          <section key={l} className="grupo">
-            <h2>Grupo {l} {calc.grupos[l].completo && <span className="badge ok">completo</span>}</h2>
-            {calc.grupos[l].partidos.map(p => (
-              <Partido key={p.id} p={p} picks={picks} setPicks={setPicks} probsLive={probsLive} />
-            ))}
-            <TablaGrupo g={calc.grupos[l]} />
-          </section>
-        ))}
+
+      {/* Tabs de grupos */}
+      <div className="grupo-tabs">
+        {letras.map(l => {
+          const g = calc.grupos[l];
+          const completoG = g?.completo;
+          return (
+            <button
+              key={l}
+              className={"grupo-tab" + (l === letraActiva ? " activa" : "") + (completoG ? " completo" : "")}
+              onClick={() => setLetraActiva(l)}
+            >
+              {l}
+            </button>
+          );
+        })}
       </div>
+
+      {/* Contenido del grupo activo */}
+      {grupo && (
+        <section className="grupo grupo-panel">
+          <h2>
+            Grupo {letraActiva}
+            {grupo.completo && <span className="badge ok">completo</span>}
+          </h2>
+          {grupo.partidos.map(p => (
+            <Partido key={p.id} p={p} picks={picks} setPicks={setPicks} probsLive={probsLive} />
+          ))}
+          <TablaGrupo g={grupo} />
+        </section>
+      )}
+
+      {/* Ranking de terceros siempre visible abajo */}
       <section className="terceros">
         <h2>Ranking de terceros (clasifican 8)</h2>
         <table className="tabla">
