@@ -127,14 +127,21 @@ def es_finalizado(ev, comp):
 
 def detectar_tipo(comp):
     """Detecta si el resultado fue en 90', ET o penales."""
-    estado = comp["status"]["type"]["name"]
-    # ESPN usa STATUS_FULL_TIME para FT normal
-    # Para ET y penales hay otros estados; mapeamos lo conocido
-    if "SHOOTOUT" in estado or "PENALTY" in estado:
+    tipo_obj = comp["status"]["type"]
+    estado = tipo_obj.get("name", "")
+    short  = tipo_obj.get("shortDetail", "").lower()
+    if "SHOOTOUT" in estado or "PENALTY" in estado or "pens" in short or "penalties" in short or "shootout" in short:
         return "PEN"
-    if "EXTRA_TIME" in estado or "OVERTIME" in estado:
+    if "EXTRA_TIME" in estado or "OVERTIME" in estado or "aet" in short or "extra time" in short:
         return "ET"
     return "90"
+
+def detectar_pen_winner(comp):
+    """Retorna nombre canónico del ganador en penales, o None."""
+    for c in comp.get("competitors", []):
+        if c.get("winner"):
+            return espn_canon(c["team"]["displayName"])
+    return None
 
 def descargar_espn():
     """
@@ -168,13 +175,15 @@ def descargar_espn():
                 away = teams.get("away")
                 if not home or not away:
                     continue
+                tipo = detectar_tipo(comp)
                 partidos.append({
-                    "fecha": ev["date"][:10],   # YYYY-MM-DD UTC
-                    "home":  home["name"],
-                    "away":  away["name"],
-                    "gHome": home["score"],
-                    "gAway": away["score"],
-                    "tipo":  detectar_tipo(comp),
+                    "fecha":      ev["date"][:10],
+                    "home":       home["name"],
+                    "away":       away["name"],
+                    "gHome":      home["score"],
+                    "gAway":      away["score"],
+                    "tipo":       tipo,
+                    "penWinner":  detectar_pen_winner(comp) if tipo == "PEN" else None,
                 })
             fechas_ok += 1
         except Exception as e:
@@ -275,6 +284,8 @@ def escribir_resultados(wb, partidos_espn=None, fx_fallback=None):
                 wsR.cell(r, 2).value = gA
                 wsR.cell(r, 3).value = gB
                 wsR.cell(r, 4).value = p["tipo"]
+                if p["tipo"] == "PEN" and p.get("penWinner"):
+                    wsR.cell(r, 5).value = p["penWinner"]
                 nuevos.append((wsF.cell(r, 1).value,
                                wsF.cell(r, 5).value, gA, gB, wsF.cell(r, 6).value))
             elif (existA, existB) != (gA, gB):
