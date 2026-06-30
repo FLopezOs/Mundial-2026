@@ -40,6 +40,8 @@ function FilaProb({ label, labelClass, pA, pX, pB, mlA, mlX, mlB }) {
 function Escudo({ p, probs, liveTeams, hoy, ayer }) {
   const pr = probs?.[p.id];
   const ga = p.resultado?.golesA, gb = p.resultado?.golesB;
+  const pen = p.resultado?.definidoPor === "pen" || p.resultado?.definidoPor === "PEN";
+  const penGanador = p.resultado?.ganadorPenales;
   const jugado = p.resultado != null;
 
   // Solo marcar como vivo si el partido es HOY o AYER (nunca fechas futuras)
@@ -56,12 +58,17 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
         {isLive && <span className="live-badge-inline">EN VIVO</span>}
       </div>
       <div className="tp-equipos">
-        <div className={"tp-equipo" + (jugado && ga > gb ? " ganador" : "")}>
+        <div className={"tp-equipo" + (jugado && (ga > gb || penGanador === p.equipoA) ? " ganador" : "")}>
           <Bandera equipo={p.equipoA} ancho={28} />
           <span>{p.equipoA}</span>
         </div>
-        {jugado ? <div className="tp-score">{ga} — {gb}</div> : <div className="tp-vs">VS</div>}
-        <div className={"tp-equipo der" + (jugado && gb > ga ? " ganador" : "")}>
+        {jugado
+          ? <div className="tp-score-wrap">
+              <div className="tp-score">{ga} — {gb}</div>
+              {pen && <div className="tp-pen-lbl">pen · gana {penGanador ?? "—"}</div>}
+            </div>
+          : <div className="tp-vs">VS</div>}
+        <div className={"tp-equipo der" + (jugado && (gb > ga || penGanador === p.equipoB) ? " ganador" : "")}>
           <Bandera equipo={p.equipoB} ancho={28} />
           <span>{p.equipoB}</span>
         </div>

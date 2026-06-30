@@ -328,7 +328,9 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
 }
 .tp-equipo.ganador { font-weight: 800; color: var(--azul); }
 
-.tp-score { font-family: var(--font-impact); font-size: 1.9rem; font-weight: 400; letter-spacing: 1px; color: var(--azul); min-width: 70px; text-align: center; }
+.tp-score-wrap { display: flex; flex-direction: column; align-items: center; min-width: 70px; }
+.tp-score { font-family: var(--font-impact); font-size: 1.9rem; font-weight: 400; letter-spacing: 1px; color: var(--azul); text-align: center; line-height: 1; }
+.tp-pen-lbl { font-size: .62rem; font-weight: 700; color: var(--ambar); text-align: center; margin-top: 2px; white-space: nowrap; }
 .tp-vs { font-size: .72rem; font-weight: 700; color: var(--gris); min-width: 28px; text-align: center; }
 
 /* ── Probabilidades ── */
