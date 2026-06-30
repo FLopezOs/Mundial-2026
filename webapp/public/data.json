@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-30 21:12",
+ "generado": "2026-06-30 17:24",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2341,7 +2341,7 @@
    "resultado": {
     "golesA": 1,
     "golesB": 1,
-    "definidoPor": "pen",
+    "definidoPor": "PEN",
     "ganadorPenales": "Paraguay",
     "penScoreA": 3,
     "penScoreB": 4
@@ -2366,7 +2366,7 @@
    "resultado": {
     "golesA": 1,
     "golesB": 1,
-    "definidoPor": "pen",
+    "definidoPor": "PEN",
     "ganadorPenales": "Marruecos",
     "penScoreA": 2,
     "penScoreB": 3
@@ -2387,6 +2387,14 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "13:00",
+   "resultado": {
+    "golesA": 1,
+    "golesB": 2,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"

@@ -252,12 +252,25 @@ def escribir_resultados(wb, partidos_espn=None, fx_fallback=None):
     """
     wsF, wsR = wb["Fixture"], wb["Resultados"]
 
+    # Carga overrides de equipos KO desde bracket_manuales.json (igual que exportar_json.py)
+    bracket_map = {}
+    bracket_path = os.path.join(BASE, "Data", "bracket_manuales.json")
+    try:
+        with open(bracket_path, encoding="utf-8") as _f:
+            bracket_map = json.load(_f).get("partidos", {})
+    except Exception:
+        pass
+
     # Índice por (fecha, equipoA, equipoB) → fila
     fila_de = {}
     for r in range(2, 106):
-        f  = wsF.cell(r, 2).value
-        eA = wsF.cell(r, 5).value
-        eB = wsF.cell(r, 6).value
+        pid = wsF.cell(r, 1).value
+        f   = wsF.cell(r, 2).value
+        eA  = wsF.cell(r, 5).value
+        eB  = wsF.cell(r, 6).value
+        if str(pid) in bracket_map:
+            eA = bracket_map[str(pid)].get("equipoA", eA)
+            eB = bracket_map[str(pid)].get("equipoB", eB)
         if f and eA and eB:
             fila_de[(f, eA, eB)] = r
 
