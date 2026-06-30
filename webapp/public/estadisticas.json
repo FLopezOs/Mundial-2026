@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-29 22:07",
+ "generado": "2026-06-30 02:56",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -2811,6 +2811,44 @@
    "offsides": {
     "A": "1",
     "B": "0"
+   }
+  },
+  "Alemania|Paraguay": {
+   "possessionPct": {
+    "A": "75.6",
+    "B": "24.4"
+   },
+   "totalShots": {
+    "A": "21",
+    "B": "7"
+   },
+   "shotsOnTarget": {
+    "A": "6",
+    "B": "3"
+   },
+   "saves": {
+    "A": "2",
+    "B": "6"
+   },
+   "cornerKicks": {
+    "A": "16",
+    "B": "6"
+   },
+   "foulsCommitted": {
+    "A": "18",
+    "B": "12"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "4",
+    "B": "1"
    }
   }
  }
