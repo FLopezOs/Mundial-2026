@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-30 08:29",
+ "generado": "2026-06-30 08:40",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -506,7 +506,9 @@
     "golesA": 2,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -530,7 +532,9 @@
     "golesA": 2,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -552,7 +556,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -576,7 +582,9 @@
     "golesA": 4,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -600,7 +608,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -623,7 +633,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -647,7 +659,9 @@
     "golesA": 0,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -669,7 +683,9 @@
     "golesA": 2,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -691,7 +707,9 @@
     "golesA": 7,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -713,7 +731,9 @@
     "golesA": 2,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -737,7 +757,9 @@
     "golesA": 1,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -761,7 +783,9 @@
     "golesA": 5,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -783,7 +807,9 @@
     "golesA": 0,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -806,7 +832,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -829,7 +857,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -853,7 +883,9 @@
     "golesA": 2,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -875,7 +907,9 @@
     "golesA": 3,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -898,7 +932,9 @@
     "golesA": 1,
     "golesB": 4,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -920,7 +956,9 @@
     "golesA": 3,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -944,7 +982,9 @@
     "golesA": 3,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -966,7 +1006,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -988,7 +1030,9 @@
     "golesA": 4,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1011,7 +1055,9 @@
     "golesA": 1,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1033,7 +1079,9 @@
     "golesA": 1,
     "golesB": 3,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1057,7 +1105,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1079,7 +1129,9 @@
     "golesA": 4,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1103,7 +1155,9 @@
     "golesA": 6,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1126,7 +1180,9 @@
     "golesA": 1,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1149,7 +1205,9 @@
     "golesA": 2,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1172,7 +1230,9 @@
     "golesA": 0,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1195,7 +1255,9 @@
     "golesA": 3,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1217,7 +1279,9 @@
     "golesA": 0,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1239,7 +1303,9 @@
     "golesA": 5,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1261,7 +1327,9 @@
     "golesA": 2,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1285,7 +1353,9 @@
     "golesA": 0,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1309,7 +1379,9 @@
     "golesA": 0,
     "golesB": 4,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1332,7 +1404,9 @@
     "golesA": 4,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1356,7 +1430,9 @@
     "golesA": 0,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1379,7 +1455,9 @@
     "golesA": 2,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1401,7 +1479,9 @@
     "golesA": 1,
     "golesB": 3,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1423,7 +1503,9 @@
     "golesA": 2,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1447,7 +1529,9 @@
     "golesA": 3,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1469,7 +1553,9 @@
     "golesA": 3,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1492,7 +1578,9 @@
     "golesA": 1,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1514,7 +1602,9 @@
     "golesA": 5,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1537,7 +1627,9 @@
     "golesA": 0,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1560,7 +1652,9 @@
     "golesA": 0,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1583,7 +1677,9 @@
     "golesA": 1,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1606,7 +1702,9 @@
     "golesA": 2,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1628,7 +1726,9 @@
     "golesA": 3,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1650,7 +1750,9 @@
     "golesA": 0,
     "golesB": 3,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1674,7 +1776,9 @@
     "golesA": 4,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1696,7 +1800,9 @@
     "golesA": 0,
     "golesB": 3,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1719,7 +1825,9 @@
     "golesA": 1,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1741,7 +1849,9 @@
     "golesA": 0,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1763,7 +1873,9 @@
     "golesA": 2,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1787,7 +1899,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1809,7 +1923,9 @@
     "golesA": 1,
     "golesB": 3,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1832,7 +1948,9 @@
     "golesA": 3,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1854,7 +1972,9 @@
     "golesA": 0,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1877,7 +1997,9 @@
     "golesA": 1,
     "golesB": 4,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1900,7 +2022,9 @@
     "golesA": 5,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1922,7 +2046,9 @@
     "golesA": 0,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1944,7 +2070,9 @@
     "golesA": 0,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1968,7 +2096,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -1990,7 +2120,9 @@
     "golesA": 1,
     "golesB": 5,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2012,7 +2144,9 @@
     "golesA": 0,
     "golesB": 2,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2034,7 +2168,9 @@
     "golesA": 2,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2056,7 +2192,9 @@
     "golesA": 0,
     "golesB": 0,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2080,7 +2218,9 @@
     "golesA": 3,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2102,7 +2242,9 @@
     "golesA": 3,
     "golesB": 3,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2124,7 +2266,9 @@
     "golesA": 1,
     "golesB": 3,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2147,7 +2291,9 @@
     "golesA": 0,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2170,7 +2316,9 @@
     "golesA": 2,
     "golesB": 1,
     "definidoPor": "90",
-    "ganadorPenales": null
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2194,7 +2342,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "pen",
-    "ganadorPenales": "Paraguay"
+    "ganadorPenales": "Paraguay",
+    "penScoreA": 3,
+    "penScoreB": 4
    },
    "canales": [
     "DGO",
@@ -2217,7 +2367,9 @@
     "golesA": 1,
     "golesB": 1,
     "definidoPor": "pen",
-    "ganadorPenales": "Marruecos"
+    "ganadorPenales": "Marruecos",
+    "penScoreA": 2,
+    "penScoreB": 3
    },
    "canales": [
     "DGO",

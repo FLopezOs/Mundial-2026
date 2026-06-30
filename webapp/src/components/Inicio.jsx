@@ -42,6 +42,7 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
   const ga = p.resultado?.golesA, gb = p.resultado?.golesB;
   const pen = p.resultado?.definidoPor === "pen" || p.resultado?.definidoPor === "PEN";
   const penGanador = p.resultado?.ganadorPenales;
+  const penA = p.resultado?.penScoreA, penB = p.resultado?.penScoreB;
   const jugado = p.resultado != null;
 
   // Solo marcar como vivo si el partido es HOY o AYER (nunca fechas futuras)
@@ -63,9 +64,10 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
           <span>{p.equipoA}</span>
         </div>
         {jugado
-          ? <div className="tp-score-wrap">
-              <div className="tp-score">{ga} — {gb}</div>
-              {pen && <div className="tp-pen-lbl">pen · gana {penGanador ?? "—"}</div>}
+          ? <div className="tp-score">
+              {pen && penA != null && <span className="tp-pen-score">({penA}) </span>}
+              {ga} — {gb}
+              {pen && penB != null && <span className="tp-pen-score"> ({penB})</span>}
             </div>
           : <div className="tp-vs">VS</div>}
         <div className={"tp-equipo der" + (jugado && (gb > ga || penGanador === p.equipoB) ? " ganador" : "")}>

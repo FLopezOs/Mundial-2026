@@ -173,21 +173,23 @@ def main():
         ga, gb = wsR.cell(r, 2).value, wsR.cell(r, 3).value
 
         if ga is not None and gb is not None:
-            # Resultado viene del Excel (fuente principal)
             p["resultado"] = {
                 "golesA":        int(ga),
                 "golesB":        int(gb),
                 "definidoPor":   wsR.cell(r, 4).value or "90",
                 "ganadorPenales":wsR.cell(r, 5).value,
+                "penScoreA":     wsR.cell(r, 6).value,
+                "penScoreB":     wsR.cell(r, 7).value,
             }
         elif str(pid) in manuales_map:
-            # Excel no tiene resultado pero sí está en resultados_manuales.json
             m = manuales_map[str(pid)]
             p["resultado"] = {
                 "golesA":        m["golesA"],
                 "golesB":        m["golesB"],
                 "definidoPor":   m.get("definidoPor", "90"),
                 "ganadorPenales":m.get("ganadorPenales"),
+                "penScoreA":     m.get("penScoreA"),
+                "penScoreB":     m.get("penScoreB"),
             }
             manuales_aplicados += 1
 

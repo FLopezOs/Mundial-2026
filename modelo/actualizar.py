@@ -176,6 +176,15 @@ def descargar_espn():
                 if not home or not away:
                     continue
                 tipo = detectar_tipo(comp)
+                pen_home = pen_away = None
+                if tipo == "PEN":
+                    for c in comp.get("competitors", []):
+                        ss = c.get("shootoutScore")
+                        if ss is not None:
+                            if c["homeAway"] == "home":
+                                pen_home = int(ss)
+                            else:
+                                pen_away = int(ss)
                 partidos.append({
                     "fecha":      ev["date"][:10],
                     "home":       home["name"],
@@ -184,6 +193,8 @@ def descargar_espn():
                     "gAway":      away["score"],
                     "tipo":       tipo,
                     "penWinner":  detectar_pen_winner(comp) if tipo == "PEN" else None,
+                    "penHome":    pen_home,
+                    "penAway":    pen_away,
                 })
             fechas_ok += 1
         except Exception as e:
@@ -284,8 +295,10 @@ def escribir_resultados(wb, partidos_espn=None, fx_fallback=None):
                 wsR.cell(r, 2).value = gA
                 wsR.cell(r, 3).value = gB
                 wsR.cell(r, 4).value = p["tipo"]
-                if p["tipo"] == "PEN" and p.get("penWinner"):
-                    wsR.cell(r, 5).value = p["penWinner"]
+                if p["tipo"] == "PEN":
+                    if p.get("penWinner"):  wsR.cell(r, 5).value = p["penWinner"]
+                    if p.get("penHome") is not None: wsR.cell(r, 6).value = p["penHome"]
+                    if p.get("penAway") is not None: wsR.cell(r, 7).value = p["penAway"]
                 nuevos.append((wsF.cell(r, 1).value,
                                wsF.cell(r, 5).value, gA, gB, wsF.cell(r, 6).value))
             elif (existA, existB) != (gA, gB):
