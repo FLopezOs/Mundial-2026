@@ -37,29 +37,49 @@ body { margin: 0; font-family: var(--font-body); background: var(--fondo); color
 /* ── Header ── */
 .encabezado {
   position: sticky; top: 0; z-index: 5;
-  background: rgba(255,255,255,.97);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 9px 0 8px;
-  border-bottom: 3px solid transparent;
-  border-image: var(--wc-tricolor) 1;
-  display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center;
-  box-shadow: 0 2px 16px rgba(13,44,84,.10), 0 1px 4px rgba(13,44,84,.06);
+  background: var(--azul);
+  box-shadow: 0 2px 16px rgba(13,44,84,.25);
 }
-.titulo h1 { margin: 0; font-size: 1.5rem; font-family: var(--font-impact); color: var(--azul); letter-spacing: 1.5px; font-weight: 400; line-height: 1.1; }
+
+/* Fila superior: brand + aciertos */
+.enc-top {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px; padding: 10px 16px 8px;
+}
+.enc-brand { display: flex; align-items: center; gap: 10px; }
+
+.titulo h1 { margin: 0; font-size: 1.3rem; font-family: var(--font-impact); color: #fff; letter-spacing: 1.5px; font-weight: 400; line-height: 1.1; }
 .titulo h1 .veintiseis { background: var(--wc-tricolor); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 900; }
-.titulo .sub { font-size: .78rem; color: var(--gris); letter-spacing: .2px; }
-.aciertos { display: flex; gap: 12px; font-size: .88rem; background: var(--azul-claro); padding: 6px 12px; border-radius: 10px; box-shadow: var(--shadow-xs); }
-.pestanas { display: flex; gap: 4px; margin-left: auto; }
-.pestanas button {
-  border: 1.5px solid var(--borde); background: #fff; padding: 7px 13px;
-  border-radius: 9px; cursor: pointer; font-size: .81rem; font-weight: 600;
-  font-family: var(--font-body); transition: all var(--t);
-  display: flex; align-items: center; gap: 4px; color: var(--gris-oscuro);
-  box-shadow: var(--shadow-xs);
+.titulo .sub { font-size: .72rem; color: rgba(255,255,255,.6); letter-spacing: .2px; }
+
+.aciertos {
+  display: flex; gap: 10px; font-size: .82rem;
+  background: rgba(255,255,255,.12); padding: 5px 11px;
+  border-radius: 10px; color: #fff;
 }
-.pestanas button.activa { background: var(--azul); color: #fff; border-color: var(--azul); box-shadow: inset 0 -3px 0 var(--wc-rojo), var(--shadow-sm); }
-.pestanas button:not(.activa):hover { border-color: var(--azul); color: var(--azul); background: var(--azul-claro); box-shadow: var(--shadow-sm); }
+.aciertos strong { color: #fff; }
+
+/* Barra de navegación */
+.pestanas {
+  display: flex; gap: 0; border-top: 1px solid rgba(255,255,255,.12);
+  overflow-x: auto; scrollbar-width: none;
+}
+.pestanas::-webkit-scrollbar { display: none; }
+.pestanas button {
+  flex: 1; min-width: 70px;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 8px 6px 7px;
+  background: transparent; border: none; border-bottom: 3px solid transparent;
+  cursor: pointer; font-family: var(--font-body); transition: all var(--t);
+  color: rgba(255,255,255,.6);
+}
+.pestanas button:hover { background: rgba(255,255,255,.08); color: #fff; }
+.pestanas button.activa {
+  color: #fff; border-bottom-color: #fff;
+  background: rgba(255,255,255,.1);
+}
+.nav-icono { font-size: 1.1rem; line-height: 1; }
+.nav-label { font-size: .7rem; font-weight: 600; letter-spacing: .2px; white-space: nowrap; }
 
 .bandera { vertical-align: -3px; border-radius: 4px; box-shadow: 0 0 0 1px rgba(0,0,0,.14); }
 .grupo h2 { border-left: 4px solid var(--azul); padding-left: 8px; }
@@ -174,17 +194,17 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
 
 /* ── Media queries ── */
 @media (max-width: 640px) {
-  .pestanas { margin-left: 0; width: 100%; }
-  .pestanas button { flex: 1; padding: 8px 4px; font-size: .78rem; }
   .bracket { min-width: 760px; }
   .grilla-grupos { grid-template-columns: 1fr; }
   .grilla-resumen { grid-template-columns: 1fr; }
+  .enc-top { padding: 8px 12px 6px; }
+  .aciertos { font-size: .75rem; gap: 8px; }
 }
 @media (max-width: 480px) {
   .app { padding: 0 10px 40px; }
-  .encabezado { padding: 8px 0 6px; gap: 6px 10px; }
-  .titulo h1 { font-size: 1.3rem; }
-  .aciertos { font-size: .8rem; padding: 5px 10px; }
+  .titulo h1 { font-size: 1.1rem; }
+  .nav-label { font-size: .62rem; }
+  .pestanas button { min-width: 54px; padding: 7px 4px 6px; }
 }
 @media print {
   .no-imprimir, .encabezado, .pie { display: none !important; }

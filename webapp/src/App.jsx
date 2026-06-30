@@ -9,7 +9,16 @@ import EnVivo from "./components/EnVivo.jsx";
 import Historial from "./components/Historial.jsx";
 import PorPais from "./components/PorPais.jsx";
 
-const VISTAS = ["Inicio", "Grupos", "Bracket", "En Vivo", "Resultados", "Por País", "Resumen"];
+const VISTAS = [
+  { id: "Inicio",     icono: "🏠", label: "Inicio"     },
+  { id: "Grupos",     icono: "📋", label: "Grupos"     },
+  { id: "Bracket",    icono: "🏆", label: "Bracket"    },
+  { id: "En Vivo",    icono: "⚡", label: "En Vivo"    },
+  { id: "Resultados", icono: "📅", label: "Resultados" },
+  { id: "Por País",   icono: "🌍", label: "Por País"   },
+  { id: "Resumen",    icono: "📊", label: "Resumen"    },
+];
+const VISTA_IDS = VISTAS.map(v => v.id);
 
 /* ─── Mapeo ESPN (inglés) → nombre canónico ES ─── */
 const ESPN_CANON = {
@@ -89,7 +98,7 @@ export default function App() {
   /* ── Vista persistente via URL hash ── */
   const getHashVista = () => {
     const h = decodeURIComponent(window.location.hash.slice(1));
-    return VISTAS.includes(h) ? h : "Inicio";
+    return VISTA_IDS.includes(h) ? h : "Inicio";
   };
   const [vista, setVistaState] = useState(getHashVista);
   const setVista = v => {
@@ -176,22 +185,27 @@ export default function App() {
   return (
     <div className="app">
       <header className="encabezado">
-        <LogoWA26 />
-        <TrofeoWC />
-        <div className="titulo">
-          <h1>⚽ Polla Mundial <span className="veintiseis">26</span></h1>
-          <span className="sub">Escenario: <strong>{estado.activo}</strong> · {data.generado}</span>
-        </div>
-        <div className="aciertos" title="Aciertos sobre partidos ya jugados con pick">
-          <span>✓ 1X2: <strong>{calc.aciertos.ok1x2}/{calc.aciertos.conPick}</strong></span>
-          <span>🎯 Exactos: <strong>{calc.aciertos.exactos}</strong></span>
-          <span className="pts-total">🏅 <strong>{calc.puntaje.total}</strong> pts</span>
+        <div className="enc-top">
+          <div className="enc-brand">
+            <LogoWA26 />
+            <TrofeoWC />
+            <div className="titulo">
+              <h1>Mundial <span className="veintiseis">26</span></h1>
+              <span className="sub">{data.generado}</span>
+            </div>
+          </div>
+          <div className="aciertos" title="Aciertos sobre partidos ya jugados con pick">
+            <span>✓ 1X2: <strong>{calc.aciertos.ok1x2}/{calc.aciertos.conPick}</strong></span>
+            <span>🎯 Exactos: <strong>{calc.aciertos.exactos}</strong></span>
+            <span className="pts-total">🏅 <strong>{calc.puntaje.total}</strong> pts</span>
+          </div>
         </div>
         <nav className="pestanas">
-          {VISTAS.map(v => (
-            <button key={v} className={v === vista ? "activa" : ""} onClick={() => setVista(v)}>
-              {v}
-              {v === "En Vivo" && hayVivo && <span className="live-dot-nav" aria-label="partido en vivo" />}
+          {VISTAS.map(({ id, icono, label }) => (
+            <button key={id} className={id === vista ? "activa" : ""} onClick={() => setVista(id)}>
+              <span className="nav-icono">{icono}</span>
+              <span className="nav-label">{label}</span>
+              {id === "En Vivo" && hayVivo && <span className="live-dot-nav" aria-label="partido en vivo" />}
             </button>
           ))}
         </nav>
