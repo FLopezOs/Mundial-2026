@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-30 22:48",
+ "generado": "2026-06-30 23:24",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2411,6 +2411,14 @@
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
+   "resultado": {
+    "golesA": 3,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "CHV",

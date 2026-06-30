@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-30 19:50",
+ "generado": "2026-06-30 23:24",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -2925,6 +2925,44 @@
    "offsides": {
     "A": "2",
     "B": "2"
+   }
+  },
+  "Francia|Suecia": {
+   "possessionPct": {
+    "A": "61",
+    "B": "39"
+   },
+   "totalShots": {
+    "A": "25",
+    "B": "8"
+   },
+   "shotsOnTarget": {
+    "A": "12",
+    "B": "3"
+   },
+   "saves": {
+    "A": "3",
+    "B": "9"
+   },
+   "cornerKicks": {
+    "A": "9",
+    "B": "1"
+   },
+   "foulsCommitted": {
+    "A": "14",
+    "B": "10"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "1"
    }
   }
  }
