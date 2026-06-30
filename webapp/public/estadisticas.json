@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-30 14:11",
+ "generado": "2026-06-30 19:50",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -2887,6 +2887,44 @@
    "offsides": {
     "A": "3",
     "B": "0"
+   }
+  },
+  "Costa de Marfil|Noruega": {
+   "possessionPct": {
+    "A": "47.1",
+    "B": "52.9"
+   },
+   "totalShots": {
+    "A": "14",
+    "B": "9"
+   },
+   "shotsOnTarget": {
+    "A": "5",
+    "B": "4"
+   },
+   "saves": {
+    "A": "1",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "14",
+    "B": "3"
+   },
+   "foulsCommitted": {
+    "A": "6",
+    "B": "7"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "2"
    }
   }
  }
