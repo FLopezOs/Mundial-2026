@@ -187,17 +187,10 @@ export default function App() {
       <header className="encabezado">
         <div className="enc-top">
           <div className="enc-brand">
-            <LogoWA26 />
             <TrofeoWC />
             <div className="titulo">
               <h1>Mundial <span className="veintiseis">26</span></h1>
-              <span className="sub">{data.generado}</span>
             </div>
-          </div>
-          <div className="aciertos" title="Aciertos sobre partidos ya jugados con pronóstico ingresado">
-            <span>✓ 1X2: <strong>{calc.aciertos.ok1x2}/{calc.aciertos.conPick}</strong></span>
-            <span>🎯 Exactos: <strong>{calc.aciertos.exactos}</strong></span>
-            <span className="pts-total">🏅 <strong>{calc.puntaje.total}</strong> pts</span>
           </div>
         </div>
         <nav className="pestanas">
