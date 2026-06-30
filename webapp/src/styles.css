@@ -231,7 +231,7 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
 /* ===== BRACKET DOS ZONAS ===== */
 .bracket-wrap { display: flex; flex-direction: column; }
 .bracket-ayuda { margin: 0 0 6px; font-size: .8rem; }
-.bracket-doble-scroll { overflow-x: auto; padding-bottom: 6px; }
+.bracket-doble-scroll { overflow-x: auto; overflow-y: hidden; padding-bottom: 6px; }
 
 .bracket-doble {
   display: flex;
@@ -280,7 +280,7 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
   position: relative;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  padding: 6px 6px 4px;
+  padding: 28px 6px 4px; /* 28px = altura header col-ronda → alinea Final con Semis */
   border-left: 1px dashed var(--borde);
   border-right: 1px dashed var(--borde);
 }
