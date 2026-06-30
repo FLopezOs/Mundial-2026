@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-30 02:56",
+ "generado": "2026-06-30 06:55",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -2849,6 +2849,44 @@
    "offsides": {
     "A": "4",
     "B": "1"
+   }
+  },
+  "Países Bajos|Marruecos": {
+   "possessionPct": {
+    "A": "29.9",
+    "B": "70.1"
+   },
+   "totalShots": {
+    "A": "6",
+    "B": "11"
+   },
+   "shotsOnTarget": {
+    "A": "2",
+    "B": "5"
+   },
+   "saves": {
+    "A": "5",
+    "B": "1"
+   },
+   "cornerKicks": {
+    "A": "5",
+    "B": "8"
+   },
+   "foulsCommitted": {
+    "A": "18",
+    "B": "15"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "0"
    }
   }
  }
