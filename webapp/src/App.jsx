@@ -194,7 +194,7 @@ export default function App() {
               <span className="sub">{data.generado}</span>
             </div>
           </div>
-          <div className="aciertos" title="Aciertos sobre partidos ya jugados con pick">
+          <div className="aciertos" title="Aciertos sobre partidos ya jugados con pronóstico ingresado">
             <span>✓ 1X2: <strong>{calc.aciertos.ok1x2}/{calc.aciertos.conPick}</strong></span>
             <span>🎯 Exactos: <strong>{calc.aciertos.exactos}</strong></span>
             <span className="pts-total">🏅 <strong>{calc.puntaje.total}</strong> pts</span>
@@ -219,7 +219,7 @@ export default function App() {
         {vista === "Por País"    && <PorPais    data={data} />}
         {vista === "Resumen"     && <Resumen    data={data} picks={picks} calc={calc} escenario={estado.activo} />}
       </main>
-      <footer className="pie">Modelo Elo+Poisson del Tracker — referencia estadística sin incorporar lesiones ni alineaciones.</footer>
+      <footer className="pie">Seguimiento Mundial 2026 · Modelo Elo+Poisson — referencia estadística, no incorpora lesiones ni alineaciones.</footer>
     </div>
   );
 }

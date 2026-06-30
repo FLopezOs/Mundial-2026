@@ -17,7 +17,7 @@ export default function Resumen({ data, picks, calc, escenario }) {
   const ref = useRef(null);
   const imprimir = useReactToPrint({
     content: () => ref.current,
-    documentTitle: `Polla_Mundial2026_${escenario.replace(/\W+/g, "_")}_${new Date().toISOString().slice(0, 10)}`,
+    documentTitle: `Seguimiento_Mundial2026_${escenario.replace(/\W+/g, "_")}_${new Date().toISOString().slice(0, 10)}`,
   });
   const comp = comparativoModelo(data, picks);
   const fecha = new Date().toISOString().slice(0, 10);
@@ -27,7 +27,7 @@ export default function Resumen({ data, picks, calc, escenario }) {
     const blob = new Blob([html], { type: "text/html;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = `Polla_Mundial2026_${escenario.replace(/\W+/g, "_")}_${fecha}.html`;
+    a.download = `Seguimiento_Mundial2026_${escenario.replace(/\W+/g, "_")}_${fecha}.html`;
     a.click();
     URL.revokeObjectURL(a.href);
   };
@@ -40,12 +40,12 @@ export default function Resumen({ data, picks, calc, escenario }) {
         <button onClick={imprimir}>Descargar PDF</button>
       </div>
       <div ref={ref} className="hoja-resumen">
-        <h2>Polla Mundial 2026 — {escenario} <span className="sub">({fecha})</span></h2>
+        <h2>Seguimiento Mundial 2026 — {escenario} <span className="sub">({fecha})</span></h2>
         {campeon
           ? <div className="campeon">🏆 Campeón: <strong><Bandera equipo={campeon} /> {campeon}</strong> · Subcampeón: <Bandera equipo={subcampeon} ancho={16} /> {subcampeon}</div>
-          : <div className="ayuda">Bracket incompleto: faltan picks para llegar al campeón.</div>}
+          : <div className="ayuda">Bracket incompleto: faltan pronósticos para llegar al campeón.</div>}
 
-        <h3>Mis picks vs. modelo</h3>
+        <h3>Mis pronósticos vs. modelo</h3>
         <p className="comparativo">
           Coincido con el favorito del modelo en <strong>{comp.coincidencias}/{comp.total}</strong> partidos pronosticados (1X2).
           Probabilidad conjunta aproximada de mi combinación de grupos: <strong>{comp.probConjunta ? fmtPct(comp.probConjunta, comp.probConjunta < 0.001 ? 4 : 2) : "—"}</strong> {comp.probConjunta ? `(${unoEntre(comp.probConjunta)})` : ""}.
@@ -70,7 +70,7 @@ export default function Resumen({ data, picks, calc, escenario }) {
           ))}
         </div>
 
-        <p className="nota">Generado por Polla Mundial 2026 (datos del Tracker, {data.generado}). El bracket completo está en la pestaña <strong>Bracket</strong>. Modelo Elo+Poisson solo como referencia.</p>
+        <p className="nota">Generado por Seguimiento Mundial 2026 ({data.generado}). El bracket completo está en la pestaña <strong>Bracket</strong>. Modelo Elo+Poisson solo como referencia.</p>
       </div>
     </div>
   );

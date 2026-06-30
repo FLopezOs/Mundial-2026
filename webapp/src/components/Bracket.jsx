@@ -76,7 +76,7 @@ function Llave({ ll, picks, setPicks, compact, pMap }) {
       <div className="estado-llave">
         {ll.definicion === "real" && <span className="badge ok">oficial</span>}
         {ll.pen && ll.ganador && <span className="badge pen">penales</span>}
-        {ll.definicion === "pick" && !ll.pen && <span className="badge pick">mi pick</span>}
+        {ll.definicion === "pick" && !ll.pen && <span className="badge pick">mi pronóstico</span>}
       </div>
     </div>
   );

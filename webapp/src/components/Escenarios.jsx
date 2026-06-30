@@ -18,8 +18,8 @@ export default function Escenarios({ estado, guardar, reiniciarTodo }) {
     guardar({ activo: n, escenarios: { ...estado.escenarios, [n]: structuredClone(estado.escenarios[estado.activo]) } });
   };
   const eliminar = (n) => {
-    if (nombres.length === 1) { alert("Debe quedar al menos un escenario."); return; }
-    if (!confirm(`¿Eliminar el escenario "${n}"?`)) return;
+    if (nombres.length === 1) { alert("Debe quedar al menos un perfil."); return; }
+    if (!confirm(`¿Eliminar el perfil "${n}"?`)) return;
     const esc = { ...estado.escenarios };
     delete esc[n];
     guardar({ activo: n === estado.activo ? Object.keys(esc)[0] : estado.activo, escenarios: esc });
@@ -50,26 +50,26 @@ export default function Escenarios({ estado, guardar, reiniciarTodo }) {
 
   return (
     <div className="escenarios">
-      <h2>Escenarios guardados</h2>
+      <h2>Mis perfiles de pronóstico</h2>
       <ul className="lista-esc">
         {nombres.map(n => (
           <li key={n} className={n === estado.activo ? "activo" : ""}>
             <button className="nombre-esc" onClick={() => guardar({ ...estado, activo: n })}>{n}</button>
-            <span className="conteo">{Object.values(estado.escenarios[n].scores ?? {}).filter(s => Number.isInteger(s?.ga)).length} picks</span>
+            <span className="conteo">{Object.values(estado.escenarios[n].scores ?? {}).filter(s => Number.isInteger(s?.ga)).length} pronósticos</span>
             <button className="peligro chico" onClick={() => eliminar(n)}>✕</button>
           </li>
         ))}
       </ul>
       <div className="acciones">
-        <input value={nombre} onChange={e => setNombre(e.target.value)} placeholder="Nuevo escenario (ej. Polla oficina)" onKeyDown={e => e.key === "Enter" && crear()} />
+        <input value={nombre} onChange={e => setNombre(e.target.value)} placeholder="Nombre del perfil (ej. Mi escenario)" onKeyDown={e => e.key === "Enter" && crear()} />
         <button onClick={crear} disabled={!nombre.trim()}>Crear</button>
         <button onClick={duplicar}>Duplicar actual</button>
       </div>
       <div className="acciones">
-        <button onClick={exportar}>Exportar picks (JSON)</button>
-        <button onClick={() => archivo.current?.click()}>Importar picks</button>
+        <button onClick={exportar}>Exportar pronósticos (JSON)</button>
+        <button onClick={() => archivo.current?.click()}>Importar pronósticos</button>
         <input ref={archivo} type="file" accept="application/json" hidden onChange={importar} />
-        <button className="peligro" onClick={() => confirm("¿Borrar TODOS los escenarios y picks? Esto no se puede deshacer.") && reiniciarTodo()}>Reiniciar todo</button>
+        <button className="peligro" onClick={() => confirm("¿Borrar TODOS los perfiles y pronósticos? Esto no se puede deshacer.") && reiniciarTodo()}>Reiniciar todo</button>
       </div>
       <p className="ayuda">Todo se guarda automáticamente en este navegador (localStorage). Exporta a JSON para respaldar o compartir.</p>
     </div>

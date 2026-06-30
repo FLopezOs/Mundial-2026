@@ -59,7 +59,7 @@ function Partido({ p, picks, setPicks, probsLive }) {
           </span>
         )}
         {badge}{ptsBadge}
-        {real && Number.isInteger(s.ga) && <span className="mi-pick">mi pick: {s.ga}-{s.gb}</span>}
+        {real && Number.isInteger(s.ga) && <span className="mi-pick">mi pronóstico: {s.ga}-{s.gb}</span>}
       </div>
     </div>
   );
@@ -96,7 +96,7 @@ export default function Grupos({ data, picks, setPicks, calc, probsLive }) {
   return (
     <div>
       <p className="ayuda">
-        Ingresa tu marcador ({pendientes} sin pick). ⚡ = probabilidad con Elo actualizado a resultados reales.
+        Ingresa tu pronóstico ({pendientes} sin completar). ⚡ = probabilidad con Elo actualizado a resultados reales.
         Verde = clasifica directo · Amarillo = tercero (pasan 8 mejores).
       </p>
 

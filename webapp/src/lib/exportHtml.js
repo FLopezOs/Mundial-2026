@@ -25,11 +25,11 @@ export function generarHtml({ data, calc, comp, escenario, fecha }) {
         </div>`).join("")}
     </div>`).join("");
   return `<!doctype html><html lang="es"><head><meta charset="utf-8">
-<title>Polla Mundial 2026 — ${esc(escenario)}</title>
+<title>Seguimiento Mundial 2026 — ${esc(escenario)}</title>
 <style>body{font-family:system-ui,Arial,sans-serif;margin:24px;color:#1a1a2e}
 table{border-collapse:collapse;margin:6px;font-size:12px;display:inline-table;vertical-align:top}
 td,th{border:1px solid #ddd;padding:3px 8px;text-align:center}h1{font-size:20px}</style></head><body>
-<h1>⚽ Polla Mundial 2026 — ${esc(escenario)} <small>(${fecha})</small></h1>
+<h1>⚽ Seguimiento Mundial 2026 — ${esc(escenario)} <small>(${fecha})</small></h1>
 ${bracket.campeon ? `<p style="font-size:16px">🏆 Campeón: <b>${emojiDe(bracket.campeon)} ${esc(bracket.campeon)}</b> · Subcampeón: ${esc(bracket.subcampeon)}</p>` : "<p><i>Bracket incompleto.</i></p>"}
 <p>Coincido con el favorito del modelo en <b>${comp.coincidencias}/${comp.total}</b> partidos.
 Probabilidad conjunta aproximada (grupos): <b>${comp.probConjunta ? fmtPct(comp.probConjunta, comp.probConjunta < 0.001 ? 4 : 2) : "—"}</b>.</p>

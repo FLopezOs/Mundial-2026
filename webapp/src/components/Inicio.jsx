@@ -158,7 +158,7 @@ export default function Inicio({ data, picks, calc, setVista, probsLive: probs, 
       </div>
 
       <div className="acciones-inicio">
-        <button className="btn-accion btn-principal" onClick={() => setVista("Grupos")}>✏️ Ingresar / ver resultados</button>
+        <button className="btn-accion btn-principal" onClick={() => setVista("Grupos")}>✏️ Ingresar pronósticos</button>
         <button className="btn-accion" onClick={() => setVista("Bracket")}>🏆 Ver bracket</button>
         <button className="btn-accion" onClick={() => setVista("En Vivo")}>⚡ Ver en vivo</button>
         <button className="btn-accion" onClick={() => setVista("Resumen")}>📊 Mi resumen</button>
