@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-29 15:40",
+ "generado": "2026-06-30 11:43",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -2772,6 +2772,120 @@
    },
    "offsides": {
     "A": "1",
+    "B": "0"
+   }
+  },
+  "Brasil|Japón": {
+   "possessionPct": {
+    "A": "68.6",
+    "B": "31.4"
+   },
+   "totalShots": {
+    "A": "19",
+    "B": "5"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "2"
+   },
+   "saves": {
+    "A": "1",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "6",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "4",
+    "B": "13"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "3"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "1",
+    "B": "0"
+   }
+  },
+  "Alemania|Paraguay": {
+   "possessionPct": {
+    "A": "75.6",
+    "B": "24.4"
+   },
+   "totalShots": {
+    "A": "21",
+    "B": "7"
+   },
+   "shotsOnTarget": {
+    "A": "6",
+    "B": "3"
+   },
+   "saves": {
+    "A": "2",
+    "B": "6"
+   },
+   "cornerKicks": {
+    "A": "16",
+    "B": "6"
+   },
+   "foulsCommitted": {
+    "A": "18",
+    "B": "12"
+   },
+   "yellowCards": {
+    "A": "2",
+    "B": "2"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "4",
+    "B": "1"
+   }
+  },
+  "Países Bajos|Marruecos": {
+   "possessionPct": {
+    "A": "29.9",
+    "B": "70.1"
+   },
+   "totalShots": {
+    "A": "6",
+    "B": "11"
+   },
+   "shotsOnTarget": {
+    "A": "2",
+    "B": "5"
+   },
+   "saves": {
+    "A": "5",
+    "B": "1"
+   },
+   "cornerKicks": {
+    "A": "5",
+    "B": "8"
+   },
+   "foulsCommitted": {
+    "A": "18",
+    "B": "15"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
     "B": "0"
    }
   }
