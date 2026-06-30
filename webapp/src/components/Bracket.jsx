@@ -96,26 +96,6 @@ function ColRonda({ titulo, nums, llaves, picks, setPicks, pMap }) {
   );
 }
 
-function WeAre26SVG() {
-  return (
-    <svg className="weare26-svg" viewBox="0 0 130 52" xmlns="http://www.w3.org/2000/svg">
-      <rect width="130" height="52" rx="5" fill="#0d2c54"/>
-      <rect x="0" y="44" width="43" height="8" fill="#d50032"/>
-      <rect x="43" y="44" width="44" height="8" fill="#0b7a3b"/>
-      <rect x="87" y="44" width="43" height="8" fill="#0d4f8b"/>
-      <polygon points="65,2 66.8,7.5 72.5,7.5 67.8,10.8 69.6,16.3 65,13 60.4,16.3 62.2,10.8 57.5,7.5 63.2,7.5"
-        fill="#f5c518"/>
-      <text x="65" y="30" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900"
-        fontSize="10" fill="#ffffff" textAnchor="middle" letterSpacing="3.5">WE ARE</text>
-      <text x="47" y="44" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900"
-        fontSize="16" fill="#d50032" textAnchor="middle">2</text>
-      <text x="83" y="44" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900"
-        fontSize="16" fill="#0d4f8b" textAnchor="middle">6</text>
-      <text x="65" y="44" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900"
-        fontSize="14" fill="#0b7a3b" textAnchor="middle">·</text>
-    </svg>
-  );
-}
 
 export default function Bracket({ picks, setPicks, calc, data }) {
   const { llaves, campeon } = calc.bracket;
@@ -171,7 +151,6 @@ export default function Bracket({ picks, setPicks, calc, data }) {
               <div className="col-titulo-ronda" style={{marginTop:"6px"}}>🥉 3er Puesto</div>
               <Llave ll={llave(103)} picks={picks} setPicks={setPicks} compact pMap={pMap} />
             </div>
-            <WeAre26SVG/>
           </div>
 
           {/* ── ZONA DERECHA (espejo) ── */}
