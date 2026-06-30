@@ -231,14 +231,11 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
 /* ===== BRACKET DOS ZONAS ===== */
 .bracket-wrap { display: flex; flex-direction: column; }
 .bracket-ayuda { margin: 0 0 6px; font-size: .8rem; }
-.bracket-doble-scroll { overflow-x: auto; overflow-y: hidden; padding-bottom: 6px; }
+.bracket-doble-scroll { overflow-x: auto; padding-bottom: 6px; }
 
 .bracket-doble {
   display: flex;
   min-width: 980px;
-  height: calc(100vh - 210px);
-  max-height: 820px;
-  min-height: 480px;
   align-items: stretch;
   gap: 0;
 }
@@ -267,7 +264,7 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
   justify-content: space-around; gap: 1px;
 }
 
-.bracket-doble .llave { margin: 1px 0; padding: 4px 5px; flex-shrink: 0; box-shadow: none; }
+.bracket-doble .llave { margin: 0; padding: 4px 5px; flex-shrink: 0; box-shadow: none; height: 72px; overflow: hidden; }
 .bracket-doble .slot { font-size: .73rem; padding: 2px 4px; }
 .bracket-doble .num { font-size: .56rem; }
 .bracket-doble .estado-llave { min-height: 14px; }
