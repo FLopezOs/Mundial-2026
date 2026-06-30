@@ -1,5 +1,5 @@
 {
- "generado": "2026-06-30 11:43",
+ "generado": "2026-06-30 08:29",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2190,6 +2190,12 @@
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
    "horaChile": "16:30",
+   "resultado": {
+    "golesA": 1,
+    "golesB": 1,
+    "definidoPor": "pen",
+    "ganadorPenales": "Paraguay"
+   },
    "canales": [
     "DGO",
     "CHV",
@@ -2207,6 +2213,12 @@
    "ciudad": "Monterrey (Guadalupe)",
    "pais": "México",
    "horaChile": "21:00",
+   "resultado": {
+    "golesA": 1,
+    "golesB": 1,
+    "definidoPor": "pen",
+    "ganadorPenales": "Marruecos"
+   },
    "canales": [
     "DGO",
     "Paramount+"

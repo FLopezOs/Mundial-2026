@@ -3,6 +3,8 @@
  "partidos": {
   "32": {"golesA": 0, "golesB": 1, "definidoPor": "90", "ganadorPenales": null},
   "73": {"golesA": 0, "golesB": 1, "definidoPor": "90", "ganadorPenales": null},
-  "74": {"golesA": 2, "golesB": 1, "definidoPor": "90", "ganadorPenales": null}
+  "74": {"golesA": 2, "golesB": 1, "definidoPor": "90",  "ganadorPenales": null},
+  "75": {"golesA": 1, "golesB": 1, "definidoPor": "pen", "ganadorPenales": "Paraguay"},
+  "76": {"golesA": 1, "golesB": 1, "definidoPor": "pen", "ganadorPenales": "Marruecos"}
  }
 }
