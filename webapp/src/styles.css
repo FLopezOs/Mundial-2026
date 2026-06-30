@@ -264,7 +264,7 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
   justify-content: space-around; gap: 1px;
 }
 
-.bracket-doble .llave { margin: 0; padding: 4px 5px; flex-shrink: 0; box-shadow: none; height: 72px; overflow: hidden; }
+.bracket-doble .llave { margin: 0; padding: 4px 5px; flex-shrink: 0; box-shadow: none; height: 86px; overflow: hidden; }
 .bracket-doble .slot { font-size: .73rem; padding: 2px 4px; }
 .bracket-doble .num { font-size: .56rem; }
 .bracket-doble .estado-llave { min-height: 14px; }
