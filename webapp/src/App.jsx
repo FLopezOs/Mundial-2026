@@ -177,6 +177,21 @@ export default function App() {
     return recalcularProbs(data, picks);
   }, [data, picks]);
 
+  const faseActual = useMemo(() => {
+    if (!data) return "";
+    const ORDEN  = ["Grupos", "R32", "Octavos", "Cuartos", "Semis", "3er Puesto", "Final"];
+    const LABELS = { Grupos: "Fase de Grupos", R32: "Dieciseisavos", Octavos: "Octavos de Final", Cuartos: "Cuartos de Final", Semis: "Semifinales", "3er Puesto": "Tercer Puesto", Final: "Final" };
+    const pendientes = new Set(data.partidos.filter(p => !p.resultado).map(p => p.fase));
+    const fase = ORDEN.find(f => pendientes.has(f)) ?? ORDEN[ORDEN.length - 1];
+    return LABELS[fase] ?? fase;
+  }, [data]);
+
+  const horaUpdate = useMemo(() => {
+    if (!data?.generado) return "—";
+    const d = new Date(data.generado.replace(" ", "T") + "Z");
+    return d.toLocaleTimeString("es-CL", { timeZone: "America/Santiago", hour: "2-digit", minute: "2-digit" });
+  }, [data]);
+
   if (error)          return <div className="cargando">Error cargando data.json: {error}.</div>;
   if (!data || !calc) return <div className="cargando">Cargando datos del Tracker…</div>;
 
@@ -193,8 +208,8 @@ export default function App() {
             </div>
           </div>
           <div className="enc-meta">
-            <span className="enc-fase">{data.fase ?? "Fase de Grupos"}</span>
-            <span className="enc-update">🕐 {data.generado?.slice(11, 16) ?? "—"}</span>
+            <span className="enc-fase">{faseActual}</span>
+            <span className="enc-update">🕐 {horaUpdate}</span>
           </div>
         </div>
         <nav className="pestanas">
