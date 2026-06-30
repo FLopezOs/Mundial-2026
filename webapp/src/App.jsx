@@ -192,6 +192,10 @@ export default function App() {
               <h1>Mundial <span className="veintiseis">26</span></h1>
             </div>
           </div>
+          <div className="enc-meta">
+            <span className="enc-fase">{data.fase ?? "Fase de Grupos"}</span>
+            <span className="enc-update">🕐 {data.generado?.slice(11, 16) ?? "—"}</span>
+          </div>
         </div>
         <nav className="pestanas">
           {VISTAS.map(({ id, icono, label }) => (

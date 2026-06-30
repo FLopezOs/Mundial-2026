@@ -47,6 +47,9 @@ body { margin: 0; font-family: var(--font-body); background: var(--fondo); color
   flex-wrap: wrap; gap: 8px; padding: 10px 16px 8px;
 }
 .enc-brand { display: flex; align-items: center; gap: 10px; }
+.enc-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; margin-left: auto; }
+.enc-fase { font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 0.8px; }
+.enc-update { font-size: 0.7rem; color: rgba(255,255,255,0.5); }
 
 .titulo h1 { margin: 0; font-size: 1.3rem; font-family: var(--font-impact); color: #fff; letter-spacing: 1.5px; font-weight: 400; line-height: 1.1; }
 .titulo h1 .veintiseis { background: var(--wc-tricolor); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 900; }
