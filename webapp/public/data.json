@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-01 16:42",
+ "generado": "2026-07-01 18:08",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2461,6 +2461,14 @@
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "12:00",
+   "resultado": {
+    "golesA": 2,
+    "golesB": 1,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"
