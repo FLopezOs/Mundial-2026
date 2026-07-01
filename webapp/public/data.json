@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-01 22:12",
+ "generado": "2026-07-01 23:38",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2485,6 +2485,14 @@
    "ciudad": "Seattle",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
+   "resultado": {
+    "golesA": 3,
+    "golesB": 2,
+    "definidoPor": "ET",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "CHV",

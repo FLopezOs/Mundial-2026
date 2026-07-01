@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-01 21:46",
+ "generado": "2026-07-01 23:38",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -3039,6 +3039,44 @@
    "offsides": {
     "A": "0",
     "B": "4"
+   }
+  },
+  "Bélgica|Senegal": {
+   "possessionPct": {
+    "A": "52.2",
+    "B": "47.8"
+   },
+   "totalShots": {
+    "A": "19",
+    "B": "19"
+   },
+   "shotsOnTarget": {
+    "A": "5",
+    "B": "5"
+   },
+   "saves": {
+    "A": "3",
+    "B": "3"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "2"
+   },
+   "foulsCommitted": {
+    "A": "22",
+    "B": "12"
+   },
+   "yellowCards": {
+    "A": "1",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "2",
+    "B": "2"
    }
   }
  }
