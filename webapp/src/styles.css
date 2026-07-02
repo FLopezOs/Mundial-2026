@@ -377,7 +377,9 @@ button.chico { padding: 2px 8px; font-size: .82rem; }
 
 .tp-score { font-family: var(--font-impact); font-size: 1.9rem; font-weight: 400; letter-spacing: 1px; color: var(--azul); min-width: 70px; text-align: center; }
 .tp-pen-score { font-size: 1rem; color: var(--gris); font-weight: 400; }
+.tp-def-label { font-size: .65rem; font-weight: 700; color: var(--wc-rojo); text-transform: uppercase; letter-spacing: .5px; margin-top: 2px; }
 .tp-vs { font-size: .72rem; font-weight: 700; color: var(--gris); min-width: 28px; text-align: center; }
+.ev2-pen-score { font-size: .85rem; color: var(--gris); margin: 0 4px; }
 
 /* ── Probabilidades ── */
 .tp-probs { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }

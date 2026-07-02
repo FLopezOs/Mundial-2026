@@ -55,7 +55,9 @@ function resolverEquipo(code, llaves) {
 function Escudo({ p, probs, liveTeams, hoy, ayer, llaves }) {
   const pr = probs?.[p.id];
   const ga = p.resultado?.golesA, gb = p.resultado?.golesB;
-  const pen = p.resultado?.definidoPor === "pen" || p.resultado?.definidoPor === "PEN";
+  const def = p.resultado?.definidoPor;
+  const pen = def === "PEN" || def === "pen";
+  const et  = def === "ET";
   const penGanador = p.resultado?.ganadorPenales;
   const penA = p.resultado?.penScoreA, penB = p.resultado?.penScoreB;
   const jugado = p.resultado != null;
@@ -88,6 +90,7 @@ function Escudo({ p, probs, liveTeams, hoy, ayer, llaves }) {
               {pen && penA != null && <span className="tp-pen-score">({penA}) </span>}
               {ga} — {gb}
               {pen && penB != null && <span className="tp-pen-score"> ({penB})</span>}
+              {(pen || et) && <div className="tp-def-label">{pen ? "Penales" : "Prórroga"}</div>}
             </div>
           : <div className="tp-vs">VS</div>}
         <div className={"tp-equipo der" + (jugado && (gb > ga || penGanador === equipoB) ? " ganador" : "")}>

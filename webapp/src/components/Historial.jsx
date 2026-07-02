@@ -62,11 +62,11 @@ function TarjetaHistorial({ partido, statsMap }) {
   const gA  = resultado?.golesA ?? "—";
   const gB  = resultado?.golesB ?? "—";
   const gAn = Number(gA), gBn = Number(gB);
-  const defLabel =
-    resultado?.definidoPor === "PEN"    ? "FT (Penales)"  :
-    resultado?.definidoPor === "ET"     ? "FT (Prórroga)" :
-    resultado?.definidoPor === "penales" ? "FT (Penales)" :
-    resultado?.definidoPor === "prorroga"? "FT (Prórroga)": "FT";
+  const def = resultado?.definidoPor;
+  const esPen = def === "PEN" || def === "pen" || def === "penales";
+  const esET  = def === "ET" || def === "prorroga";
+  const defLabel = esPen ? "Penales" : esET ? "Prórroga" : "90 min";
+  const penA = resultado?.penScoreA, penB = resultado?.penScoreB;
 
   let fechaDisplay = "";
   try {
@@ -90,9 +90,11 @@ function TarjetaHistorial({ partido, statsMap }) {
           <span className="ev2-team-name">{equipoA}</span>
         </div>
         <div className="ev2-score-center">
+          {esPen && penA != null && <span className="ev2-pen-score">({penA})</span>}
           <span className={"ev2-gol" + (gAn > gBn ? " winner" : "")}>{gA}</span>
           <span className="ev2-dash">–</span>
           <span className={"ev2-gol" + (gBn > gAn ? " winner" : "")}>{gB}</span>
+          {esPen && penB != null && <span className="ev2-pen-score">({penB})</span>}
         </div>
         <div className="ev2-team away">
           <Bandera equipo={equipoB} ancho={44} />
