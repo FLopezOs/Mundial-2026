@@ -39,7 +39,20 @@ function FilaProb({ label, labelClass, pA, pX, pB, mlA, mlX, mlB }) {
   );
 }
 
-function Escudo({ p, probs, liveTeams, hoy, ayer }) {
+/* Resuelve "W73" → ganador del partido 73, "L73" → perdedor */
+function resolverEquipo(code, llaves) {
+  if (!code) return code;
+  const m = String(code).match(/^([WL])(\d+)$/i);
+  if (!m) return code;
+  const [, tipo, numStr] = m;
+  const llave = llaves?.find(l => l.numFifa === parseInt(numStr));
+  if (!llave) return null; // aún no definido
+  if (tipo.toUpperCase() === "W") return llave.ganador ?? null;
+  if (llave.ganador) return llave.a === llave.ganador ? llave.b : llave.a;
+  return null;
+}
+
+function Escudo({ p, probs, liveTeams, hoy, ayer, llaves }) {
   const pr = probs?.[p.id];
   const ga = p.resultado?.golesA, gb = p.resultado?.golesB;
   const pen = p.resultado?.definidoPor === "pen" || p.resultado?.definidoPor === "PEN";
@@ -47,10 +60,15 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
   const penA = p.resultado?.penScoreA, penB = p.resultado?.penScoreB;
   const jugado = p.resultado != null;
 
-  // Solo marcar como vivo si el partido es HOY o AYER (nunca fechas futuras)
+  // Resolver nombres si son códigos W/L
+  const equipoA = resolverEquipo(p.equipoA, llaves) ?? p.equipoA;
+  const equipoB = resolverEquipo(p.equipoB, llaves) ?? p.equipoB;
+  const esCodigoA = /^[WL]\d+$/i.test(p.equipoA) && !resolverEquipo(p.equipoA, llaves);
+  const esCodigoB = /^[WL]\d+$/i.test(p.equipoB) && !resolverEquipo(p.equipoB, llaves);
+
   const fechaElegible = p.fecha === hoy || p.fecha === ayer;
   const isLive = !jugado && fechaElegible && liveTeams &&
-    (liveTeams.has(p.equipoA) || liveTeams.has(p.equipoB));
+    (liveTeams.has(equipoA) || liveTeams.has(equipoB));
 
   return (
     <div className={"tarjeta-partido" + (jugado ? " jugado" : "") + (isLive ? " en-vivo-card" : "")}>
@@ -61,9 +79,9 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
         {isLive && <span className="live-badge-inline">EN VIVO</span>}
       </div>
       <div className="tp-equipos">
-        <div className={"tp-equipo" + (jugado && (ga > gb || penGanador === p.equipoA) ? " ganador" : "")}>
-          <Bandera equipo={p.equipoA} ancho={28} />
-          <span>{p.equipoA}</span>
+        <div className={"tp-equipo" + (jugado && (ga > gb || penGanador === equipoA) ? " ganador" : "")}>
+          {!esCodigoA && <Bandera equipo={equipoA} ancho={28} />}
+          <span className={esCodigoA ? "slot-posible" : ""}>{esCodigoA ? `Por definir (${p.equipoA})` : equipoA}</span>
         </div>
         {jugado
           ? <div className="tp-score">
@@ -72,9 +90,9 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
               {pen && penB != null && <span className="tp-pen-score"> ({penB})</span>}
             </div>
           : <div className="tp-vs">VS</div>}
-        <div className={"tp-equipo der" + (jugado && (gb > ga || penGanador === p.equipoB) ? " ganador" : "")}>
-          <Bandera equipo={p.equipoB} ancho={28} />
-          <span>{p.equipoB}</span>
+        <div className={"tp-equipo der" + (jugado && (gb > ga || penGanador === equipoB) ? " ganador" : "")}>
+          {!esCodigoB && <Bandera equipo={equipoB} ancho={28} />}
+          <span className={esCodigoB ? "slot-posible" : ""}>{esCodigoB ? `Por definir (${p.equipoB})` : equipoB}</span>
         </div>
       </div>
       {pr && !jugado && (
@@ -95,14 +113,14 @@ function Escudo({ p, probs, liveTeams, hoy, ayer }) {
   );
 }
 
-function SeccionDia({ titulo, partidos, probs, liveTeams, hoy, ayer }) {
+function SeccionDia({ titulo, partidos, probs, liveTeams, hoy, ayer, llaves }) {
   if (!partidos?.length) return null;
   return (
     <div className="seccion-dia">
       <h2 className="sec-titulo">{titulo}</h2>
       <div className="grilla-partidos">
         {partidos.map(p => (
-          <Escudo key={p.id} p={p} probs={probs} liveTeams={liveTeams} hoy={hoy} ayer={ayer} />
+          <Escudo key={p.id} p={p} probs={probs} liveTeams={liveTeams} hoy={hoy} ayer={ayer} llaves={llaves} />
         ))}
       </div>
     </div>
@@ -195,6 +213,7 @@ export default function Inicio({ data, picks, calc, setVista, probsLive: probs, 
             liveTeams={liveTeams}
             hoy={hoy}
             ayer={ayer}
+            llaves={calc.bracket.llaves}
           />
         : <div className="seccion-dia vacia"><p className="ayuda">No hay partidos el {diaSemana(diaSeleccionado)}.</p></div>
       }
