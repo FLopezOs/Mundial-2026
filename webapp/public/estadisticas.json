@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-01 23:38",
+ "generado": "2026-07-02 04:18",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -3077,6 +3077,44 @@
    "offsides": {
     "A": "2",
     "B": "2"
+   }
+  },
+  "Estados Unidos|Bosnia y Herzegovina": {
+   "possessionPct": {
+    "A": "48.4",
+    "B": "51.6"
+   },
+   "totalShots": {
+    "A": "8",
+    "B": "10"
+   },
+   "shotsOnTarget": {
+    "A": "2",
+    "B": "3"
+   },
+   "saves": {
+    "A": "3",
+    "B": "0"
+   },
+   "cornerKicks": {
+    "A": "4",
+    "B": "3"
+   },
+   "foulsCommitted": {
+    "A": "7",
+    "B": "13"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "1"
+   },
+   "redCards": {
+    "A": "1",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "0"
    }
   }
  }
