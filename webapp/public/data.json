@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-02 20:36",
+ "generado": "2026-07-02 21:05",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2534,6 +2534,14 @@
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
+   "resultado": {
+    "golesA": 3,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "CHV",
