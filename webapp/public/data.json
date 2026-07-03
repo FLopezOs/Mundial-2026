@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-03 20:39",
+ "generado": "2026-07-03 21:45",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2608,6 +2608,14 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "14:00",
+   "resultado": {
+    "golesA": 1,
+    "golesB": 1,
+    "definidoPor": "PEN",
+    "ganadorPenales": "Egipto",
+    "penScoreA": 2,
+    "penScoreB": 4
+   },
    "canales": [
     "DGO",
     "Paramount+"
