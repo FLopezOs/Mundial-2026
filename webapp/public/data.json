@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-04 00:17",
+ "generado": "2026-07-04 04:11",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2632,6 +2632,14 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "18:00",
+   "resultado": {
+    "golesA": 3,
+    "golesB": 2,
+    "definidoPor": "ET",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "CHV",
@@ -2650,6 +2658,14 @@
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "21:30",
+   "resultado": {
+    "golesA": 1,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "CHV",
