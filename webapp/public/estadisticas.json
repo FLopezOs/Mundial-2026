@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-04 22:08",
+ "generado": "2026-07-04 23:11",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -3381,6 +3381,44 @@
    "offsides": {
     "A": "2",
     "B": "3"
+   }
+  },
+  "Paraguay|Francia": {
+   "possessionPct": {
+    "A": "24",
+    "B": "76"
+   },
+   "totalShots": {
+    "A": "5",
+    "B": "15"
+   },
+   "shotsOnTarget": {
+    "A": "1",
+    "B": "5"
+   },
+   "saves": {
+    "A": "4",
+    "B": "1"
+   },
+   "cornerKicks": {
+    "A": "2",
+    "B": "12"
+   },
+   "foulsCommitted": {
+    "A": "13",
+    "B": "11"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "3"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "0",
+    "B": "0"
    }
   }
  }
