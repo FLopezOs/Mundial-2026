@@ -1,15 +1,7 @@
 {
- "generado": "2026-07-07 22:31",
+ "generado": "2026-07-07 23:36",
  "fuente": "DraftKings vía ESPN unofficial API",
  "partidos": {
-  "96": {
-   "pGanaA": 0.2713,
-   "pEmpate": 0.3331,
-   "pGanaB": 0.3956,
-   "mlA": "+250",
-   "mlX": "185",
-   "mlB": "+140"
-  },
   "97": {
    "pGanaA": 0.5962,
    "pEmpate": 0.246,
@@ -27,12 +19,20 @@
    "mlB": "+450"
   },
   "99": {
-   "pGanaA": 0.2392,
-   "pEmpate": 0.2554,
-   "pGanaB": 0.5054,
-   "mlA": "+295",
+   "pGanaA": 0.2325,
+   "pEmpate": 0.2576,
+   "pGanaB": 0.5099,
+   "mlA": "+310",
    "mlX": "270",
    "mlB": "-115"
+  },
+  "100": {
+   "pGanaA": 0.5506,
+   "pEmpate": 0.2697,
+   "pGanaB": 0.1798,
+   "mlA": "-140",
+   "mlX": "250",
+   "mlB": "+425"
   }
  }
 }
