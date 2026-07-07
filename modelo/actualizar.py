@@ -65,6 +65,16 @@ ESPN_EXTRA = {
     "Uzbekistan":            "Uzbekistán",
     "Algeria":               "Argelia",
     "Cape Verde":            "Cabo Verde",
+    "Canada":                "Canadá",
+    "France":                "Francia",
+    "Egypt":                 "Egipto",
+    "Belgium":               "Bélgica",
+    "England":               "Inglaterra",
+    "Spain":                 "España",
+    "Australia":             "Australia",
+    "Colombia":              "Colombia",
+    "Argentina":             "Argentina",
+    "Paraguay":              "Paraguay",
 }
 
 def espn_canon(nombre):
@@ -331,10 +341,11 @@ def escribir_resultados(wb, partidos_espn=None, fx_fallback=None):
             gA = gB = None
             home, away = p["home"], p["away"]
             fecha = p["fecha"]
-            # ESPN fecha UTC puede estar 1 día adelante respecto al Fixture (horario local)
+            # ESPN fecha UTC puede diferir ±1 día respecto al Fixture (horario local)
             fechas = [fecha]
             dt = datetime.strptime(fecha, "%Y-%m-%d")
             fechas.append((dt - timedelta(days=1)).strftime("%Y-%m-%d"))
+            fechas.append((dt + timedelta(days=1)).strftime("%Y-%m-%d"))
 
             for f in fechas:
                 if (f, home, away) in fila_de:

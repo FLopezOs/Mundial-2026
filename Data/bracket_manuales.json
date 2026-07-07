@@ -16,6 +16,10 @@
   "85": {"equipoA": "Suiza",              "equipoB": "Argelia"},
   "86": {"equipoA": "Australia",          "equipoB": "Egipto"},
   "87": {"equipoA": "Argentina",          "equipoB": "Cabo Verde"},
-  "88": {"equipoA": "Colombia",           "equipoB": "Ghana"}
+  "88": {"equipoA": "Colombia",           "equipoB": "Ghana"},
+  "89": {"equipoA": "Canadá",            "equipoB": "Marruecos"},
+  "91": {"equipoA": "Paraguay",          "equipoB": "Francia"},
+  "95": {"equipoA": "Argentina",         "equipoB": "Egipto"},
+  "96": {"equipoA": "Colombia",          "equipoB": "Suiza"}
  }
 }

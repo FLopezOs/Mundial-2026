@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-07 21:07",
+ "generado": "2026-07-07 18:04",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2678,11 +2678,19 @@
    "fecha": "2026-07-04",
    "fase": "Octavos",
    "grupo": null,
-   "equipoA": "W73",
-   "equipoB": "W75",
+   "equipoA": "Canadá",
+   "equipoB": "Marruecos",
    "ciudad": "Houston",
    "pais": "Estados Unidos",
    "horaChile": "13:00",
+   "resultado": {
+    "golesA": 0,
+    "golesB": 3,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2699,6 +2707,14 @@
    "ciudad": "Philadelphia",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
+   "resultado": {
+    "golesA": 1,
+    "golesB": 2,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2710,11 +2726,19 @@
    "fecha": "2026-07-05",
    "fase": "Octavos",
    "grupo": null,
-   "equipoA": "W76",
-   "equipoB": "W78",
+   "equipoA": "Paraguay",
+   "equipoB": "Francia",
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
+   "resultado": {
+    "golesA": 0,
+    "golesB": 1,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2731,6 +2755,14 @@
    "ciudad": "Mexico City",
    "pais": "México",
    "horaChile": "20:00",
+   "resultado": {
+    "golesA": 2,
+    "golesB": 3,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2747,6 +2779,14 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
+   "resultado": {
+    "golesA": 1,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2763,6 +2803,14 @@
    "ciudad": "Seattle",
    "pais": "Estados Unidos",
    "horaChile": "20:00",
+   "resultado": {
+    "golesA": 4,
+    "golesB": 1,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2774,11 +2822,19 @@
    "fecha": "2026-07-07",
    "fase": "Octavos",
    "grupo": null,
-   "equipoA": "W86",
-   "equipoB": "W88",
+   "equipoA": "Argentina",
+   "equipoB": "Egipto",
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "12:00",
+   "resultado": {
+    "golesA": 3,
+    "golesB": 2,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2790,8 +2846,8 @@
    "fecha": "2026-07-07",
    "fase": "Octavos",
    "grupo": null,
-   "equipoA": "W85",
-   "equipoB": "W87",
+   "equipoA": "Colombia",
+   "equipoB": "Suiza",
    "ciudad": "Vancouver",
    "pais": "Canadá",
    "horaChile": "16:00",
