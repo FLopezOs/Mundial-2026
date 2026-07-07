@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-07 15:11",
+ "generado": "2026-07-07 18:14",
  "partidos": {
   "México|Sudáfrica": {
    "possessionPct": {
@@ -3571,6 +3571,44 @@
    "offsides": {
     "A": "0",
     "B": "1"
+   }
+  },
+  "Argentina|Egipto": {
+   "possessionPct": {
+    "A": "63.6",
+    "B": "36.4"
+   },
+   "totalShots": {
+    "A": "19",
+    "B": "5"
+   },
+   "shotsOnTarget": {
+    "A": "7",
+    "B": "2"
+   },
+   "saves": {
+    "A": "0",
+    "B": "4"
+   },
+   "cornerKicks": {
+    "A": "6",
+    "B": "1"
+   },
+   "foulsCommitted": {
+    "A": "13",
+    "B": "11"
+   },
+   "yellowCards": {
+    "A": "0",
+    "B": "4"
+   },
+   "redCards": {
+    "A": "0",
+    "B": "0"
+   },
+   "offsides": {
+    "A": "3",
+    "B": "0"
    }
   }
  }
