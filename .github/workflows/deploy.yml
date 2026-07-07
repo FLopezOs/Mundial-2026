@@ -1,20 +1,20 @@
 name: Deploy to GitHub Pages
 
+# Los datos los actualiza update-data.yml (4×/hora); cada commit de datos
+# dispara este deploy vía push. Aquí solo se buildea y publica la webapp.
 on:
   push:
     branches: [master]
-  schedule:
-    - cron: '10 */1 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -36,44 +36,6 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-
-      # ── Pipeline de datos (solo en schedule / workflow_dispatch) ──
-
-      - name: Setup Python
-        if: github.event_name != 'push'
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Instalar dependencias Python
-        if: github.event_name != 'push'
-        run: pip install openpyxl pandas numpy requests scipy
-
-      - name: Actualizar datos del torneo
-        if: github.event_name != 'push'
-        continue-on-error: true
-        run: |
-          python -X utf8 modelo/actualizar.py
-          python -X utf8 modelo/exportar_json.py
-          python -X utf8 modelo/stats_espn.py
-
-      - name: Commitear datos actualizados
-        if: github.event_name != 'push'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add webapp/public/data.json || true
-          git add webapp/public/estadisticas.json || true
-          git add Data/odds.json || true
-          git add output/Mundial2026_Tracker.xlsx || true
-          if git diff --cached --quiet; then
-            echo "Sin cambios en los datos, nada que commitear."
-          else
-            git commit -m "chore: actualizar datos del torneo [skip ci]"
-            git push || echo "Push falló (posible conflicto); se reintentará en la próxima corrida."
-          fi
-
-      # ── Build y deploy de Pages (siempre, con los datos ya actualizados) ──
 
       - name: Install dependencies
         working-directory: webapp

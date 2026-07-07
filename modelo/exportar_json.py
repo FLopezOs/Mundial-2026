@@ -54,6 +54,9 @@ def build_hora_map(wc_path):
         t2 = JSON_A_CANON.get(m.get("team2",""), m.get("team2",""))
         key = (fecha, frozenset([t1.lower(), t2.lower()]))
         hora_map[key] = hora_chile
+        # También por número FIFA — inmune a renombres de equipos en el Fixture
+        if m.get("num"):
+            hora_map[("num", m["num"])] = hora_chile
     return hora_map
 
 def build_odds_map(odds_path):
@@ -163,8 +166,10 @@ def main():
             "ciudad":  wsF.cell(r, 8).value,
             "pais":    wsF.cell(r, 9).value,
         }
-        # Hora Chile — intenta primero con nombres reales, luego con códigos originales del Excel
-        key = (str(fecha), frozenset([ea.lower(), eb.lower()]))
+        # Hora Chile — por número FIFA (robusto ante renombres), luego por nombres
+        key = ("num", p["numFifa"])
+        if key not in hora_map:
+            key = (str(fecha), frozenset([ea.lower(), eb.lower()]))
         if key not in hora_map:
             key = (str(fecha), frozenset([ea_orig.lower(), eb_orig.lower()]))
         if key in hora_map:

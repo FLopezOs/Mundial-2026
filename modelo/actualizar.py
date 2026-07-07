@@ -215,6 +215,96 @@ def descargar_espn():
         return None   # señal de fallo total
     return partidos
 
+# ── sincronización de cruces KO desde ESPN (partidos programados) ───────────
+import unicodedata
+
+def _norm_ciudad(s):
+    """Normaliza nombre de ciudad: minúsculas, sin acentos."""
+    s = unicodedata.normalize("NFD", str(s or ""))
+    return "".join(c for c in s if unicodedata.category(c) != "Mn").lower().strip()
+
+def _es_placeholder(nombre):
+    """True si ESPN aún no conoce el equipo (ej. 'Round of 16 8 Winner', 'TBD')."""
+    n = str(nombre or "")
+    return (not n or "winner" in n.lower() or "loser" in n.lower()
+            or "tbd" in n.lower() or "round of" in n.lower()
+            or "match" in n.lower() or any(ch.isdigit() for ch in n))
+
+def sincronizar_cruces_ko(wb, dias_adelante=10):
+    """
+    Consulta ESPN por partidos PROGRAMADOS (hoy → +N días) y escribe los
+    nombres reales de equipos en el Fixture para filas KO que aún tienen
+    códigos W/L o nombres desactualizados. Empareja por ciudad + fecha ±1 día.
+    Devuelve nº de filas actualizadas.
+    """
+    hoy = date_t.today()
+    rango = f"{hoy.strftime('%Y%m%d')}-{(hoy + timedelta(days=dias_adelante)).strftime('%Y%m%d')}"
+    url = ESPN_URL.format(rango)
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        data = json.loads(urllib.request.urlopen(req, timeout=20).read())
+    except Exception as e:
+        print(f"[AVISO] Sync cruces KO: ESPN no disponible ({e})")
+        return 0
+
+    wsF = wb["Fixture"]
+    actualizados = 0
+    for ev in data.get("events", []):
+        comp = ev["competitions"][0]
+        teams = {c["homeAway"]: c["team"]["displayName"] for c in comp["competitors"]}
+        home_raw, away_raw = teams.get("home"), teams.get("away")
+        ciudad_espn = _norm_ciudad(
+            comp.get("venue", {}).get("address", {}).get("city", "").split(",")[0])
+        if not ciudad_espn:
+            continue
+        fecha_espn = ev["date"][:10]
+        dt = datetime.strptime(fecha_espn, "%Y-%m-%d")
+        fechas_ok = {fecha_espn,
+                     (dt - timedelta(days=1)).strftime("%Y-%m-%d"),
+                     (dt + timedelta(days=1)).strftime("%Y-%m-%d")}
+
+        for r in range(2, 106):
+            if wsF.cell(r, 3).value == "Grupos":
+                continue
+            if wsF.cell(r, 2).value not in fechas_ok:
+                continue
+            if ciudad_espn not in _norm_ciudad(wsF.cell(r, 8).value):
+                continue
+            # Fila encontrada: actualizar cada lado si ESPN ya conoce el equipo
+            for col, raw in ((5, home_raw), (6, away_raw)):
+                if _es_placeholder(raw):
+                    continue
+                nombre = espn_canon(raw)
+                if wsF.cell(r, col).value != nombre:
+                    print(f"[SYNC] Fila {wsF.cell(r, 1).value} ({wsF.cell(r, 3).value}): "
+                          f"'{wsF.cell(r, col).value}' → '{nombre}'")
+                    wsF.cell(r, col).value = nombre
+                    actualizados += 1
+            break
+    if actualizados:
+        print(f"[OK] Sync cruces KO: {actualizados} nombre(s) actualizado(s) en Fixture.")
+    return actualizados
+
+def diagnostico_fixture(wb):
+    """Advierte si partidos de los próximos 2 días aún tienen códigos W/L sin resolver."""
+    wsF = wb["Fixture"]
+    hoy = date_t.today()
+    limite = (hoy + timedelta(days=2)).strftime("%Y-%m-%d")
+    avisos = []
+    for r in range(2, 106):
+        f = wsF.cell(r, 2).value
+        if not f or str(f) > limite or str(f) < hoy.strftime("%Y-%m-%d"):
+            continue
+        for col in (5, 6):
+            v = str(wsF.cell(r, col).value or "")
+            if _re.match(r'^[WL]\d+$', v, _re.I) or _re.match(r'^\d[A-L]$', v):
+                avisos.append(f"  ID {wsF.cell(r, 1).value} ({f}): '{v}' sin resolver")
+    if avisos:
+        print("[DIAG] Partidos próximos con equipos sin resolver:")
+        for a in avisos:
+            print(a)
+    return avisos
+
 # ── openfootball (fallback) ──────────────────────────────────────────────────
 URL_OPENFOOTBALL = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json"
 
@@ -464,6 +554,10 @@ def main():
     backup()
     wb = load_workbook(XLSX)
 
+    # 2b. Sincronizar cruces KO programados (nombres reales desde ESPN)
+    if partidos_espn is not None:
+        sincronizar_cruces_ko(wb)
+
     # 3. Escribir resultados
     nuevos, conflictos = escribir_resultados(
         wb,
@@ -498,6 +592,7 @@ def main():
             print(f"  {t}: {elo_ini[t]:.1f} -> {elo[t]:.1f} ({elo[t]-elo_ini[t]:+.1f})")
     if not nuevos and not conflictos:
         print("Sin partidos nuevos — todo ya estaba cargado o no hay resultados recientes.")
+    diagnostico_fixture(wb2)
     print("\nListo! Recarga el browser (F5) para ver probabilities actualizadas.")
     print("(Opcional: recalcular el xlsx en Excel para refrescar fórmulas Elo en Equipos!D)")
 

@@ -1,4 +1,4 @@
-name: Actualizar datos cada 30 minutos
+name: Actualizar datos del torneo
 
 on:
   schedule:
@@ -7,6 +7,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -26,16 +30,19 @@ jobs:
         run: |
           python -X utf8 modelo/actualizar.py
           python -X utf8 modelo/exportar_json.py
+          python -X utf8 modelo/stats_espn.py
 
+      # El commit SIN [skip ci] dispara deploy.yml (on: push) → la página
+      # se actualiza minutos después de cada cambio real de datos.
       - name: Commit y push si hay cambios
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add webapp/public/data.json Data/odds.json output/Mundial2026_Tracker.xlsx || true
+          git add webapp/public/data.json webapp/public/estadisticas.json Data/odds.json output/Mundial2026_Tracker.xlsx || true
           if git diff --cached --quiet; then
             echo "Sin cambios en los datos."
           else
-            git commit -m "chore: actualizar datos del torneo [skip ci]"
+            git commit -m "chore: actualizar datos del torneo"
             git pull --rebase origin master
             git push
           fi

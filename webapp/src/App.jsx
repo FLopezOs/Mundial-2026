@@ -27,7 +27,7 @@ const ESPN_CANON = {
   "Portugal":"Portugal","Argentina":"Argentina","Netherlands":"Países Bajos",
   "Mexico":"México","Japan":"Japón","United States":"Estados Unidos",
   "Ivory Coast":"Costa de Marfil","South Korea":"Corea del Sur",
-  "DR Congo":"R.D. Congo","Czechia":"Chequia","Czech Republic":"Chequia",
+  "DR Congo":"RD Congo","Czechia":"Chequia","Czech Republic":"Chequia",
   "Switzerland":"Suiza","Saudi Arabia":"Arabia Saudita","IR Iran":"Irán",
   "New Zealand":"Nueva Zelanda","Senegal":"Senegal","Uruguay":"Uruguay",
   "Ecuador":"Ecuador","Colombia":"Colombia","Peru":"Perú","Chile":"Chile",
@@ -50,31 +50,6 @@ const ESPN_CANON = {
   "Guatemala":"Guatemala","Cuba":"Cuba","Trinidad and Tobago":"Trinidad y Tobago",
 };
 const toCanon = n => ESPN_CANON[n] ?? n;
-
-/* ─── Logo We Are 26 ─── */
-function LogoWA26() {
-  return (
-    <svg className="logo-weare26" viewBox="0 0 148 58" xmlns="http://www.w3.org/2000/svg"
-      role="img" aria-label="FIFA World Cup 2026 — We Are 26">
-      <rect width="148" height="58" rx="6" fill="#0d2c54"/>
-      <rect x="0"   y="50" width="49"  height="8" fill="#d50032"/>
-      <rect x="49"  y="50" width="50"  height="8" fill="#0b7a3b"/>
-      <rect x="99"  y="50" width="49"  height="8" fill="#0d4f8b"/>
-      <rect x="0"   y="50" width="6"   height="4" fill="#0d2c54"/>
-      <rect x="142" y="50" width="6"   height="4" fill="#0d2c54"/>
-      <polygon points="74,2 76.4,9 83.5,9 77.8,13.4 80.2,20.4 74,16 67.8,20.4 70.2,13.4 64.5,9 71.6,9"
-        fill="#f5c518" stroke="#c8a80080" strokeWidth="0.5"/>
-      <text x="74" y="27" fontFamily="Arial,sans-serif" fontWeight="700" fontSize="6.5"
-        fill="rgba(255,255,255,0.65)" textAnchor="middle" letterSpacing="2.2">WORLD CUP</text>
-      <text x="74" y="38" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900" fontSize="11.5"
-        fill="#ffffff" textAnchor="middle" letterSpacing="4">WE ARE</text>
-      <text x="48"  y="50" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900" fontSize="18" fill="white" textAnchor="middle">2</text>
-      <rect x="70"  y="42" width="8" height="10" fill="#0b7a3b" rx="1"/>
-      <text x="74"  y="51" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900" fontSize="10" fill="white" textAnchor="middle">26</text>
-      <text x="100" y="50" fontFamily="'Arial Black',Arial,sans-serif" fontWeight="900" fontSize="18" fill="white" textAnchor="middle">6</text>
-    </svg>
-  );
-}
 
 /* ─── Copa del Mundo FIFA — imagen real ─── */
 export function TrofeoWC({ size = 1 }) {
@@ -146,17 +121,22 @@ export default function App() {
     return () => clearInterval(iv);
   }, []);
 
-  /* ── Datos del torneo ── */
+  /* ── Datos del torneo: carga inicial + refresco silencioso cada 5 min ── */
   useEffect(() => {
-    fetch(import.meta.env.BASE_URL + "data.json", { cache: "no-cache" })
-      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(setData)
-      .catch(e => setError(String(e)));
-  }, []);
-
-  /* ── Refresco automático cada hora ── */
-  useEffect(() => {
-    const iv = setInterval(() => window.location.reload(), 60 * 60 * 1000);
+    let generadoActual = null;
+    const cargar = (esInicial) => {
+      fetch(import.meta.env.BASE_URL + "data.json", { cache: "no-cache" })
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(d => {
+          if (d.generado !== generadoActual) {
+            generadoActual = d.generado;
+            setData(d);
+          }
+        })
+        .catch(e => { if (esInicial) setError(String(e)); });
+    };
+    cargar(true);
+    const iv = setInterval(() => cargar(false), 5 * 60 * 1000);
     return () => clearInterval(iv);
   }, []);
 

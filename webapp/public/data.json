@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-07 22:20",
+ "generado": "2026-07-07 18:28",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2851,6 +2851,14 @@
    "ciudad": "Vancouver",
    "pais": "Canadá",
    "horaChile": "16:00",
+   "oddsImplied": {
+    "pGanaA": 0.2713,
+    "pEmpate": 0.3331,
+    "pGanaB": 0.3956,
+    "mlA": "+250",
+    "mlX": "185",
+    "mlB": "+140"
+   },
    "canales": [
     "DGO",
     "CHV",
@@ -2868,6 +2876,14 @@
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
+   "oddsImplied": {
+    "pGanaA": 0.5962,
+    "pEmpate": 0.246,
+    "pGanaB": 0.1578,
+    "mlA": "-170",
+    "mlX": "285",
+    "mlB": "+500"
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2884,6 +2900,14 @@
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
+   "oddsImplied": {
+    "pGanaA": 0.5887,
+    "pEmpate": 0.2394,
+    "pGanaB": 0.1719,
+    "mlA": "-165",
+    "mlX": "295",
+    "mlB": "+450"
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2900,6 +2924,14 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
+   "oddsImplied": {
+    "pGanaA": 0.2392,
+    "pEmpate": 0.2554,
+    "pGanaB": 0.5054,
+    "mlA": "+295",
+    "mlX": "270",
+    "mlB": "-115"
+   },
    "canales": [
     "DGO",
     "Paramount+"
