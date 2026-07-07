@@ -244,6 +244,8 @@ def backup():
     print(f"[OK] Backup: {os.path.basename(dst)}")
 
 # ── escritura en xlsx ─────────────────────────────────────────────────────────
+import re as _re
+
 def escribir_resultados(wb, partidos_espn=None, fx_fallback=None):
     """
     Escribe resultados nuevos en Resultados y actualiza Fixture.
@@ -252,7 +254,7 @@ def escribir_resultados(wb, partidos_espn=None, fx_fallback=None):
     """
     wsF, wsR = wb["Fixture"], wb["Resultados"]
 
-    # Carga overrides de equipos KO desde bracket_manuales.json (igual que exportar_json.py)
+    # Carga overrides de equipos KO desde bracket_manuales.json
     bracket_map = {}
     bracket_path = os.path.join(BASE, "Data", "bracket_manuales.json")
     try:
@@ -261,7 +263,48 @@ def escribir_resultados(wb, partidos_espn=None, fx_fallback=None):
     except Exception:
         pass
 
+    # Construir mapa de ganadores/perdedores desde resultados ya guardados
+    # para resolver códigos W/L (ej. "W73" → "Canadá")
+    ganadores = {}  # numFifa (int) → {"W": ganador, "L": perdedor}
+    for r in range(2, 106):
+        pid = wsF.cell(r, 1).value
+        eA  = wsF.cell(r, 5).value
+        eB  = wsF.cell(r, 6).value
+        if str(pid) in bracket_map:
+            eA = bracket_map[str(pid)].get("equipoA", eA)
+            eB = bracket_map[str(pid)].get("equipoB", eB)
+        gA = wsR.cell(r, 2).value
+        gB = wsR.cell(r, 3).value
+        def_por = wsR.cell(r, 4).value
+        pen_w   = wsR.cell(r, 5).value
+        if gA is not None and gB is not None and eA and eB:
+            if def_por == "PEN" and pen_w:
+                w = pen_w
+                l = eB if pen_w == eA else eA
+            elif gA > gB:
+                w, l = eA, eB
+            elif gB > gA:
+                w, l = eB, eA
+            else:
+                continue
+            try:
+                ganadores[int(pid)] = {"W": w, "L": l}
+            except (TypeError, ValueError):
+                pass
+
+    def resolve_code(code):
+        """W73 → nombre real del ganador/perdedor del partido 73."""
+        if not code:
+            return code
+        m = _re.match(r'^([WL])(\d+)$', str(code), _re.I)
+        if not m:
+            return code
+        tipo, num = m.group(1).upper(), int(m.group(2))
+        g = ganadores.get(num)
+        return g.get(tipo) if g else None
+
     # Índice por (fecha, equipoA, equipoB) → fila
+    # Resuelve códigos W/L automáticamente usando resultados ya guardados
     fila_de = {}
     for r in range(2, 106):
         pid = wsF.cell(r, 1).value
@@ -271,6 +314,11 @@ def escribir_resultados(wb, partidos_espn=None, fx_fallback=None):
         if str(pid) in bracket_map:
             eA = bracket_map[str(pid)].get("equipoA", eA)
             eB = bracket_map[str(pid)].get("equipoB", eB)
+        # Resolver códigos W/L si los hay
+        if eA and _re.match(r'^[WL]\d+$', str(eA), _re.I):
+            eA = resolve_code(eA)
+        if eB and _re.match(r'^[WL]\d+$', str(eB), _re.I):
+            eB = resolve_code(eB)
         if f and eA and eB:
             fila_de[(f, eA, eB)] = r
 
