@@ -20,6 +20,10 @@
   "89": {"equipoA": "Canadá",            "equipoB": "Marruecos"},
   "91": {"equipoA": "Paraguay",          "equipoB": "Francia"},
   "95": {"equipoA": "Argentina",         "equipoB": "Egipto"},
-  "96": {"equipoA": "Colombia",          "equipoB": "Suiza"}
+  "96": {"equipoA": "Colombia",          "equipoB": "Suiza"},
+  "97": {"equipoA": "Francia",           "equipoB": "Marruecos"},
+  "98": {"equipoA": "España",            "equipoB": "Bélgica"},
+  "99": {"equipoA": "Noruega",           "equipoB": "Inglaterra"},
+  "100": {"equipoA": "Argentina",        "equipoB": "W96"}
  }
 }

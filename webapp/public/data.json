@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-07 18:04",
+ "generado": "2026-07-07 18:12",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2853,6 +2853,7 @@
    "horaChile": "16:00",
    "canales": [
     "DGO",
+    "CHV",
     "Paramount+"
    ]
   },
@@ -2862,8 +2863,8 @@
    "fecha": "2026-07-09",
    "fase": "Cuartos",
    "grupo": null,
-   "equipoA": "W89",
-   "equipoB": "W90",
+   "equipoA": "Francia",
+   "equipoB": "Marruecos",
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
@@ -2878,8 +2879,8 @@
    "fecha": "2026-07-10",
    "fase": "Cuartos",
    "grupo": null,
-   "equipoA": "W93",
-   "equipoB": "W94",
+   "equipoA": "España",
+   "equipoB": "Bélgica",
    "ciudad": "Los Angeles (Inglewood)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
@@ -2894,8 +2895,8 @@
    "fecha": "2026-07-11",
    "fase": "Cuartos",
    "grupo": null,
-   "equipoA": "W91",
-   "equipoB": "W92",
+   "equipoA": "Noruega",
+   "equipoB": "Inglaterra",
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
@@ -2910,7 +2911,7 @@
    "fecha": "2026-07-11",
    "fase": "Cuartos",
    "grupo": null,
-   "equipoA": "W95",
+   "equipoA": "Argentina",
    "equipoB": "W96",
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
