@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-09 21:07",
+ "generado": "2026-07-09 22:43",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2876,13 +2876,13 @@
    "ciudad": "Boston (Foxborough)",
    "pais": "Estados Unidos",
    "horaChile": "16:00",
-   "oddsImplied": {
-    "pGanaA": 0.5943,
-    "pEmpate": 0.2484,
-    "pGanaB": 0.1573,
-    "mlA": "-170",
-    "mlX": "280",
-    "mlB": "+500"
+   "resultado": {
+    "golesA": 2,
+    "golesB": 0,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2967,7 +2967,7 @@
    "fecha": "2026-07-14",
    "fase": "Semis",
    "grupo": null,
-   "equipoA": "W97",
+   "equipoA": "Francia",
    "equipoB": "W98",
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
