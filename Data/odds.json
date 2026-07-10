@@ -1,14 +1,14 @@
 {
- "generado": "2026-07-10 06:47",
+ "generado": "2026-07-10 10:23",
  "fuente": "DraftKings vía ESPN unofficial API",
  "partidos": {
   "98": {
-   "pGanaA": 0.5763,
-   "pEmpate": 0.2431,
-   "pGanaB": 0.1806,
-   "mlA": "-155",
-   "mlX": "290",
-   "mlB": "+425"
+   "pGanaA": 0.5859,
+   "pEmpate": 0.241,
+   "pGanaB": 0.1731,
+   "mlA": "-160",
+   "mlX": "295",
+   "mlB": "+450"
   },
   "99": {
    "pGanaA": 0.2325,
