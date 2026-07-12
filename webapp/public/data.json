@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-12 01:05",
+ "generado": "2026-07-12 04:38",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2948,6 +2948,14 @@
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "21:00",
+   "resultado": {
+    "golesA": 3,
+    "golesB": 1,
+    "definidoPor": "ET",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
+   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2985,10 +2993,18 @@
    "fase": "Semis",
    "grupo": null,
    "equipoA": "Inglaterra",
-   "equipoB": "W100",
+   "equipoB": "Argentina",
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
+   "oddsImplied": {
+    "pGanaA": 0.3723,
+    "pEmpate": 0.3113,
+    "pGanaB": 0.3164,
+    "mlA": "+155",
+    "mlX": "205",
+    "mlB": "+200"
+   },
    "canales": [
     "DGO",
     "CHV",
