@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-11 23:26",
+ "generado": "2026-07-12 01:05",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2924,13 +2924,13 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "oddsImplied": {
-    "pGanaA": 0.2212,
-    "pEmpate": 0.2503,
-    "pGanaB": 0.5285,
-    "mlA": "+330",
-    "mlX": "280",
-    "mlB": "-125"
+   "resultado": {
+    "golesA": 1,
+    "golesB": 2,
+    "definidoPor": "ET",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -2948,14 +2948,6 @@
    "ciudad": "Kansas City",
    "pais": "Estados Unidos",
    "horaChile": "21:00",
-   "oddsImplied": {
-    "pGanaA": 0.5529,
-    "pEmpate": 0.2747,
-    "pGanaB": 0.1723,
-    "mlA": "-140",
-    "mlX": "245",
-    "mlB": "+450"
-   },
    "canales": [
     "DGO",
     "Paramount+"
@@ -2973,12 +2965,12 @@
    "pais": "Estados Unidos",
    "horaChile": "15:00",
    "oddsImplied": {
-    "pGanaA": 0.405,
-    "pEmpate": 0.2928,
-    "pGanaB": 0.3021,
+    "pGanaA": 0.4069,
+    "pEmpate": 0.2942,
+    "pGanaB": 0.2988,
     "mlA": "+135",
     "mlX": "225",
-    "mlB": "+215"
+    "mlB": "+220"
    },
    "canales": [
     "DGO",
@@ -2992,7 +2984,7 @@
    "fecha": "2026-07-15",
    "fase": "Semis",
    "grupo": null,
-   "equipoA": "W99",
+   "equipoA": "Inglaterra",
    "equipoB": "W100",
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
