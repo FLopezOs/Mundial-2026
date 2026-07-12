@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-12 10:53",
+ "generado": "2026-07-12 11:58",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2973,12 +2973,12 @@
    "pais": "Estados Unidos",
    "horaChile": "15:00",
    "oddsImplied": {
-    "pGanaA": 0.4069,
-    "pEmpate": 0.2942,
-    "pGanaB": 0.2988,
-    "mlA": "+135",
-    "mlX": "225",
-    "mlB": "+220"
+    "pGanaA": 0.4121,
+    "pEmpate": 0.2962,
+    "pGanaB": 0.2917,
+    "mlA": "+130",
+    "mlX": "220",
+    "mlB": "+225"
    },
    "canales": [
     "DGO",
