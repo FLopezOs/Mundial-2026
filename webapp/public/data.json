@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-14 21:15",
+ "generado": "2026-07-14 22:16",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2998,12 +2998,12 @@
    "pais": "Estados Unidos",
    "horaChile": "15:00",
    "oddsImplied": {
-    "pGanaA": 0.3433,
-    "pEmpate": 0.3312,
-    "pGanaB": 0.3255,
-    "mlA": "+175",
+    "pGanaA": 0.3512,
+    "pEmpate": 0.3327,
+    "pGanaB": 0.3161,
+    "mlA": "+170",
     "mlX": "185",
-    "mlB": "+190"
+    "mlB": "+200"
    },
    "canales": [
     "DGO",
@@ -3017,7 +3017,7 @@
    "fecha": "2026-07-18",
    "fase": "3er Puesto",
    "grupo": null,
-   "equipoA": "L101",
+   "equipoA": "Francia",
    "equipoB": "L102",
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
@@ -3035,7 +3035,7 @@
    "fecha": "2026-07-19",
    "fase": "Final",
    "grupo": null,
-   "equipoA": "W101",
+   "equipoA": "España",
    "equipoB": "W102",
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
