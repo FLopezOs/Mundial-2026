@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-14 20:10",
+ "generado": "2026-07-14 21:15",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2972,13 +2972,13 @@
    "ciudad": "Dallas (Arlington)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
-   "oddsImplied": {
-    "pGanaA": 0.3656,
-    "pEmpate": 0.3278,
-    "pGanaB": 0.3066,
-    "mlA": "+160",
-    "mlX": "190",
-    "mlB": "+210"
+   "resultado": {
+    "golesA": 0,
+    "golesB": 2,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
