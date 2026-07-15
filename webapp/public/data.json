@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-15 20:42",
+ "generado": "2026-07-15 21:40",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -2997,13 +2997,13 @@
    "ciudad": "Atlanta",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
-   "oddsImplied": {
-    "pGanaA": 0.3509,
-    "pEmpate": 0.3384,
-    "pGanaB": 0.3107,
-    "mlA": "+170",
-    "mlX": "180",
-    "mlB": "+205"
+   "resultado": {
+    "golesA": 1,
+    "golesB": 2,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
@@ -3018,10 +3018,18 @@
    "fase": "3er Puesto",
    "grupo": null,
    "equipoA": "Francia",
-   "equipoB": "L102",
+   "equipoB": "Inglaterra",
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
+   "oddsImplied": {
+    "pGanaA": 0.4623,
+    "pEmpate": 0.267,
+    "pGanaB": 0.2708,
+    "mlA": "+105",
+    "mlX": "255",
+    "mlB": "+250"
+   },
    "canales": [
     "DGO",
     "CHV",
@@ -3036,10 +3044,18 @@
    "fase": "Final",
    "grupo": null,
    "equipoA": "España",
-   "equipoB": "W102",
+   "equipoB": "Argentina",
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
+   "oddsImplied": {
+    "pGanaA": 0.4119,
+    "pEmpate": 0.3212,
+    "pGanaB": 0.2669,
+    "mlA": "+130",
+    "mlX": "195",
+    "mlB": "+255"
+   },
    "canales": [
     "DGO",
     "CHV",
