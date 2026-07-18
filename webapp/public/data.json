@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-18 22:24",
+ "generado": "2026-07-18 23:26",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -3022,13 +3022,13 @@
    "ciudad": "Miami (Miami Gardens)",
    "pais": "Estados Unidos",
    "horaChile": "17:00",
-   "oddsImplied": {
-    "pGanaA": 0.5594,
-    "pEmpate": 0.2305,
-    "pGanaB": 0.21,
-    "mlA": "-145",
-    "mlX": "310",
-    "mlB": "+350"
+   "resultado": {
+    "golesA": 4,
+    "golesB": 6,
+    "definidoPor": "90",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
