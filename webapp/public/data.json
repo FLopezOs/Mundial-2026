@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-19 21:51",
+ "generado": "2026-07-19 22:51",
  "torneo": "Mundial 2026",
  "nota": "Generado por modelo/exportar_json.py — no editar a mano.",
  "calibracion": {
@@ -3048,13 +3048,13 @@
    "ciudad": "New York/New Jersey (East Rutherford)",
    "pais": "Estados Unidos",
    "horaChile": "15:00",
-   "oddsImplied": {
-    "pGanaA": 0.4248,
-    "pEmpate": 0.3134,
-    "pGanaB": 0.2619,
-    "mlA": "+125",
-    "mlX": "205",
-    "mlB": "+265"
+   "resultado": {
+    "golesA": 1,
+    "golesB": 0,
+    "definidoPor": "ET",
+    "ganadorPenales": null,
+    "penScoreA": null,
+    "penScoreB": null
    },
    "canales": [
     "DGO",
