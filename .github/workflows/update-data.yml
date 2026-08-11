@@ -1,8 +1,8 @@
 name: Actualizar datos del torneo
 
+# Torneo finalizado (julio 2026): schedule desactivado.
+# Para una actualización puntual, correr manualmente desde la pestaña Actions.
 on:
-  schedule:
-    - cron: '0,15,30,45 * * * *'
   workflow_dispatch:
 
 permissions:
